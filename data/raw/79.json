@@ -1,0 +1,76 @@
+{
+  "app_id": 79,
+  "name": "Smartsheet",
+  "website": "https://www.smartsheet.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Smartsheet API provides RESTful access to sheets, folders, users, attachments, and more, with OAuth2 and API key authentication.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "paid plan",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.smartsheet.com/api/smartsheet",
+  "mcp": "official",
+  "mcp_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C#"
+    ],
+    "webhooks": null,
+    "rate_limits": "Posting a file attachment is resource-intensive and is limited to 30 requests per minute per API token.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "snippet": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "snippet": "The Smartsheet API enables you to programmatically access and manage your organization's Smartsheet resources.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "snippet": "The MCP server exposes Smartsheet capabilities as tools that AI models can invoke.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "snippet": "- [OpenAPI Reference](/api/smartsheet/openapi): skip ahead to learn about resource endpoints and objects, including [Sheets](/api/smartsheet/openapi/sheets), [Cells](/api/smartsheet/openapi/cells), [Folders](/api/smartsheet/openapi/folders), and more",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "snippet": "For OAuth with Smartsheet: Work through the OAuth Walkthrough to regenerate client secrets, auth codes, and tokens.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "Gate details not provided; webhooks not documented. | dropped during extraction: evidence for auth: rejected, support check says this snippet does not establish auth = 'OAuth2'; evidence for api_type: snippet has no api_type language; evidence for mcp: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; auth='OAuth2' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

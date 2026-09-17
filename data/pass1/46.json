@@ -1,0 +1,83 @@
+{
+  "app_id": 46,
+  "name": "Squarespace",
+  "website": "https://www.squarespace.com",
+  "category": "Ecommerce",
+  "one_liner": "Reliable REST APIs for commerce, custom code, webhooks, and domain management on Squarespace.",
+  "auth": "Bearer",
+  "auth_notes": "Bearer token can be an API key or OAuth 2.0 access token.",
+  "access": "paid plan",
+  "access_notes": "API keys are generated in the Squarespace admin and require the Commerce Advanced plan.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.squarespace.com",
+  "mcp": "official",
+  "mcp_url": "https://developers-preview.squarespace.com/mcp/overview",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "process": "Generate API key via site Settings > Advanced > Developer API Keys > GENERATE KEY.",
+    "contact": "Support",
+    "est_time": "minutes"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "Create Order rate limit 100/hour for API key callers.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.squarespace.com/commerce-apis/making-requests",
+      "snippet": "Authorization: Bearer YOUR_API_KEY_OR_OAUTH_TOKEN",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://apis.io/security/squarespace/squarespace-authentication/",
+      "snippet": "Requires the Squarespace Advanced (Commerce Advanced) plan.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.squarespace.com",
+      "snippet": "REST endpoints, webhooks for order events, and signed payloads for safe server-to-server delivery.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.squarespace.com",
+      "snippet": "Squarespace Developer Platform: APIs, Apps, and Docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://apis.io/security/squarespace/squarespace-authentication/",
+      "snippet": "Client registration is manual and reviewed by Squarespace",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers-preview.squarespace.com/mcp/overview",
+      "snippet": "The Squarespace MCP server connects AI assistants and agents to Squarespace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "No SDKs are officially provided; the API is RESTful and supports webhooks. OAuth 2.0 is required for extensions and is manually reviewed. API keys never expire as long as the merchant site remains active. | dropped during extraction: evidence for api_breadth: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official' | retrieval filled: mcp='official' via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

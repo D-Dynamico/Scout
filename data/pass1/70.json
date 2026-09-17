@@ -1,0 +1,61 @@
+{
+  "app_id": 70,
+  "name": "Sentry",
+  "website": "https://sentry.io",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Sentry offers a REST API for managing organizations, projects, events, and integrations, authenticated via bearer tokens or OAuth2.",
+  "auth": "OAuth2",
+  "auth_notes": "Bearer tokens are passed in the Authorization header and OAuth2 is supported via the authorization code grant.",
+  "access": "free self-serve",
+  "access_notes": "Tokens can be created in the Sentry UI as internal integrations or personal tokens.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.sentry.dev/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "Ruby",
+      "Go",
+      "C#",
+      "Android",
+      "iOS"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.sentry.dev/api/auth/",
+      "snippet": "Sentry supports OAuth2 with the authorization code grant type.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.sentry.dev/api/auth/",
+      "snippet": "You can create authentication tokens within Sentry by creating an internal integration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.sentry.dev/",
+      "snippet": "claude mcp add --transport http sentry https://mcp.sentry.dev/mcp/{organizationSlug}/{projectSlug}",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.71,
+  "notes": "No information on production review or rate limits was found in the provided pages. | dropped during extraction: evidence for api_type: snippet has no api_type language; evidence for api_docs_url: snippet not on any page; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: mcp='official' via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

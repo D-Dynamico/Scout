@@ -1,0 +1,11 @@
+{
+  "app_id": 21,
+  "urls": [
+    "https://api.slack.com",
+    "https://docs.slack.dev/authentication/",
+    "https://slack.com/terms-of-service/slack-developer-program",
+    "https://docs.slack.dev/ai/slack-mcp-server/",
+    "https://docs.slack.dev/authentication/installing-with-oauth/",
+    "https://docs.slack.dev/tools/developer-sandboxes/"
+  ]
+}

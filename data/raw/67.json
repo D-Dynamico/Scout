@@ -1,0 +1,63 @@
+{
+  "app_id": 67,
+  "name": "Snowflake",
+  "website": "https://www.snowflake.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Snowflake is a cloud data platform that separates storage and compute for scalable analytics.",
+  "auth": "OAuth2",
+  "auth_notes": "Supports OAuth, key‑pair JWT, programmatic access tokens, and workload identity federation.",
+  "access": null,
+  "access_notes": "Users can sign up for a free trial account to obtain API credentials.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free trial",
+      "reason": "support check says this snippet does not establish access = 'free trial'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Python",
+      "Java",
+      "Node.js",
+      "Go",
+      ".NET"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+      "snippet": "Authorization: Bearer oauth_token",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+      "snippet": "Authenticating %sf-rest% with Snowflake",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "snippet": "Snowflake-managed MCP server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "Snowflake’s REST API requires authentication via OAuth or key‑pair JWT; the platform also offers a managed MCP server for AI agent integration. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_docs_url: snippet not on any page; api_docs_url nulled, no surviving evidence | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

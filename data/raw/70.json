@@ -1,0 +1,75 @@
+{
+  "app_id": 70,
+  "name": "Sentry",
+  "website": "https://sentry.io",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Sentry offers a REST API for programmatic access to organizations, projects, events, and integrations, authenticated via bearer tokens or OAuth2.",
+  "auth": "OAuth2",
+  "auth_notes": "Sentry supports OAuth2 with bearer tokens; personal access tokens are also available.",
+  "access": null,
+  "access_notes": "API tokens can be created in the free Developer plan via user settings or internal integrations.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.sentry.io/api/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.sentry.dev/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": false,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    },
+    "api_breadth": {
+      "value": "large",
+      "reason": "support check says this snippet does not establish api_breadth = 'large'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Rate Limits",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.sentry.dev/api/auth/",
+      "snippet": "Sentry supports OAuth2 with the authorization code grant type.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.sentry.io/api/",
+      "snippet": "API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://mcp.sentry.dev/",
+      "snippet": "Any MCP-compatible client can connect using the HTTP transport at the endpoint URL above.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://docs.sentry.dev/api/auth/",
+      "snippet": "The user visits Sentry in their browser (on any device), enters the code, and approves the request.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.sentry.dev/",
+      "snippet": "claude mcp add --transport http sentry https://mcp.sentry.dev/mcp/{organizationSlug}/{projectSlug}",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "All pages refer to the same Sentry product; no conflicting information found. | loop A disagreement: prod_requires_review=False: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'large'; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; api_type nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; prod_requires_review=False via retrieval; mcp='official' via retrieval | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 12 tried"
+}

@@ -1,0 +1,73 @@
+{
+  "app_id": 52,
+  "name": "SE Ranking",
+  "website": "https://seranking.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "REST API providing SEO and AI search data, plus MCP for AI assistants.",
+  "auth": "API key",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "small",
+  "api_docs_url": "https://seranking.com/api.html",
+  "mcp": "official",
+  "mcp_url": "https://seranking.com/api/integrations/mcp/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "5 requests per second",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://seranking.com/api.html",
+      "snippet": "SEO API by SE Ranking: SEO & GEO Data at Scale",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "snippet": "The Model Context Protocol (MCP) server provides a standardized interface that allows any compatible AI model or agent to access your SE Ranking data in a simple and secure way.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "snippet": "First, you’ll need to generate a unique API key from your account dashboard.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://seranking.com/api.html",
+      "snippet": "SE Ranking doesn’t currently offer first-party SDKs and integration is done via the REST API reference and a Postman collection for endpoint testing.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "snippet": "To authenticate your requests, include the API key in the `Authorization` header of your HTTP requests, using the `Token` scheme.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://seranking.com/api-pricing.html",
+      "snippet": "The 14-day free trial gives you 100K API credits across all six API endpoints, as well as MCP server access.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.75,
+  "notes": "API key authentication is required for all REST endpoints; MCP uses OAuth2 for AI assistants. No SDKs are provided. Webhooks are not mentioned. No production review process is indicated. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | pre-filter dropped 1 page(s) as not about SE Ranking: https://www.blogarama.com/marketing-blogs/213092-marketing-blog-for-students-professionals/80028758-mcp-servers-seo-tested-choose-2026 | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_type: snippet not on any page; evidence for api_breadth: snippet not on any page; auth nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='API key' via retrieval; api_breadth='small' via retrieval | confidence: access rests on weak evidence (-0.15); prod_requires_review is null (-0.10) | pages read: 6 of 12 tried"
+}

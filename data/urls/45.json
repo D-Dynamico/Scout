@@ -1,0 +1,11 @@
+{
+  "app_id": 45,
+  "urls": [
+    "https://developer.adobe.com/commerce",
+    "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+    "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "https://github.com/magebitcom/magento2-mcp-module",
+    "https://developer.adobe.com/commerce/webapi/get-started/gs-web-api-request",
+    "https://github.com/thomastx05/magento-mcp"
+  ]
+}

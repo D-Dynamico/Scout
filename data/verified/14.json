@@ -1,0 +1,79 @@
+{
+  "app_id": 14,
+  "name": "Front",
+  "website": "https://front.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Front is a shared inbox and omnichannel customer communication platform with a REST API for integrating with external systems.",
+  "auth": "Bearer",
+  "auth_notes": "Front recommends implementing OAuth when feasible, which has the additional benefit of building within our application framework.",
+  "access": "free self-serve",
+  "access_notes": "You can create a developer account by signing up here. You’ll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://dev.frontapp.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.frontapp.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "Front's rate limit is per company, not per token — so every token and integration on the account draws from the same pool.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "snippet": "The Core API uses Bearer tokens to authenticate its user.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://dev.frontapp.com",
+      "snippet": "You can create a developer account by signing up here. You’ll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://dev.frontapp.com",
+      "snippet": "Fetch the complete documentation index at: https://dev.frontapp.com/llms.txt.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://dev.frontapp.com/docs/mcp-server",
+      "snippet": "Front's MCP server (`mcp.frontapp.com/mcp`) lets AI agents act on Front conversation data using a single OAuth-authenticated endpoint.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.getmacha.com/blog/how-to-use-the-front-api",
+      "snippet": "The Front Core API is a RESTful, JSON-over-HTTPS API — Front calls it their \"primary backend API.\" You make standard HTTP requests — `GET` to read, `POST` to create, `PUT`/`PATCH` to update, `DELETE` to remove — against resource URLs, and you get JSON back.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://dev.frontapp.com/docs/partnering-with-front",
+      "snippet": "Once your integration has been technically approved, our team will use the image and marketing details you submit in the form to launch your integration with a dedicated landing page on our website and in our app.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "No contradictory information found. API breadth not explicitly quantified, so set to null. | retrieval problems: api_breadth: retrieval picked sentence None, out of range | dropped during extraction: evidence for api_type: snippet not on any page; api_type nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; prod_requires_review=True via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 12 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06)"
+}

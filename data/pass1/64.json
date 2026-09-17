@@ -1,0 +1,71 @@
+{
+  "app_id": 64,
+  "name": "Cloudflare",
+  "website": "https://www.cloudflare.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Cloudflare provides a wide range of cloud services including DNS, CDN, security, and serverless compute.",
+  "auth": null,
+  "auth_notes": "Authentication is performed with API tokens (Bearer) or legacy API keys.",
+  "access": "free self-serve",
+  "access_notes": "Users can create API tokens directly from their account settings.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.cloudflare.com/api/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.cloudflare.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "npm",
+      "pip",
+      "go",
+      "terraform"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "snippet": "The stable base URL for all Version 4 HTTPS endpoints is: `https://api.cloudflare.com/client/v4/`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.cloudflare.com/api/",
+      "snippet": "API Reference | Cloudflare API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+      "snippet": "Cloudflare runs a catalog of managed remote MCP servers which you can connect to using OAuth on clients like Claude",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.cloudflare.com/pricing.md",
+      "snippet": "- Sign up: Create a Cloudflare account and start with the free tier",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+      "snippet": "The Cloudflare API MCP server ↗ provides access to the entire Cloudflare API — over 2,500 endpoints across DNS, Workers, R2, Zero Trust, and every other product — through just two tools: `search()` and `execute()`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.65,
+  "notes": "Cloudflare offers a REST API with many endpoints; authentication via API tokens (Bearer) or legacy API keys. No app review is required to obtain credentials. Webhooks are not explicitly documented in the provided pages. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_breadth='large' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

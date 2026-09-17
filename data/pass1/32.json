@@ -1,0 +1,91 @@
+{
+  "app_id": 32,
+  "name": "Meta Ads",
+  "website": "https://www.facebook.com/business",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Meta Ads API enables developers to create, manage, and analyze advertising campaigns across Meta platforms.",
+  "auth": "OAuth2",
+  "auth_notes": "Access token required; can be user or system user token.",
+  "access": "admin approval",
+  "access_notes": "Requires app review and business verification for production use; rate limits vary by tier.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.facebook.com/docs/marketing-apis",
+  "mcp": "official",
+  "mcp_url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript SDK",
+      "PHP SDK",
+      "Python SDK",
+      "Android SDK",
+      "iOS SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "Standard Marketing API: 200 calls per user per hour per ad account",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md",
+      "snippet": "- **Method:** OAuth2 access token",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://www.blotato.com/blog/facebook-api-pricing",
+      "snippet": "App Review, business verification, or permission review, and that approval cycle is where the real cost lives for most developers.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md",
+      "snippet": "`https://graph.facebook.com/v21.0`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.facebook.com/docs/marketing-apis",
+      "snippet": "Marketing API | Meta | Developer Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://www.blotato.com/blog/facebook-api-pricing",
+      "snippet": "App Review, business verification, or permission review, and that approval cycle is where the real cost lives for most developers.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.blotato.com/blog/facebook-api-pricing",
+      "snippet": "Advanced Access (Full Access on the Marketing API) requires App Review, business verification, and a screencast that demonstrates each permission in your live product.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+      "snippet": "The ads MCP server is a Meta-hosted Model Context Protocol⁠ server that lets you manage Meta ads directly from an AI agent.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "No explicit pricing tiers beyond free; rate limits differ by tier; app review required for production; MCP is official; webhooks supported. | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: snippet not on any page; evidence for mcp: snippet not on any page; api_breadth nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; mcp='official' via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

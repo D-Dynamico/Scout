@@ -1,0 +1,61 @@
+{
+  "app_id": 28,
+  "name": "WhatsApp Business",
+  "website": "https://business.whatsapp.com",
+  "category": "Communications and Messaging",
+  "one_liner": "WhatsApp Business Platform provides a RESTful Graph API for messaging, calling, and account management.",
+  "auth": null,
+  "auth_notes": "Authentication uses OAuth (not 2.0) access tokens.",
+  "access": "free self-serve",
+  "access_notes": "Creating a developer app and a WhatsApp Business Account costs nothing.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.facebook.com/docs/whatsapp",
+  "mcp": "community",
+  "mcp_url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "PyWa"
+    ],
+    "webhooks": true,
+    "rate_limits": "Standard Graph API rate limits apply. Business phone numbers can send up to 80 messages per second by default.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview/",
+      "snippet": "The WhatsApp Business Platform is built on [Graph API](/docs/graph-api/overview) and uses HTTP protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.facebook.com/docs/whatsapp",
+      "snippet": "WhatsApp Business Platform | Developer Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "snippet": "MCP server for WhatsApp Business Cloud API. 50+ tools for messaging, templates, media, analytics, flows and webhooks.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview/",
+      "snippet": "When you [get started with Cloud API](/documentation/business-messaging/whatsapp/get-started), a test WhatsApp Business account and test business phone number are automatically created for you.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "Access to the API is free and self‑serve; no app review or admin approval is required to obtain credentials. The platform relies on webhooks for event delivery and is subject to standard Graph API rate limits. | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: snippet has no api_breadth language; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

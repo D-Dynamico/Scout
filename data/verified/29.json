@@ -1,0 +1,81 @@
+{
+  "app_id": 29,
+  "name": "Aircall",
+  "website": "https://aircall.io",
+  "category": "Communications and Messaging",
+  "one_liner": "Aircall is a cloud phone system with a REST API for calls, contacts, users, and webhooks.",
+  "auth": "OAuth2",
+  "auth_notes": "Supports Basic Auth with API ID/token and OAuth for multi‑tenant apps.",
+  "access": "free self-serve",
+  "access_notes": "API keys are generated in the Aircall dashboard; OAuth requires admin approval.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.aircall.io/api-references",
+  "mcp": "community",
+  "mcp_url": "https://github.com/themobilefirstco/aircall-mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Aircall Anywhere SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "Aircall limits the number of requests to its Public API to 120 requests per minute per company.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.aircall.io/docs/authentication",
+      "snippet": "Aircall supports two ways to authenticate with the REST API: Basic Authentication and OAuth.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.aircall.io/api-references",
+      "snippet": "Aircall Public API is a classic REST API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.aircall.io/api-references",
+      "snippet": "The root endpoint of Aircall Public API is `https://api.aircall.io/v1`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+      "snippet": "> **MCP Server for Aircall API** — 73 tools for calls, contacts, SMS, users, teams, transcripts, AI summaries, and more.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://github.com/growth-box/aircall-mcp",
+      "snippet": "Create API credentials in **Aircall Dashboard → Integrations → API keys**.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.aircall.io/api-references",
+      "snippet": "It is a requirement to be listed on the Aircall App Marketplace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.79,
+  "notes": "No official MCP server; community MCP servers exist. API keys are self‑serve; OAuth requires admin approval. | loop A disagreement: prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; access nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried | loop A: auth: pass1 said 'OAuth2', second model said 'Basic'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15)"
+}

@@ -1,0 +1,64 @@
+{
+  "app_id": 17,
+  "name": "Plain",
+  "website": "https://www.plain.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Plain offers a fully public GraphQL API with no rate limits and no restrictions compared to the UI.",
+  "auth": "API key",
+  "auth_notes": "Authorization: Bearer YOUR_TOKEN where the token is your API key.",
+  "access": "free self-serve",
+  "access_notes": "Machine Users can have multiple API Keys to make it easy to rotate keys.",
+  "api_type": "GraphQL",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.plain.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.plain.com/docs/api-reference/graphql",
+      "snippet": "* `Authorization: Bearer YOUR_TOKEN` where the token is your API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.plain.com/docs/api-reference/graphql",
+      "snippet": "Plain is built with this very GraphQL API we expose to you.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.plain.com/article/mcp-server",
+      "snippet": "The Plain MCP server at `https://mcp.plain.com/mcp` lets tools like Claude, ChatGPT, and Cursor work with your support data directly.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://plain.support.site/article/creating-api-keys",
+      "snippet": "### Step 2: Create an API Key",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "Plain’s API is fully public, requires an API key, and is accessed via GraphQL. The MCP server is an official, OAuth‑based endpoint that provides 30 tools for interacting with support data. Webhooks are supported as part of the extensibility offering. No rate limits are advertised, and no app review is required for API usage. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'paid plan'; evidence for api_breadth: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

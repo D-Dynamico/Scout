@@ -1,0 +1,11 @@
+{
+  "app_id": 79,
+  "urls": [
+    "https://smartsheet.com/developers",
+    "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "https://developers.smartsheet.com/api/smartsheet/introduction",
+    "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+    "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "https://developers.smartsheet.com/api/smartsheet/openapi/schemas/index"
+  ]
+}

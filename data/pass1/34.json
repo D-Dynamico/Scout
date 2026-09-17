@@ -1,0 +1,66 @@
+{
+  "app_id": 34,
+  "name": "GoHighLevel",
+  "website": "https://www.gohighlevel.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "GoHighLevel is an all‑in‑one marketing and CRM platform with API access for private integrations and MCP.",
+  "auth": null,
+  "auth_notes": "Uses Private Integration Tokens (Bearer) for API v2; OAuth 2.0 is also supported for multi‑client installations.",
+  "access": "free trial",
+  "access_notes": "API credentials can be generated directly from the account settings; no approval required.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://marketplace.gohighlevel.com/docs/",
+  "mcp": "official",
+  "mcp_url": "https://services.leadconnectorhq.com/mcp/",
+  "stage": "needs sandbox",
+  "blocker": "trial only, no free tier for credentials",
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Burst Limit: 25 requests per 10 seconds, Daily Limit: 10,000 requests",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000003054-private-integrations-everything-you-need-to-know",
+      "snippet": "Generate Private Integration tokens from your account settings and manage them with ease.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000003054-private-integrations-everything-you-need-to-know",
+      "snippet": "curl --request GET \\\n  --url https://services.leadconnectorhq.com/locations/ve9EPM428h8vShlRW1KT \\\n  --header 'Accept: application/json' \\\n  --header 'Authorization: <YOUR PRIVATE INTEGRATION TOKEN>' \\\n  --header 'Version: 2021-07-28'",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000003054-private-integrations-everything-you-need-to-know",
+      "snippet": "visit our official API documentation: https://marketplace.gohighlevel.com/docs/",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+      "snippet": "The HighLevel MCP Server lets AI agents and MCP-compatible clients connect securely to HighLevel tools and services.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://ideas.gohighlevel.com/changelog/private-integration-tokens-pits-now-available-for-sandbox-trial-accounts",
+      "snippet": "We’ve enabled Private Integration Tokens (PITs) for Sandbox and Trial accounts, allowing developers and agencies to test their custom integrations end-to-end against HighLevel APIs before going live.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.74,
+  "notes": "API v2 uses Private Integration Tokens (Bearer) for server‑to‑server access; OAuth 2.0 is recommended for multi‑client marketplace apps. No app review is required to obtain credentials, but token scopes must be set appropriately. The MCP endpoint is officially supported for AI agents. | loop A disagreement: access='free trial': retrieval chose this sentence, support check disagreed | dropped during extraction: access='free self‑serve' not in enum; evidence for auth: snippet has no auth language; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free trial' via retrieval | confidence: auth is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

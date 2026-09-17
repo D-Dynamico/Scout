@@ -1,0 +1,71 @@
+{
+  "app_id": 78,
+  "name": "Coda",
+  "website": "https://coda.io",
+  "category": "Productivity and Project Management",
+  "one_liner": null,
+  "auth": "Bearer",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/vish288/mcp-coda",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://apiterms.com/api/coda.io/",
+      "snippet": "The Coda API (Superhuman Docs API) API uses Bearer token authentication; has freemium pricing; offers a free tier (API available free of charge in both free and paid workspaces); rate limits: Reading data: 100 req/6s; Writing (POST/PUT/PATCH): 10 req/6s; Writing doc content: 5 req/10s; Listing docs: 4 req/6s; Reading analytics: 100 req/6s; errors return HTTP 429.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_type",
+      "url": "https://apis.io/apis/coda/coda-account-api/",
+      "snippet": "We will post about such changes as well as announce\\nnew features in the [Developers Central](https://community.coda.io/c/developers-central) section of our Community,\\nand update the [API updates](https://coda.io/api-updates) doc.\\n\\n# Using the API\\n\\nCoda's REST API is designed to be straightforward to use.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth",
+      "url": "https://apiterms.com/api/coda.io/",
+      "snippet": "The Coda API (Superhuman Docs API) API uses Bearer token authentication; has freemium pricing; offers a free tier (API available free of charge in both free and paid workspaces); rate limits: Reading data: 100 req/6s; Writing (POST/PUT/PATCH): 10 req/6s; Writing doc content: 5 req/10s; Listing docs: 4 req/6s; Reading analytics: 100 req/6s; errors return HTTP 429.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://coda.io/apis/v1/openapi.yaml",
+      "snippet": "The latest released Pack version that has been verified (approved)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/vish288/mcp-coda",
+      "snippet": "**mcp-coda** is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for the [Coda API](https://coda.io/developers/apis/v1) — **54 tools**, **12 resources**, and **5 prompts** covering docs, pages, tables, rows, formulas, controls, permissions, folders, publishing, automations, and analytics.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.61,
+  "notes": "extraction returned nothing usable | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; prod_requires_review=True: retrieval chose this sentence, support check disagreed | extraction returned nothing, provider groq model openai/gpt-oss-20b | dropped during extraction: everything | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='Bearer' via retrieval; prod_requires_review=True via retrieval; mcp='community' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large'; mcp: pass1 said 'community', second model said 'official' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review rests on weak evidence (-0.15) | loop C browser check: browser check timed out"
+}

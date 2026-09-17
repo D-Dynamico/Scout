@@ -1,0 +1,11 @@
+{
+  "app_id": 55,
+  "urls": [
+    "https://docs.apify.com",
+    "https://docs.apify.com/api/v2",
+    "https://apify.com/pricing?fpr=home",
+    "https://docs.apify.com/integrations/mcp.md",
+    "https://docs.apify.com/integrations/api",
+    "https://docs.apify.com/get-started/agent-onboarding"
+  ]
+}

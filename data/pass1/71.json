@@ -1,0 +1,75 @@
+{
+  "app_id": 71,
+  "name": "Notion",
+  "website": "https://www.notion.so",
+  "category": "Productivity and Project Management",
+  "one_liner": "Notion offers a REST API for reading, writing, and managing pages, databases, and more, authenticated via bearer tokens or OAuth 2.0.",
+  "auth": "Bearer",
+  "auth_notes": "Internal connections use a static API token; public connections use OAuth 2.0.",
+  "access": "free self-serve",
+  "access_notes": "Internal connections require workspace owner; public connections require OAuth flow; PATs act as user.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.notion.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.notion.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "@notionhq/client"
+    ],
+    "webhooks": true,
+    "rate_limits": "The Notion API enforces two rate limits: Per connection — an average of three requests per second, with some bursts beyond the average allowed.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.notion.com/reference/authentication",
+      "snippet": "Requests use the HTTP `Authorization` header to both authenticate and authorize operations. The Notion API accepts bearer tokens in this header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.notion.com",
+      "snippet": "With the REST API, you can read, create, and update nearly everything in a workspace — pages, databases, users, comments, and more.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.notion.com",
+      "snippet": "https://developers.notion.com",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "snippet": "**Notion MCP** (`https://mcp.notion.com/mcp`) is our hosted, actively maintained server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "snippet": "The fastest way to start building is the Quickstart — create a personal access token, make your first API request, and see a new page appear in your workspace in under two minutes.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.notion.com",
+      "snippet": "Public connections must undergo a Notion security review before being listed on the Marketplace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "Notion’s API is free to use; internal connections require workspace owner; public connections need OAuth flow; no paid plan required. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: rejected, support check says this snippet does not establish prod_requires_review = False; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,79 @@
+{
+  "app_id": 83,
+  "name": "Binance",
+  "website": "https://www.binance.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Binance offers a REST API for market data and trading, with WebSocket streams for real‑time updates.",
+  "auth": "API key",
+  "auth_notes": "API keys are signed with HMAC SHA‑256 and require a timestamp and signature.",
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.binance.com/en",
+  "mcp": "community",
+  "mcp_url": "https://github.com/nirholas/Binance-MCP",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": false,
+    "rate_limits": "Binance uses a weight-based system with 1200 weight units per minute per IP.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://binance-docs.github.io/apidocs/",
+      "snippet": "https://developers.binance.com/en",
+      "fetcher": "http",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/nirholas/Binance-MCP",
+      "snippet": "Binance MCP Server enables AI assistants like **Claude**, **ChatGPT**, and other MCP-compatible clients to interact directly with the Binance cryptocurrency exchange.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://voiceofchain.com/academy/binance-api-pricing",
+      "snippet": "You can grab a binance free api key in under two minutes, and there's no monthly subscription, no credit card required, and no per-call charges for market data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_type",
+      "url": "https://voiceofchain.com/academy/is-binance-api-free",
+      "snippet": "The WebSocket API streams real-time data at no cost, REST endpoints cover every account operation you need, and the authentication system is straightforward once you understand HMAC signing.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth",
+      "url": "https://voiceofchain.com/academy/binance-api-pricing",
+      "snippet": "You can grab a binance free api key in under two minutes, and there's no monthly subscription, no credit card required, and no per-call charges for market data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://github.com/nirholas/Binance-MCP",
+      "snippet": "**The most comprehensive Model Context Protocol server for Binance — 478+ tools covering the entire Binance.com API**",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.9,
+  "notes": "No explicit endpoint count found; breadth inferred as unknown. | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; evidence for api_breadth: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='API key' via retrieval; api_breadth='large' via retrieval | confidence: prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | confidence after verification: prod_requires_review is null (-0.10)"
+}

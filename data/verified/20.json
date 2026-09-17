@@ -1,0 +1,68 @@
+{
+  "app_id": 20,
+  "name": "Gladly",
+  "website": "https://www.gladly.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Gladly offers a REST API with token‑based Basic Authentication, free self‑serve access, and extensive endpoints (65 actions).",
+  "auth": "Basic",
+  "auth_notes": "Gladly API uses token-based **Basic Authentication**. API tokens are associated with designated Gladly users.",
+  "access": "admin approval",
+  "access_notes": "API tokens are required to use Gladly APIs for security and authentication purposes. Tokens can be accessed and created by users who at least have an API user role.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://www.stackone.com/connectors/gladly/mcp/",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "Gladly enforces strict API quotas.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://developer.gladly.com/rest/index.html",
+      "snippet": "Clients can access the REST API via HTTPS at your organization's Gladly domain (e.g. `https://{organization}.gladly.com`).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+      "snippet": "For integrations not built by Gladly, a Gladly Administrator should create a new user with an API role + Agent and/or Administrator (check with your integration partner to confirm the required roles) account for each integration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.gladly.com/rest/index.html",
+      "snippet": "Gladly API uses token-based Basic Authentication.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "snippet": "StackOne's Gladly MCP server ships with 65 pre-built actions, fully extensible via the Connector Builder — plus managed authentication, prompt injection defense, observability, and agent execution runtime.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "Gladly does not provide an official MCP server; third‑party services such as StackOne and Truto offer managed MCP endpoints. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: snippet has no api_breadth language; evidence for api_docs_url: snippet not on any page; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; mcp nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; auth='Basic' via retrieval; mcp='community' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

@@ -1,0 +1,64 @@
+{
+  "app_id": 77,
+  "name": "ClickUp",
+  "website": "https://clickup.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "ClickUp offers a public REST API with OAuth2 authentication and an official MCP server for AI assistants.",
+  "auth": "OAuth2",
+  "auth_notes": "Personal API tokens (pk_) can be used for personal or testing purposes; OAuth is required for multi‑user apps.",
+  "access": "admin approval",
+  "access_notes": "Some endpoints and parameters are limited by plan, but the API is available on all ClickUp Plans.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.clickup.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "The ClickUp API enforces request rate limits per token. Rate limits vary depending on your Workspace Plan.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://clickup.com/api",
+      "snippet": "Build integrations and apps with our Public API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "snippet": "For apps or integrations that other people use, use the OAuth flow, allowing users to authorize Workspaces for your app.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcpmux.com/servers/com.clickup-mcp/",
+      "snippet": "Manage ClickUp tasks, lists, docs, and projects through ClickUp's official hosted remote MCP server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "snippet": "Only Workspace owners or admins can create OAuth apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.56,
+  "notes": "No information on SDKs or GraphQL; API breadth not specified. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for mcp: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

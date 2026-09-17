@@ -1,0 +1,68 @@
+{
+  "app_id": 54,
+  "name": "MrScraper",
+  "website": "https://mrscraper.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "MrScraper is an AI-powered web scraping platform with API, SDKs, and MCP support.",
+  "auth": "Bearer",
+  "auth_notes": "The API token is passed in the x-api-token header.",
+  "access": null,
+  "access_notes": "The free plan includes 1,000 tokens per month with no credit card required.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.mrscraper.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.mrscraper.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Python SDK",
+      "Node.js SDK",
+      "LangChain SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.mrscraper.com",
+      "snippet": "Explore every endpoint, authentication, pagination, and error handling.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "snippet": "Access MrScraper’s web scraping API via a Model Context Protocol (MCP) server to enable AI agents to fetch and extract web data securely.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.mrscraper.com/docs/api/authentication",
+      "snippet": "curl --location 'https://api.app.mrscraper.com/api/v1/analytic/statuses?domain=LINK&action=ACTION_DETAIL&startDate=2026-04-12%2000%3A00%3A00&endDate=2026-04-13%2023%3A59%3A59&apiTokenName=MRSCRAPER_API_TOKEN' \\",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "snippet": "claude mcp add mrscraper --transport http https://mcp.mrscraper.com/mcp --header \"Authorization: Bearer <MRSCRAPER_API_TOKEN>\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Rate limits and API breadth are not documented; API breadth is unknown. | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: rejected, support check says this snippet does not establish api_type = 'REST'; auth nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; auth='Bearer' via retrieval | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

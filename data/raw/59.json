@@ -1,0 +1,73 @@
+{
+  "app_id": 59,
+  "name": "Waterfall.io",
+  "website": "https://waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Waterfall.io provides a unified B2B enrichment API aggregating 30+ data vendors for contact, email, phone, and company data.",
+  "auth": "API key",
+  "auth_notes": "Provide your API key in the `x-api-key` header.",
+  "access": "free self-serve",
+  "access_notes": "Usage-based pricing, no monthly commitments, credit expirations, or long-term contracts; pay only for successful enrichments.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.waterfall.io/v1/introduction",
+  "mcp": null,
+  "mcp_url": null,
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "The Prospector, Search, Enrichment, Job Change and Verify Email APIs allow a maximum of 50 requests per minute (60 seconds).",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "snippet": "All requests are authenticated using `x-api-key`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://docs.waterfall.io/v1/search-contact-launcher",
+      "snippet": "Provide your API key in the `x-api-key` header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://www.leadsforge.ai/blog/waterfall-io-review",
+      "snippet": "Usage-based pricing, no monthly commitments, credit expirations, or long-term contracts; pay only for successful enrichments.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "snippet": "The Waterfall API is available at `https://api.waterfall.io`. All requests require an API key in the `x-api-key` header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "snippet": "The Waterfall API is available at `https://api.waterfall.io`. All requests require an API key in the `x-api-key` header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.waterfall.io/llms.txt",
+      "snippet": "- [API Keys - Create](https://docs.waterfall.io/v1/api-keys-create.md): Create a new sub-key for your account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.65,
+  "notes": "Waterfall.io offers a RESTful API with many endpoints for contact and company enrichment, phone and email verification, and job change detection. It aggregates 30+ data vendors, provides webhooks, and enforces a 50 req/min rate limit. Credentials are obtained via free self‑serve sign‑up and usage is billed per successful enrichment. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: snippet has no api_breadth language; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); mcp is null (-0.04); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

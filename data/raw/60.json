@@ -1,0 +1,80 @@
+{
+  "app_id": 60,
+  "name": "Clay",
+  "website": "https://www.clay.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Clay is a data enrichment and search platform with a public API, CLI, and MCP server.",
+  "auth": "API key",
+  "auth_notes": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.",
+  "access": "free self-serve",
+  "access_notes": "API keys are tied to a Clay user and workspace access.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://api.clay.com/v3/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": false,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.clay.com/public-api/authentication",
+      "snippet": "Authenticate requests with a Clay API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://developers.clay.com/public-api/authentication",
+      "snippet": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://developers.clay.com/public-api/authentication",
+      "snippet": "API keys are tied to a Clay user and workspace access.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://apis.io/apis/clay-com/mcp/",
+      "snippet": "Clay's hosted remote Model Context Protocol server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.clay.com/quickstart",
+      "snippet": "- Create one yourself in Clay under Settings → Account → API keys (beta).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://apis.io/apis/clay-com/mcp/",
+      "snippet": "Streamable HTTP at https://api.clay.com/v3/mcp, gated by Clay's own OAuth 2.0 authorization server (scope `mcp`) with PKCE, device-code and dynamic client registration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+      "snippet": "Because registration is open, Clay can't treat a self-chosen `client_name` as an identity claim, so every publicly registered client is presented as an `Unverified application` and the consent screen shows the user your redirect destination.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.76,
+  "notes": "No rate limits, webhooks, or SDKs documented; API breadth not specified. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; evidence for api_docs_url: snippet not on any page; api_type nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; prod_requires_review=False via retrieval | mcp downgraded from official to community, its only evidence is a page the app does not own | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03) | pages read: 6 of 12 tried"
+}

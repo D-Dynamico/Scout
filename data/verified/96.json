@@ -1,0 +1,63 @@
+{
+  "app_id": 96,
+  "name": "Devin",
+  "website": "https://devin.ai",
+  "category": "AI, Research and Media-native",
+  "one_liner": "AI software engineer that writes, runs, and tests code automatically.",
+  "auth": "Bearer",
+  "auth_notes": "Uses a bearer token prefixed with \"cog_\" for both service user API keys and personal access tokens.",
+  "access": "free self-serve",
+  "access_notes": "API credentials can be created by any user on the free plan; no admin approval or sales contact required.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.devin.ai/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "snippet": "curl -X GET \"https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions\" \\\n  -H \"Authorization: Bearer cog_your_token_here\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.devin.ai/",
+      "snippet": "Connect to: `https://mcp.devin.ai/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "snippet": "Generate an API key — the key starts with `cog_` and is shown only once at creation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "snippet": "curl -X POST \"https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions\" \\",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "No OAuth2 or other authentication methods are documented; the API is REST‑style but the documentation does not explicitly label it as such. The API is available on the free plan, and no app review or partner contact is required to obtain credentials. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet not on any page; evidence for api_docs_url: snippet not on any page; access nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 11 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

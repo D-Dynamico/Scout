@@ -1,0 +1,73 @@
+{
+  "app_id": 85,
+  "name": "iPayX",
+  "website": "https://ipayx.ai",
+  "category": "Finance and Fintech",
+  "one_liner": "REST API for real‑time FX forensic audit and mid‑market rate lookup, with free and paid tiers.",
+  "auth": "Bearer",
+  "auth_notes": "Format: ipx_live_xxxxx (production) or ipx_test_xxxxx (sandbox).",
+  "access": "free self-serve",
+  "access_notes": "Free tier: 10 audits / day per API key. Paid tier ($199): unlimited audits.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://www.ipayx.ai/docs/mcp-server",
+  "mcp": "official",
+  "mcp_url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Rate limit: 10 audits / day per API key (free). Rate limit: 60 calls / minute per API key.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "snippet": "Authorization: Bearer ipx_live_xxxxxxxxxxxxxxxxxxxxxxxx",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "snippet": "- Format: `ipx_live_xxxxx` (production) or `ipx_test_xxxxx` (sandbox).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "snippet": "Open your iPayX dashboard → API keys.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "snippet": "REST API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "snippet": "- Documentation: `https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server/docs`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "snippet": "> **MCP server for [iPayX Protocol](https://www.ipayx.ai)** — audit FX fees, compare currency conversion margins and score cross-border payment invoices, directly inside Claude, Cursor, Cline, ChatGPT or any MCP-compatible AI client.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for auth_notes: snippet was paraphrased, snapped to the real sentence; evidence for access_notes: snippet not on any page; evidence for api_breadth: snippet not on any page; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: mcp='official' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

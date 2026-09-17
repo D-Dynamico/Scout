@@ -1,0 +1,68 @@
+{
+  "app_id": 26,
+  "name": "Discord",
+  "website": "https://discord.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Discord provides a REST API for bots, slash commands, and interactions, with OAuth2 and bot token authentication.",
+  "auth": null,
+  "auth_notes": "Supports Bot token and OAuth2 bearer tokens.",
+  "access": "admin approval",
+  "access_notes": "No per-call fees or subscription; bots can be created in minutes.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://discord.com/developers/docs/intro",
+  "mcp": "community",
+  "mcp_url": "https://github.com/pasympa/discord-mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "discord.js",
+      "discord.py",
+      "discord.js v14"
+    ],
+    "webhooks": true,
+    "rate_limits": "The HTTP API implements a process for limiting and preventing excessive requests in accordance with RFC 6585.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.discord.com/developers/reference",
+      "snippet": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.discord.com/developers/reference",
+      "snippet": "## Documentation Index",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/pasympa/discord-mcp",
+      "snippet": "A lightweight, multi-guild Discord MCP server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/discord/discord-api-docs/48d3c2d324796d8236355262ace3b22c1d29acb0/docs/policies_and_agreements/Developer_Terms_of_Service.md",
+      "snippet": "Without limiting the foregoing, we may also require that you submit your Application for our review and approval in various circumstances (e.g., to approve access to certain APIs or API Data, when use of your Application reaches certain thresholds, or to review compliance with the Terms) (“App Review”).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "api_breadth is unknown due to lack of explicit endpoint count; no gate required for free self-serve access. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,11 @@
+{
+  "app_id": 3,
+  "urls": [
+    "https://developers.pipedrive.com/docs/api/v1",
+    "https://developers.pipedrive.com/tutorials/adding-leads-to-pipedrive",
+    "https://www.pipedrive.com/en/features/crm-api",
+    "https://www.pipedrive.com/en/features/mcp-server",
+    "https://pipedrive.readme.io/docs/hello-world-tutorial",
+    "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting"
+  ]
+}

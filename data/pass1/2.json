@@ -1,0 +1,78 @@
+{
+  "app_id": 2,
+  "name": "HubSpot",
+  "website": "https://www.hubspot.com",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot offers a RESTful CRM API with date‑based versioning, OAuth 2.0, SDKs, webhooks, and MCP support.",
+  "auth": "OAuth2",
+  "auth_notes": "HubSpot supports the OAuth 2.0 Authorization Code grant type",
+  "access": "free self-serve",
+  "access_notes": "API access included on all plans, including Free",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.hubspot.com/docs/api/overview",
+  "mcp": "official",
+  "mcp_url": "https://developers.hubspot.com/ai-tools/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "large",
+      "reason": "support check says this snippet does not establish api_breadth = 'large'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "PHP",
+      "Java",
+      "Ruby",
+      "Go",
+      "TypeScript",
+      "Python"
+    ],
+    "webhooks": true,
+    "rate_limits": "100-190 req/10 sec depending on plan; 250K-1M calls/day",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/oauth/oauth-quickstart-guide",
+      "snippet": "HubSpot supports the OAuth 2.0 Authorization Code grant type",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://pipeline.zoominfo.com/sales/hubspot-api",
+      "snippet": "| API type | REST over HTTPS (JSON); GraphQL available for CMS queries |",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://pipeline.zoominfo.com/sales/hubspot-api",
+      "snippet": "The developer documentation lives at developers.hubspot.com",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://pipeline.zoominfo.com/sales/hubspot-api",
+      "snippet": "HubSpot MCP Server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://pipeline.zoominfo.com/sales/hubspot-api",
+      "snippet": "HubSpot bundles API access into all subscription plans, including the free tier.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "No review required for API usage; marketplace app review not covered in the provided pages. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'large' | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

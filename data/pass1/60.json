@@ -1,0 +1,71 @@
+{
+  "app_id": 60,
+  "name": "Clay",
+  "website": "https://www.clay.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Clay offers a public REST API and MCP server for programmatic access to its GTM data, enrichment functions, and workflows.",
+  "auth": "API key",
+  "auth_notes": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.",
+  "access": "free self-serve",
+  "access_notes": "API keys are tied to a Clay user and workspace access. Create one under Settings → Account → API keys (beta).",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.clay.com/quickstart",
+  "mcp": "official",
+  "mcp_url": "https://university.clay.com/docs/connect-to-clay-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": false,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Search result limits vary by plan: Free 50 per request, 100/mo; Trial 50 per request, 10k/14d; Paid 10,000 per request, 1M/yr; Enterprise 10,000 per request, 10M/yr.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.clay.com/public-api/authentication",
+      "snippet": "Authenticate requests with a Clay API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.clay.com/quickstart",
+      "snippet": "Build with Clay from your coding agent, or call the Clay API from your own applications.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+      "snippet": "Clay exposes a Model Context Protocol (MCP) server that lets an external platform — an AI assistant, IDE, agent host, or partner product — run Clay's find-and-enrich tools and custom functions on behalf of a signed-in Clay user.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+      "snippet": "Dynamic Client Registration (DCR) is the self-service path onto that server: your platform registers itself at connect time to obtain OAuth client credentials, with no manual setup on Clay's side.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+      "snippet": "Because registration is open, Clay can't treat a self-chosen `client_name` as an identity claim, so every publicly registered client is presented as an `Unverified application` and the consent screen shows the user your redirect destination.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "The public API uses API key authentication; MCP uses OAuth2 with PKCE. Table querying via the API is only available on Enterprise plans. No explicit app review is required for API usage. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for prod_requires_review: snippet has no prod_requires_review language; api_type nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=False via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

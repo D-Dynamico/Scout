@@ -1,0 +1,61 @@
+{
+  "app_id": 98,
+  "name": "Mermaid CLI",
+  "website": "https://github.com/mermaid-js/mermaid-cli",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Command-line interface for generating Mermaid diagrams as SVG/PNG/PDF files",
+  "auth": "API key",
+  "auth_notes": null,
+  "access": null,
+  "access_notes": null,
+  "api_type": "CLI-only",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://github.com/mermaid-js/mermaid-cli",
+  "mcp": "community",
+  "mcp_url": "https://github.com/abekdwight/mermaid-mcp-server",
+  "stage": "no viable API",
+  "blocker": "CLI only, nothing to call",
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node.js"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://www.npmjs.com/package/@mermaid-js/mermaid-cli",
+      "snippet": "Command-line interface for mermaid",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "snippet": "This is a command-line interface (CLI) for [mermaid](https://mermaid.js.org/).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://github.com/andrewginns/mermaid-mcp-server/",
+      "snippet": "Copy `.env.example` to `.env` and fill in your API key",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/abekdwight/mermaid-mcp-server",
+      "snippet": "A [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol/specification) server providing tools for validating and rendering [Mermaid](https://mermaid.js.org/) diagrams.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.74,
+  "notes": "Mermaid CLI is an open‑source command‑line tool with a Node.js API; it does not expose a REST or GraphQL endpoint, requires no authentication, and has no pricing or access restrictions. No MCP server is bundled with the CLI itself, though community MCP servers exist that wrap it. | pre-filter dropped 2 page(s) as not about Mermaid CLI: https://www.npmjs.com/package/@mermaidchart/cli, https://github.com/tci-nebula/mermaid-mcp | dropped during extraction: evidence for api_type: snippet has no api_type language; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: api_type='CLI-only' via retrieval; auth='API key' via retrieval; mcp='official' via retrieval | mcp downgraded from official to community, its only evidence is a page the app does not own | confidence: access is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 9 tried"
+}

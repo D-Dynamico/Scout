@@ -1,0 +1,77 @@
+{
+  "app_id": 95,
+  "name": "Reducto",
+  "website": "https://reducto.ai",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Reducto offers a RESTful API for parsing, extracting, splitting, classifying, and editing documents, with SDKs in Python, Node.js, and Go, and an official MCP server for agent integration.",
+  "auth": "Bearer",
+  "auth_notes": "Set REDUCTO_API_KEY",
+  "access": "free self-serve",
+  "access_notes": "first 15K credits included",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.reducto.ai",
+  "mcp": "official",
+  "mcp_url": "https://mcp.reducto.ai/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python",
+      "Node.js",
+      "Go"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.reducto.ai/quickstart",
+      "snippet": "curl -X POST \"https://platform.reducto.ai/parse\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.reducto.ai/quickstart",
+      "snippet": "https://docs.reducto.ai",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.reducto.ai/mcp-server",
+      "snippet": "Reducto MCP Server connects AI agents directly to Reducto",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://docs.reducto.ai/mcp-server",
+      "snippet": "https://mcp.reducto.ai/mcp",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://reducto.ai/developers",
+      "snippet": "Sign up at studio.reducto.ai and create an API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.reducto.ai/mcp-server",
+      "snippet": "\"Authorization\": \"Bearer your-api-key\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for auth: snippet has no auth language; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet has no access language; auth nulled, no surviving evidence; access nulled, no surviving evidence; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; auth='Bearer' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,88 @@
+{
+  "app_id": 93,
+  "name": "Fathom",
+  "website": "https://fathom.video",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Fathom is a meeting recording and AI insights platform that offers a public API and MCP server for integrating meeting data with LLMs.",
+  "auth": "API key",
+  "auth_notes": "API keys are created at the user level and can be set via the environment variable FATHOM_API_KEY_AUTH.",
+  "access": "partner or contact-sales",
+  "access_notes": "Rate limiting is 60 calls per minute across all API keys, indicating a free self-serve model.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.fathom.ai/api-reference/meetings/list-meetings",
+  "mcp": "community",
+  "mcp_url": "https://api.fathom.ai/mcp",
+  "stage": "needs partnership outreach",
+  "blocker": "partner or contact-sales",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "fathom-typescript",
+      "fathom_python"
+    ],
+    "webhooks": true,
+    "rate_limits": "Rate Limiting: users can make 60 calls per minute across all of their API keys; this ensures system stability and reliability.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.fathom.ai/sdks/authentication",
+      "snippet": "## API Key Authentication",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://github.com/agencyenterprise/fathom-mcp-server",
+      "snippet": "https://developers.fathom.ai/api-reference/meetings/list-meetings",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://fathom-e4df0608.mintlify.app/mcp-docs",
+      "snippet": "MCP server URL: `https://api.fathom.ai/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://fathom-e4df0608.mintlify.app/mcp-docs",
+      "snippet": "MCP server URL: `https://api.fathom.ai/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://help.fathom.video/en/articles/8368641",
+      "snippet": "Partners can register an OAuth app to be eligible for a future marketplace listing as a Fathom‑approved integration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/agencyenterprise/fathom-mcp-server",
+      "snippet": "| `list_meetings` | List meetings with filters (date, team, recorder, etc.) | [Fathom API](https://developers.fathom.ai/api-reference/meetings/list-meetings) |",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://help.fathom.video/en/articles/8368641",
+      "snippet": "Partners can register an OAuth app to be eligible for a future marketplace listing as a Fathom‑approved integration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "Access is free self-serve but not explicitly stated; API type not confirmed as REST; no review required. | loop A disagreement: access='partner or contact-sales': retrieval chose this sentence, support check disagreed; prod_requires_review=True: retrieval chose this sentence, support check disagreed | retrieval problems: api_breadth: retrieval picked sentence None, out of range | pre-filter dropped 3 page(s) as not about Fathom: https://usefathom.com/api/v1/authentication, https://usefathom.com/api/v1/rate-limits, https://usefathom.com/pricing | retrieval filled: access='partner or contact-sales' via retrieval; api_type='REST' via retrieval; prod_requires_review=True via retrieval | mcp downgraded from official to community, its only evidence is a page the app does not own | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 12 tried"
+}

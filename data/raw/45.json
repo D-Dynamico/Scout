@@ -1,0 +1,59 @@
+{
+  "app_id": 45,
+  "name": "Magento (Adobe Commerce)",
+  "website": "https://business.adobe.com/products/magento/magento-commerce.html",
+  "category": "Ecommerce",
+  "one_liner": "Magento (Adobe Commerce) exposes a REST API that uses token‑based (Bearer) authentication and OAuth 1.0a for integrations, and community MCP extensions enable AI‑driven administration.",
+  "auth": "Bearer",
+  "auth_notes": "Magento supports token‑based authentication via bearer tokens and OAuth 1.0a for third‑party integrations.",
+  "access": "free self-serve",
+  "access_notes": "Merchants can create integrations and obtain consumer keys, secrets, and tokens directly from the admin panel.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/magebitcom/magento2-mcp-module",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+      "snippet": "`Authorization: Bearer `",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/gs-web-api-request",
+      "snippet": "REST web API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/magebitcom/magento2-mcp-module",
+      "snippet": "Extensible MCP module for Magento2",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+      "snippet": "When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "No explicit API breadth count or app‑review requirement is documented; MCP support is community‑provided. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet not on any page; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,52 @@
+{
+  "app_id": 94,
+  "name": "Consensus",
+  "website": "https://consensus.app",
+  "category": "AI, Research and Media-native",
+  "one_liner": "API for searching peer‑reviewed research papers with advanced filters and optional MCP integration.",
+  "auth": "Bearer",
+  "auth_notes": "API key is passed as a Bearer token in the Authorization header.",
+  "access": null,
+  "access_notes": "API usage is included in subscription plans and incurs additional charges beyond plan credits.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://consensus.app/home/api/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.consensus.app/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "30 included API & MCP calls per month",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.consensus.app/consensus-mcp",
+      "snippet": "Authorization: Bearer YOUR_API_KEY",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://consensus.app/home/api/",
+      "snippet": "Read our docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.consensus.app/consensus-mcp",
+      "snippet": "The Consensus MCP server enables AI assistants like ChatGPT, Claude, and other MCP-compatible clients to search over 220 million peer-reviewed academic research papers directly from the conversation.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "api_type and api_breadth are set to null due to lack of explicit statements about the API being REST or its endpoint count. | dropped during extraction: evidence for access: snippet has no access language; access nulled, no surviving evidence | confidence: access is null (-0.10); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

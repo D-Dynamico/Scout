@@ -1,0 +1,11 @@
+{
+  "app_id": 69,
+  "urls": [
+    "https://docs.datadoghq.com/api/latest/",
+    "https://docs.datadoghq.com/api/latest/authentication.md",
+    "https://docs.datadoghq.com/api/latest/usage-metering.md",
+    "https://docs.datadoghq.com/mcp_server.md",
+    "https://docs.datadoghq.com/api/latest/key-management.md",
+    "https://www.datadog.com/pricing"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "app_id": 58,
+  "name": "Sherlock",
+  "website": "https://github.com/sherlock-project/sherlock",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Hunt down social media accounts by username across 400+ social networks",
+  "auth": null,
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://github.com/H4RR1SON/sherlock-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/H4RR1SON/sherlock-mcp",
+      "snippet": "An official [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for the [Covertlabs](https://covertlabs.io) infostealer intelligence platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloudferro.com/en/latest/sherlock/Sherlock-authentication-API-keys-on-CloudFerro-Cloud.html",
+      "snippet": "- Authenticate to Sherlock AI with API keys on CloudFerro Cloud Prerequisites Step 1: Open API Keys Step 2: Start creating a new key Step 3: Generate and copy the key Step 4: Verify that the key was created Using the API key securely Use the API key in a request curl Python",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.46,
+  "notes": "The primary Sherlock repository is a CLI tool with no public API, authentication, or access control. The separate sherlock-mcp repository provides an official MCP server, but it is a self‑hosted service and not a public API. No rate limits, webhooks, or SDKs are documented for the CLI tool. The CloudFerro documentation refers to a different product (Sherlock AI) and is not applicable to this Sherlock project. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | retrieval filled: access='free self-serve' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

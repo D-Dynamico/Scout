@@ -1,0 +1,63 @@
+{
+  "app_id": 23,
+  "name": "Zoho Cliq",
+  "website": "https://www.zoho.com/cliq",
+  "category": "Communications and Messaging",
+  "one_liner": "Zoho Cliq offers a RESTful API for chat, bot, and integration features.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "snippet": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "snippet": "| Client Secret | A unique secret key for your application which you can receive when registering your application in the Zoho API console.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "snippet": "Zoho Cliq's REST API is built on RESTful architecture principles, enabling seamless communication between your applications and the Zoho Cliq platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "snippet": "Any AI model or agent can use our official MCP server to access your Cliq data and do:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "API supports both v2 and v3; v3 is recommended. No explicit rate limits or review process mentioned. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; evidence for api_docs_url: snippet not on any page; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; mcp='official' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

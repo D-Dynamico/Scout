@@ -1,0 +1,76 @@
+{
+  "app_id": 64,
+  "name": "Cloudflare",
+  "website": "https://www.cloudflare.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Cloudflare provides a wide range of cloud services including DNS, CDN, security, and serverless compute.",
+  "auth": "Bearer",
+  "auth_notes": "Cloudflare uses the RFC standard `Authorization: Bearer <API_TOKEN>` interface for API requests.",
+  "access": null,
+  "access_notes": "Create an API token to grant access to the API to perform actions.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.cloudflare.com/api/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.cloudflare.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "npm",
+      "pip",
+      "go",
+      "terraform"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "snippet": "Authorization: Bearer YQSn-xWAQiiEh9qM58wZNnyQS7FUdoqGIUAbrh7T",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+      "snippet": "over 2,500 endpoints",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.cloudflare.com/api/",
+      "snippet": "API Reference | Cloudflare API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+      "snippet": "Cloudflare's own MCP servers",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "snippet": "The stable base URL for all Version 4 HTTPS endpoints is: `https://api.cloudflare.com/client/v4/`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.75,
+  "notes": "No explicit mention of webhooks or rate limits in the provided pages. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval | confidence: access was rejected (-0.15); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,14 @@
+{
+  "app_id": 93,
+  "urls": [
+    "https://usefathom.com/api/v1/authentication",
+    "https://usefathom.com/api/v1/rate-limits",
+    "https://fathom-e4df0608.mintlify.app/mcp-docs",
+    "https://developers.fathom.ai/sdks/authentication",
+    "https://usefathom.com/pricing",
+    "https://github.com/agencyenterprise/fathom-mcp-server",
+    "https://help.fathom.video/en/articles/8368641",
+    "https://help.fathom.video/en/articles/6220097",
+    "https://developers.fathom.ai/mcp-docs"
+  ]
+}

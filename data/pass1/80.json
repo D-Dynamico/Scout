@@ -1,0 +1,64 @@
+{
+  "app_id": 80,
+  "name": "Harvest",
+  "website": "https://www.getharvest.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Harvest offers a RESTful API with OAuth2 and Personal Access Tokens for accessing time tracking, invoicing, and project data.",
+  "auth": null,
+  "auth_notes": "Supports Personal Access Tokens and OAuth2 flows (Authorization Code and Implicit).",
+  "access": "free self-serve",
+  "access_notes": "API access is available to all Harvest accounts, including free and trial.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://help.getharvest.com/api-v2/",
+  "mcp": "official",
+  "mcp_url": "https://api.harvestapp.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Ruby",
+      "PHP",
+      "Python",
+      "Java"
+    ],
+    "webhooks": null,
+    "rate_limits": "Yes, throttling limits exist",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "snippet": "GET https://id.getharvest.com/api/v2/accounts",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "snippet": "The Harvest MCP (Model Context Protocol) connection lets you work with your Harvest data through an AI assistant, using plain language instead of clicking through the app.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "snippet": "Remote MCP server URL to: https://api.harvestapp.com/mcp",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.getharvest.com/blog/2017/09/introducing-harvest-api-v2",
+      "snippet": "The first step involves obtaining a Personal Access Token via your Harvest ID account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.49,
+  "notes": "The API is version 2, fully RESTful, and does not require an app review before use. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; evidence for mcp: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

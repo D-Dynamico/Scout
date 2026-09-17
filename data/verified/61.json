@@ -1,0 +1,79 @@
+{
+  "app_id": 61,
+  "name": "GitHub",
+  "website": "https://github.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "GitHub provides a REST API for accessing repositories, issues, and more.",
+  "auth": "Bearer",
+  "auth_notes": "Authorization: Bearer YOUR-TOKEN",
+  "access": "free self-serve",
+  "access_notes": "You can create a personal access token",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.github.com/en/rest",
+  "mcp": "official",
+  "mcp_url": "https://github.com/github/github-mcp-server?locale=en-US",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Octokit.js",
+      "Octokit.rb"
+    ],
+    "webhooks": true,
+    "rate_limits": "The primary rate limit for unauthenticated requests is 60 requests per hour.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+      "snippet": "Authorization: Bearer YOUR-TOKEN",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+      "snippet": "You can create a personal access token",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.github.com/en/rest",
+      "snippet": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.github.com/en/rest",
+      "snippet": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/github/github-mcp-server?locale=en-US",
+      "snippet": "The GitHub MCP Server connects AI tools directly to GitHub's platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for prod_requires_review: snippet has no prod_requires_review language; prod_requires_review nulled, no surviving evidence | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

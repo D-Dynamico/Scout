@@ -1,0 +1,76 @@
+{
+  "app_id": 89,
+  "name": "Ramp",
+  "website": "https://ramp.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Ramp offers a RESTful Developer API with OAuth2 authentication, providing full access to financial data, cards, bills, and custom records.",
+  "auth": "OAuth2",
+  "auth_notes": "Ramp authenticates requests to /developer/v1/token using your client ID and client secret, typically with HTTP Basic Auth.",
+  "access": "partner or contact-sales",
+  "access_notes": "To receive access to the Ramp APIs in a sandbox or production environment, you must submit a request for Ramp review.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.ramp.com",
+  "mcp": "official",
+  "mcp_url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.ramp.com",
+      "snippet": "Ramp uses OAuth 2.0 for secure API access, providing granular permission control through scopes and supporting multiple authorization flows for different use cases.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.ramp.com",
+      "snippet": "Machine-readable index for Ramp's Developer API documentation.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+      "snippet": "Ramp MCP allows you to securely connect Ramp with AI assistants like ChatGPT and Claude, so you can query Ramp data and take actions with natural language.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://ramp.com/legal/developer-terms/developer-terms/api-agreement",
+      "snippet": "To receive access to the Ramp APIs in a sandbox or production environment, you must submit a request for Ramp review.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+      "snippet": "Tech partners building a product that connects customers' Ramp accounts apply through the Partner Integrations launch checklist.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "No SDKs listed; webhooks supported; rate limits unspecified. | loop A disagreement: access='partner or contact-sales': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'partner or contact-sales'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; api_type nulled, no surviving evidence | retrieval filled: access='partner or contact-sales' via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

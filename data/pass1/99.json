@@ -1,0 +1,66 @@
+{
+  "app_id": 99,
+  "name": "YouTube Transcript",
+  "website": "https://transcriptapi.com",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Fast, API‑driven YouTube transcript extraction with captions, ASR, batch, and translation.",
+  "auth": "Bearer",
+  "auth_notes": "Authorization: Bearer YOUR_API_KEY",
+  "access": "paid plan",
+  "access_notes": "Paid plans start with Basic at 1,200 credits/month, Pro at 4,000 credits/month, and Business at 11,000 credits/month.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://www.youtubetranscript.dev/api-docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.youtubetranscript.dev",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "youtube-audio-transcript-api"
+    ],
+    "webhooks": true,
+    "rate_limits": "The free plan has a rate limit of 1 request per second, Basic includes 25 requests per second, Pro includes 50 requests per second, and Business includes 100 requests per second.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.youtubetranscript.dev/api-docs",
+      "snippet": "Authorization: Bearer YOUR_API_KEY",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://github.com/youtube-transcript-dev/youtube-transcript-api",
+      "snippet": "API Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/jkawamoto/mcp-youtube-transcript/",
+      "snippet": "MCP server retrieving transcripts of YouTube videos",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://yttranscript.ai/api-docs",
+      "snippet": "Subscribe to a paid plan, then go to your Profile and create an API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.74,
+  "notes": "dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'paid plan'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='paid plan' via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

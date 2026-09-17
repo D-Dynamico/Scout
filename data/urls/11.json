@@ -1,0 +1,11 @@
+{
+  "app_id": 11,
+  "urls": [
+    "https://developer.zendesk.com/api-reference/",
+    "https://support.zendesk.com/hc/en-us/articles/4408831452954-How-can-I-authenticate-API-requests",
+    "https://apis.io/plans/zendesk/zendesk-plans-pricing/",
+    "https://github.com/fruggr/zendesk-mcp-server",
+    "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "https://developer.zendesk.com/api-reference/introduction/rate-limits/"
+  ]
+}

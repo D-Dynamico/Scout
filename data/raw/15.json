@@ -1,0 +1,64 @@
+{
+  "app_id": 15,
+  "name": "Pylon",
+  "website": "https://usepylon.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Pylon is an agentic support platform with a pay‑per‑request API for B2B customer issue tracking.",
+  "auth": "Bearer",
+  "auth_notes": "Uses Bearer token in Authorization header.",
+  "access": "partner or contact-sales",
+  "access_notes": "No API keys or accounts required; pay‑per‑request pricing.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.usepylon.com",
+  "stage": "needs partnership outreach",
+  "blocker": "partner or contact-sales",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "maximum of 50 requests in any second, and maximum of 600 requests in any minute",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "snippet": "Authorization: Bearer <token>",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://app.getpylon.com/docs/api",
+      "snippet": "The Pylon API is organized according to REST principles.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+      "snippet": "Pylon MCP Server exposes Pylon data to AI tools that support the Model Context Protocol",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://app.getpylon.com/docs/api",
+      "snippet": "Please contact us if you would like to programmatically create projects via the API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.81,
+  "notes": "No SDKs or webhooks documented; API breadth unknown. | retrieval problems: api_breadth: retrieval picked sentence None, out of range | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet not on any page; api_docs_url nulled, no surviving evidence | retrieval filled: access='partner or contact-sales' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 12 tried"
+}

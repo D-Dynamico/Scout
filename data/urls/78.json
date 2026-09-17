@@ -1,0 +1,11 @@
+{
+  "app_id": 78,
+  "urls": [
+    "https://coda.io/developers/apis/v1",
+    "https://apis.io/security/coda/coda-authentication/",
+    "https://coda.io/apis/v1/openapi.yaml",
+    "https://github.com/vish288/mcp-coda",
+    "https://apis.io/apis/coda/coda-account-api/",
+    "https://apiterms.com/api/coda.io/"
+  ]
+}

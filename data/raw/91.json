@@ -1,0 +1,55 @@
+{
+  "app_id": 91,
+  "name": "NotebookLM",
+  "website": "https://notebooklm.google",
+  "category": "AI, Research and Media-native",
+  "one_liner": "NotebookLM offers no official public API; programmatic access is via unofficial cookie‑based wrappers or a community Model Context Protocol server.",
+  "auth": "Bearer",
+  "auth_notes": "Authentication is performed using browser cookies extracted from a Google session; no API key or OAuth.",
+  "access": null,
+  "access_notes": "The product is free to use, but there is no public API to obtain credentials; only unofficial wrappers exist.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://github.com/teng-lin/notebooklm-py/blob/main/docs/mcp-guide.md",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "notebooklm-py",
+      "notebooklm-ts-api"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://github.com/HenriqueCosta05/notebooklm-ts-api",
+      "snippet": "An **unofficial** Node.js / TypeScript wrapper for [NotebookLM](https://notebooklm.google.com/), providing both a programmatic client library and a self-hosted REST API server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://github.com/teng-lin/notebooklm-py/blob/main/docs/mcp-guide.md",
+      "snippet": "- **Claude Code / Desktop** → the static `NOTEBOOKLM_MCP_TOKEN` bearer (an `Authorization` header).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/teng-lin/notebooklm-py/blob/main/docs/mcp-guide.md",
+      "snippet": "The MCP server exposes NotebookLM to any [Model Context Protocol](https://modelcontextprotocol.io)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.71,
+  "notes": "Official NotebookLM does not provide a public API; all programmatic access is via unofficial cookie‑based wrappers or the community‑maintained MCP server. | dropped during extraction: evidence for auth: rejected, support check says this snippet does not establish auth = 'custom'; evidence for access: snippet has no access language; evidence for api_type: snippet has no api_type language; evidence for mcp: snippet not on any page; access nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; auth='Bearer' via retrieval; mcp='official' via retrieval | confidence: access is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

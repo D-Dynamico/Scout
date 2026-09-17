@@ -1,0 +1,63 @@
+{
+  "app_id": 24,
+  "name": "Lark (Larksuite)",
+  "website": "https://www.larksuite.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Lark (Larksuite) is an enterprise collaboration platform with APIs for messaging, docs, calendar, and more.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node.js",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "webhooks": null,
+    "rate_limits": "Basic API calls limited to 10,000 per month for Standard Edition; unlimited for other editions.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+      "snippet": "Call the Obtain OAuth code API to obtain the login pre-authorization code.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+      "snippet": "curl --location --request GET 'https://open.larksuite.com/open-apis/contact/v3/departments/od-64242a18099d3a31acd24d8fce8dxxxx' \\",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "snippet": "Feishu/Lark official OpenAPI MCP (Model Context Protocol)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+      "snippet": "On the Credentials & Basic Info page, obtain the app credentials App ID and App Secret.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "Access credentials are freely obtainable via developer console; no explicit paid plan or approval required. Webhooks not explicitly documented in provided pages. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | retrieval problems: api_breadth: retrieval picked sentence None, out of range | dropped during extraction: evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for mcp_url: snippet not on any page; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | mcp downgraded from official to community, its only evidence is a page the app does not own | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 10 tried"
+}

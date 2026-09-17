@@ -1,0 +1,85 @@
+{
+  "app_id": 86,
+  "name": "QuickBooks",
+  "website": "https://quickbooks.intuit.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Accounting and invoicing software for small businesses.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "paid plan",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.intuit.com/app/developer/qbo/docs",
+  "mcp": "community",
+  "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      ".Net",
+      "Java",
+      "PHP",
+      "Node.js",
+      "Python",
+      "Ruby"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+      "snippet": "Use the OAuth 2.0 protocol to implement authentication and authorization.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+      "snippet": "Use the OAuth 2.0 protocol to implement authentication and authorization.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "snippet": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": "To make additional API calls beyond this allotment, partners can upgrade to the Silver tier by providing a valid payment method in their account on the Intuit Developer Portal within your Workspace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": "The combination of the endpoint called and HTTP method used determines whether an API call is classified as Core or CorePlus.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": "- Compliance: You must complete an Intuit-approved app assessment questionnaire, accept our updated Intuit Developer Terms of Service, and comply with the Intuit App Partner Program.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "TLS 1.0/1.1 are deprecated; only TLS 1.2+ is supported. | loop A disagreement: access='paid plan': retrieval chose this sentence, support check disagreed; api_type='REST': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for prod_requires_review: snippet has no prod_requires_review language; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='paid plan' via retrieval; api_type='REST' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_type rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

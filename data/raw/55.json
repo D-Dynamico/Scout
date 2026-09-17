@@ -1,0 +1,78 @@
+{
+  "app_id": 55,
+  "name": "Apify",
+  "website": "https://apify.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Apify provides a RESTful API for programmatic access to its platform, including Actors, datasets, and storage.",
+  "auth": "Bearer",
+  "auth_notes": "Apify API uses an API token passed in the Authorization header as a Bearer token.",
+  "access": "free self-serve",
+  "access_notes": "API tokens are available to all users after signing up and can be found on the API & Integrations page in the Apify Console.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.apify.com",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Apify SDK for JavaScript",
+      "Apify SDK for Python",
+      "Apify API client for JavaScript",
+      "Apify API client for Python"
+    ],
+    "webhooks": true,
+    "rate_limits": "The default per-resource rate limit is 60 requests per second per resource, which in this context means a single Actor, a single Actor run, a single dataset, single key-value store etc.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://docs.apify.com/api/v2",
+      "snippet": "The Apify API (version 2) provides programmatic access to the Apify platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.apify.com/api/v2",
+      "snippet": "- Add the token to your request's `Authorization` header as `Bearer `.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.apify.com/api/v2",
+      "snippet": "The Apify API (version 2) provides programmatic access to the Apify platform. The API is organized around RESTful HTTP endpoints.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.apify.com/integrations/mcp.md",
+      "snippet": "The Apify's MCP server (mcp.apify.com) allows AI applications and agents to interact with the Apify platform using Model Context Protocol (MCP).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://docs.apify.com/integrations/mcp.md",
+      "snippet": "https://mcp.apify.com",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.apify.com/integrations/mcp.md",
+      "snippet": "- An Apify account - Sign up for an Apify account, if you don't have one.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "All fields are derived from Apify documentation; no explicit review process is mentioned for API usage. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet not on any page; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

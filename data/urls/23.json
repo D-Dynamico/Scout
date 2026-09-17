@@ -1,0 +1,11 @@
+{
+  "app_id": 23,
+  "urls": [
+    "https://www.zoho.com/cliq/help/restapi/v2/",
+    "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "https://www.zoho.com/cliq/help/restapi/v3/registerclient/",
+    "https://www.zoho.com/cliq/pricing.html"
+  ]
+}

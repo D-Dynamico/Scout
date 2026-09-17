@@ -1,0 +1,77 @@
+{
+  "app_id": 41,
+  "name": "Shopify",
+  "website": "https://www.shopify.com",
+  "category": "Ecommerce",
+  "one_liner": "Shopify provides a suite of REST and GraphQL APIs for store data, storefront, and partner operations.",
+  "auth": "OAuth2",
+  "auth_notes": "Access tokens are obtained via OAuth flows and sent in the X-Shopify-Access-Token header.",
+  "access": "admin approval",
+  "access_notes": "Merchants must approve the app to grant access tokens.",
+  "api_type": "GraphQL",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://shopify.dev/docs/api",
+  "mcp": null,
+  "mcp_url": null,
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Ruby",
+      "Node",
+      "PHP",
+      "Go",
+      ".NET"
+    ],
+    "webhooks": true,
+    "rate_limits": "All APIs are subject to rate limits.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://shopify.dev/docs/api/usage/authentication",
+      "snippet": "OAuth, usually token exchange",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://shopify.dev/docs/api",
+      "snippet": "GraphQL Admin API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://shopify.dev/docs/api",
+      "snippet": "Shopify APIs, libraries, and tools",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://shopify.dev/docs/api/usage",
+      "snippet": "- With a few APIs, you’ll need to request access from Shopify and be approved before you can start making calls.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing",
+      "snippet": "Shopify App Pricing is the default option when you submit a new public app for approval.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.75,
+  "notes": "api_breadth set to null due to lack of explicit endpoint count; est_time for review is unknown. | loop A disagreement: prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'admin approval'; evidence for prod_requires_review: rejected, support check says this snippet does not establish prod_requires_review = True; mcp nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; prod_requires_review=True via retrieval | confidence: api_breadth rests on weak evidence (-0.06); mcp is null (-0.04); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}

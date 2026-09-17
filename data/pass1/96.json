@@ -1,0 +1,59 @@
+{
+  "app_id": 96,
+  "name": "Devin",
+  "website": "https://devin.ai",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Devin is an AI software engineer that can write, run, and test code via API and CLI.",
+  "auth": null,
+  "auth_notes": "Tokens are prefixed with 'cog_' and used in the Authorization header as a Bearer token.",
+  "access": "free self-serve",
+  "access_notes": "API access is available on paid plans such as Pro, Max, and Teams.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.devin.ai/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Devin CLI"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "snippet": "curl -X GET \"https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions\" \\",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "snippet": "Generate an API key — the key starts with `cog_` and is shown only once at creation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.devin.ai/",
+      "snippet": "claude mcp add -s user -t http deepwiki https://mcp.devin.ai/mcp -H \"Authorization: Bearer <API_KEY>\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.56,
+  "notes": "No explicit mention of a review process for API usage; API credentials are generated via the web UI and used immediately. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for auth: snippet has no auth language; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet has no access language; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet not on any page; evidence for mcp: snippet not on any page; auth nulled, no surviving evidence; access nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

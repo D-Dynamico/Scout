@@ -1,0 +1,81 @@
+{
+  "app_id": 22,
+  "name": "Twilio",
+  "website": "https://www.twilio.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Twilio provides a RESTful API for messaging, voice, email, and other communication services.",
+  "auth": "Basic",
+  "auth_notes": "To authenticate requests to the Twilio APIs, use HTTP Basic authentication. Use your API key SID as the username and your API key secret as the password.",
+  "access": "free self-serve",
+  "access_notes": "When you create a Twilio account, you start with a free 30-day trial that lets you explore Twilio products before upgrading.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://www.twilio.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.twilio.com/docs",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node",
+      "Python",
+      "C#",
+      "Java",
+      "Go",
+      "PHP",
+      "Ruby"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "snippet": "To authenticate requests to the Twilio APIs, use HTTP Basic authentication. Use your API key SID as the username and your API key secret as the password.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.twilio.com/docs/usage/api",
+      "snippet": "The Twilio APIs are organized around REST.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "snippet": "over 1,800 endpoints across 30+ products",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "snippet": "https://www.twilio.com/docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "snippet": "The Twilio Model Context Protocol (MCP) server gives AI coding agents direct, structured access to Twilio's full API surface—over 1,800 endpoints across 30+ products—without leaving your IDE.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "snippet": "You can create an API key either in the Twilio Console or using the API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.9,
+  "notes": "dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free trial' | retrieval filled: access='free self-serve' via retrieval | confidence: prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

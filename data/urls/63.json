@@ -1,0 +1,11 @@
+{
+  "app_id": 63,
+  "urls": [
+    "https://docs.netlify.com/api/get-started/",
+    "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+    "https://www.netlify.com/pricing/?category=developer",
+    "https://github.com/netlify/netlify-mcp",
+    "https://open-api.netlify.com/",
+    "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans"
+  ]
+}

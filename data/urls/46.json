@@ -1,0 +1,11 @@
+{
+  "app_id": 46,
+  "urls": [
+    "https://developers.squarespace.com",
+    "https://developers.squarespace.com/commerce-apis/making-requests",
+    "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "https://developers-preview.squarespace.com/mcp/overview",
+    "https://apis.io/security/squarespace/squarespace-authentication/",
+    "https://raw.githubusercontent.com/api-evangelist/squarespace/refs/heads/main/authentication/squarespace-authentication.yml"
+  ]
+}

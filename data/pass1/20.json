@@ -1,0 +1,66 @@
+{
+  "app_id": 20,
+  "name": "Gladly",
+  "website": "https://www.gladly.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Gladly offers a REST API with token‑based Basic Authentication and webhooks, accessible via a free self‑serve developer portal.",
+  "auth": "Basic",
+  "auth_notes": "Gladly API uses token-based **Basic Authentication**.",
+  "access": "admin approval",
+  "access_notes": "You must create an API token to access Gladly API resources.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://www.stackone.com/connectors/gladly/mcp/",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Chat SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "Gladly enforces strict API quotas.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://apis.io/security/gladly/gladly-authentication/",
+      "snippet": "Gladly API uses token-based **Basic Authentication**.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.gladly.com/rest/index.html",
+      "snippet": "Clients can access the REST API via HTTPS at your organization's Gladly domain (e.g.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+      "snippet": "For integrations not built by Gladly, a Gladly Administrator should create a new user with an API role + Agent and/or Administrator (check with your integration partner to confirm the required roles) account for each integration.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "snippet": "StackOne's Gladly MCP server ships with 65 pre-built actions, fully extensible via the Connector Builder — plus managed authentication, prompt injection defense, observability, and agent execution runtime.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "No explicit mention of MCP support or app review process. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_docs_url: snippet not on any page; api_docs_url nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; mcp='community' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

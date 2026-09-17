@@ -1,0 +1,69 @@
+{
+  "app_id": 50,
+  "name": "fanbasis",
+  "website": "https://fanbasis.com",
+  "category": "Ecommerce",
+  "one_liner": "FanBasis is a platform that lets creators sell digital products and services with built‑in checkout, subscriptions, and webhooks.",
+  "auth": "API key",
+  "auth_notes": "No OAuth, no client ID/secret pairs — Fanbasis uses a single API key with separate test/live environments.",
+  "access": "free self-serve",
+  "access_notes": "Keys created with the default settings carry all scopes, so most integrations never see a 403.",
+  "api_type": null,
+  "api_breadth": "small",
+  "api_docs_url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+  "mcp": "official",
+  "mcp_url": "https://zapier.com/mcp/fanbasis",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "@fanbasis/checkout-sdk",
+      "laravel-payments"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "snippet": "**API Key** — [FanBasis Dashboard → API Keys](https://www.fanbasis.com).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "snippet": "> **API Reference:** [apidocs.fan](https://apidocs.fan)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://zapier.com/mcp/fanbasis",
+      "snippet": "Zapier MCP — FanBasis",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://commasdocs.com/",
+      "snippet": "Create and copy keys in your dashboard under Account → API Keys (CLI: `commas keys add sandbox`).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://commasdocs.com/",
+      "snippet": "Seven new endpoints under `/public-api/invoices`: creating an invoice also emails it to the recipient with a hosted payment page, plus list/get, next sequential number, resend (payment reminder), void, and mark-paid.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.74,
+  "notes": "None | loop A disagreement: api_breadth='small': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_breadth='small' via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

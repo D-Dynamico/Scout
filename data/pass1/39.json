@@ -1,0 +1,76 @@
+{
+  "app_id": 39,
+  "name": "Threads (Meta)",
+  "website": "https://www.threads.net",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Meta Threads API allows developers to publish posts, manage replies, retrieve media, and access insights on Threads.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses OAuth 2.0 with short‑lived (1 hour) and long‑lived (60 days) tokens, refreshable after 24 hours.",
+  "access": "admin approval",
+  "access_notes": "Credentials are free, but production use requires Meta App Review for non‑tester users.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.facebook.com/docs/threads",
+  "mcp": "official",
+  "mcp_url": "https://github.com/sergekostenchuk/threads-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "large",
+      "reason": "support check says this snippet does not establish api_breadth = 'large'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "Calls within 24 hours = 4,800 × Number of Impressions, with a floor of 10 impressions.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/docs/threads/get-started/",
+      "snippet": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.facebook.com/docs/threads",
+      "snippet": "Threads API | Developer Platform",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.facebook.com/docs/threads/get-started/",
+      "snippet": "In order for app users without a role on your app to be able to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.blotato.com/blog/threads-api-pricing",
+      "snippet": "Create a Meta app, add the Threads use case, request the permissions you need (start with `threads_basic` and `threads_content_publish`), and either invite yourself as a Threads Tester for development or submit each permission to Meta App Review for production users.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/sergekostenchuk/threads-mcp",
+      "snippet": "Complete Model Context Protocol (MCP) server for Meta's Threads platform with OAuth authentication, media uploads, analytics, and enterprise features.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "The API is free to use but requires App Review for production access. Rate limits are based on impressions (4,800 × impressions) with a 24‑hour publishing cap of 250 posts, 1,000 replies, 100 deletions, and 500 location searches. | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; evidence for api_breadth: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'large'; evidence for mcp: snippet not on any page; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; mcp='official' via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

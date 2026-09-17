@@ -1,0 +1,75 @@
+{
+  "app_id": 4,
+  "name": "Attio",
+  "website": "https://attio.com",
+  "category": "CRM and Sales",
+  "one_liner": "Attio is a highly customisable, data‑driven CRM platform that offers a REST API, an App SDK, MCP, and SQL access for building integrations, automations, and data pipelines.",
+  "auth": "Bearer",
+  "auth_notes": "Attio uses OAuth 2.0 to issue bearer tokens that are passed in the Authorization header.",
+  "access": "free self-serve",
+  "access_notes": "API credentials can be created in the developer console on any Attio plan, including the free plan.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.attio.com/rest-api/guides/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.attio.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "App SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": "Authorization: Bearer <access_token>",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": "Authenticating requests - Attio Docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.usecarly.com/blog/attio-mcp/",
+      "snippet": "Attio has an official MCP server. It’s a hosted, remote server at `mcp.attio.com/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://www.usecarly.com/blog/attio-mcp/",
+      "snippet": "Attio has an official MCP server. It’s a hosted, remote server at `mcp.attio.com/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": "If you only need a token for a single workspace, you can generate an API key in the developer settings page of your apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.revenueflow.com/blog/attio-review",
+      "snippet": "The developer surface is unusually broad for a CRM at this price point: attio.com/pricing lists API and webhook access, an App SDK and an MCP server on every plan including the free one, and the documentation host describes four developer entry points, the App SDK, the REST API, MCP and SQL queries against workspace data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Rate limits are not specified in the provided pages; no evidence of a required app review was found. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; api_type nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

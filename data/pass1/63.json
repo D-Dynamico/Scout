@@ -1,0 +1,55 @@
+{
+  "app_id": 63,
+  "name": "Netlify",
+  "website": "https://www.netlify.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Netlify provides a REST API for managing sites, deploys, forms, DNS, and more.",
+  "auth": "OAuth2",
+  "auth_notes": "To authenticate API requests, include the token in the authorization header: Authorization: Bearer <token>.",
+  "access": null,
+  "access_notes": "To generate a personal access token (PAT): 1. Go to Applications > Personal access tokens. 2. Select New access token.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://github.com/netlify/netlify-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Go Client",
+      "JS Client"
+    ],
+    "webhooks": null,
+    "rate_limits": "You can make up to 500 requests per minute for most requests.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.netlify.com/api/get-started/",
+      "snippet": "Netlify uses OAuth2 for authentication.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.netlify.com/api/get-started/",
+      "snippet": "Use the Netlify REST API to manage atomic deploys of your sites and apps, manage form submissions, inject JavaScript snippets, manage DNS, and so much more.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/netlify/netlify-mcp",
+      "snippet": "[Netlify MCP Server](https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server/) follows the [Model Context Protocol (MCP)](https://modelcontextprotocol.org) to enable code agents to use the Netlify API and CLI—so they can create new projects, build, deploy, and manage your Netlify resources using natural language prompts.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.71,
+  "notes": "api_docs_url and mcp_url are omitted because the pages do not explicitly list those URLs. | dropped during extraction: evidence for access: snippet not on any page; evidence for mcp: snippet not on any page; access nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: mcp='official' via retrieval | confidence: access is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

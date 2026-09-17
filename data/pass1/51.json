@@ -1,0 +1,72 @@
+{
+  "app_id": 51,
+  "name": "DataForSEO",
+  "website": "https://dataforseo.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "DataForSEO offers RESTful SEO data APIs with pay‑as‑you‑go pricing and an MCP server for AI assistants.",
+  "auth": "Basic",
+  "auth_notes": "Basic Authentication using login and password encoded in Base64.",
+  "access": "free self-serve",
+  "access_notes": "Pay‑as‑you‑go model with $1 free trial credit and $50 minimum deposit.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.dataforseo.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.dataforseo.com/v3/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "PHP",
+      "C#",
+      "Java",
+      "Python",
+      "TypeScript"
+    ],
+    "webhooks": null,
+    "rate_limits": "Rate limit HTTP headers we use: X-RateLimit-Limit – the rate limit ceiling per minute for the given endpoint; X-RateLimit-Remaining – the number of requests remaining in the current rate limit window.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash=",
+      "snippet": "DataForSEO is using the Basic Authentication, which makes it possible to call our APIs with almost any programming language, Postman app, REST API platforms, and all major frameworks.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.dataforseo.com",
+      "snippet": "DataForSEO API is using the REST technology for interchanging data between your application and our service.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.dataforseo.com",
+      "snippet": "DataForSEO API v.3",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://dataforseo.com/seo-mcp-server",
+      "snippet": "The DataForSEO MCP server connects Claude, Cursor, and any MCP-compatible agent to seven live SEO APIs.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash=",
+      "snippet": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard to find your API login and password, which you’ll need to authenticate and use the DataForSEO APIs.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "No explicit mention of app review or webhooks; API breadth not quantified. | dropped during extraction: evidence for access: snippet not on any page; access nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

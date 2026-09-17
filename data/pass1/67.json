@@ -1,0 +1,65 @@
+{
+  "app_id": 67,
+  "name": "Snowflake",
+  "website": "https://www.snowflake.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Snowflake is a cloud data platform that separates storage and compute for scalable analytics.",
+  "auth": "OAuth2",
+  "auth_notes": "Supports OAuth, key pair JWT, programmatic access token, and workload identity federation.",
+  "access": "free self-serve",
+  "access_notes": "Snowflake offers a free trial account for API access.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+  "mcp": "official",
+  "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Snowpark for Python",
+      "Snowpark for Java",
+      "Snowpark for Scala",
+      "Snowpark for .NET",
+      "Snowflake CLI"
+    ],
+    "webhooks": false,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+      "snippet": "To use OAuth, follow these steps:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+      "snippet": "Authenticating %sf-rest% with Snowflake",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating.md",
+      "snippet": "$ snow connection generate-jwt --account <account_identifier> --user <user> --private-key-path <path>/rsa_key.p8",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "snippet": "Snowflake supports Model Context Protocol revision `2025-11-25`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.53,
+  "notes": "loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; mcp='official': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_type: snippet has no api_type language; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; api_type nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); mcp rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

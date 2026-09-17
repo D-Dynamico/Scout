@@ -1,0 +1,69 @@
+{
+  "app_id": 79,
+  "name": "Smartsheet",
+  "website": "https://www.smartsheet.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Smartsheet API provides RESTful access to sheets, folders, users, attachments, and more, with OAuth2 and API key authentication.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "paid plan",
+  "access_notes": null,
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://smartsheet.com/developers",
+  "mcp": "official",
+  "mcp_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C#"
+    ],
+    "webhooks": null,
+    "rate_limits": "30 requests per minute per API token for file attachment posting",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "snippet": "If your scenario involves user consent and interaction, it's typically best to use OAuth with Smartsheet. Note that the Smartsheet implementation of OAuth 2.0 is a 3-legged process, which requires human intervention.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "snippet": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://smartsheet.com/developers",
+      "snippet": "Explore API docs, connect to our MCP server, develop faster on SDKs, and join a thriving community building on Smartsheet.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "snippet": "Unlock the power of AI by connecting Smartsheet with Claude, ChatGPT, and other AI clients through the Smartsheet MCP (Model Context Protocol) server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.74,
+  "notes": "Webhooks are not documented in the provided pages. | dropped during extraction: evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

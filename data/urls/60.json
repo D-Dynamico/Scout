@@ -1,0 +1,11 @@
+{
+  "app_id": 60,
+  "urls": [
+    "https://developers.clay.com/public-api/authentication",
+    "https://university.clay.com/docs/clay-api-cli",
+    "https://university.clay.com/docs/connect-to-clay-mcp",
+    "https://developers.clay.com/quickstart",
+    "https://apis.io/plans/clay-com/clay-com-plans-pricing/",
+    "https://apis.io/apis/clay-com/mcp/"
+  ]
+}

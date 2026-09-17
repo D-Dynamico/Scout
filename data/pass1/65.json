@@ -1,0 +1,64 @@
+{
+  "app_id": 65,
+  "name": "Supabase",
+  "website": "https://supabase.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Supabase offers a RESTful API with optional GraphQL, SDKs, and MCP integration for AI tools.",
+  "auth": null,
+  "auth_notes": "Supabase Auth uses JSON Web Tokens (JWTs) for authentication.",
+  "access": null,
+  "access_notes": "Supabase provides free and paid plans, allowing self-serve access to API keys.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://supabase.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.supabase.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "JavaScript",
+      "Flutter",
+      "Python",
+      "C#",
+      "Swift",
+      "Kotlin"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://supabase.com/docs",
+      "snippet": "Data REST API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://supabase.com/docs",
+      "snippet": "Supabase Docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+      "snippet": "The hosted Supabase MCP server is available at `https://mcp.supabase.com/mcp`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "API breadth not explicitly quantified; documentation lists many endpoints but no count. | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: snippet has no api_breadth language; evidence for mcp: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | confidence: auth is null (-0.10); access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

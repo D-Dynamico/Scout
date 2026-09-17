@@ -1,0 +1,73 @@
+{
+  "app_id": 83,
+  "name": "Binance",
+  "website": "https://www.binance.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Binance is a global cryptocurrency exchange offering spot, futures, and other trading services with a comprehensive API.",
+  "auth": "API key",
+  "auth_notes": "SIGNED endpoints require an additional parameter, signature, to be sent in the query string or request body.",
+  "access": "free self-serve",
+  "access_notes": "Binance API pricing is essentially free for the vast majority of use cases. You can grab a binance free api key in under two minutes.",
+  "api_type": null,
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.binance.com/en",
+  "mcp": "community",
+  "mcp_url": "https://github.com/nirholas/Binance-MCP",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": false,
+    "rate_limits": "Binance uses a weight-based system with 1200 weight units per minute per IP.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md",
+      "snippet": "* Each endpoint has a security type indicating required API key permissions, shown next to the endpoint name (e.g., [New order (TRADE)](#new-order-trade).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md",
+      "snippet": "* `SIGNED` endpoints require an additional parameter, `signature`, to be sent in the `query string` or `request body`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://binance-docs.github.io/apidocs/",
+      "snippet": "https://developers.binance.com/en",
+      "fetcher": "http",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/nirholas/Binance-MCP",
+      "snippet": "The most comprehensive Model Context Protocol server for Binance",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://voiceofchain.com/academy/binance-api-pricing",
+      "snippet": "You can grab a binance free api key in under two minutes, and there's no monthly subscription, no credit card required, and no per-call charges for market data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://github.com/nirholas/Binance-MCP",
+      "snippet": "**The most comprehensive Model Context Protocol server for Binance — 478+ tools covering the entire Binance.com API**",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.8,
+  "notes": "None | dropped during extraction: evidence for auth: snippet not on any page; evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for auth_notes: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for access: snippet not on any page; evidence for api_type: snippet not on any page; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'large'; evidence for prod_requires_review: snippet not on any page; api_type nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_breadth='large' via retrieval | confidence: api_type is null (-0.10); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

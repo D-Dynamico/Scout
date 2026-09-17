@@ -1,0 +1,71 @@
+{
+  "app_id": 47,
+  "name": "Ecwid",
+  "website": "https://www.ecwid.com",
+  "category": "Ecommerce",
+  "one_liner": "Ecwid provides a REST API for accessing and managing store data, including products, orders, customers, and more.",
+  "auth": "OAuth2",
+  "auth_notes": "Use a Bearer token (secret token) for API requests.",
+  "access": "paid plan",
+  "access_notes": "API access requires a paid plan.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://ecwid.usefulapi.io/mcp",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "https://my.ecwid.com/#develop-apps",
+    "process": "Create a custom app in the Ecwid admin to obtain access tokens.",
+    "contact": "https://support.ecwid.com/hc/en-us",
+    "est_time": "minutes"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "snippet": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+      "snippet": "Only stores on paid plans can access API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "snippet": "All requests to Ecwid REST API require an access token.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://claudeskills.info/mcp/usefulapi/ecwid/",
+      "snippet": "Ecwid MCP Server by usefulapi | Claude Skills Hub",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "gate",
+      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+      "snippet": "You can manage API access to your store data right in the Ecwid admin, through the app dashboard.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.81,
+  "notes": "No SDKs provided; rate limits not documented. | dropped during extraction: evidence for api_docs_url: snippet not on any page; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | confidence: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

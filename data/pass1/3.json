@@ -1,0 +1,79 @@
+{
+  "app_id": 3,
+  "name": "Pipedrive",
+  "website": "https://www.pipedrive.com",
+  "category": "CRM and Sales",
+  "one_liner": "Pipedrive offers a RESTful CRM API with extensive endpoints, OAuth2 and API key authentication, webhooks, SDKs, and official MCP support for AI assistants.",
+  "auth": "OAuth2",
+  "auth_notes": "Pipedrive accepts both API tokens and OAuth 2.0 access tokens for authentication.",
+  "access": "free self-serve",
+  "access_notes": "An API token is available with every plan, allowing free self‑serve access.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "mcp": "official",
+  "mcp_url": "https://www.pipedrive.com/en/features/mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node.js",
+      "PHP",
+      "Python",
+      ".NET",
+      "Ruby"
+    ],
+    "webhooks": true,
+    "rate_limits": "Token‑based rate limiting with a daily budget and burst limits per plan.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.pipedrive.com/tutorials/adding-leads-to-pipedrive",
+      "snippet": "For authentication with OAuth 2.0",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "snippet": "RESTful Pipedrive API v1",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "snippet": "hundreds of endpoints",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://pipedrive.readme.io/docs/hello-world-tutorial",
+      "snippet": "https://developers.pipedrive.com/docs/api/v1",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "snippet": "Pipedrive MCP (Model Context Protocol) connects your AI assistant directly to Pipedrive",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/hello-world-tutorial",
+      "snippet": "- (optional) a Developer Sandbox account (you don't need to have one, but you can create it if you're interested in building an app with Pipedrive or need an environment just for testing)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.75,
+  "notes": "The API supports both API key and OAuth2; rate limiting is token‑based with daily budgets and burst limits; MCP is an official feature; no app review is required for using the API. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve' | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

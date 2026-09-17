@@ -1,0 +1,66 @@
+{
+  "app_id": 76,
+  "name": "Monday.com",
+  "website": "https://monday.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "An expressive GraphQL API to interact with monday.com workflows, automate processes, and power integrations.",
+  "auth": "Bearer",
+  "auth_notes": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+  "access": "free self-serve",
+  "access_notes": "All users with API access can follow these steps to access their API token:",
+  "api_type": "GraphQL",
+  "api_breadth": "small",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+      "snippet": "The Platform MCP is monday.com's hosted MCP (Model Context Protocol) server, maintained by the monday.com AI team.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.monday.com/api-reference/docs/developer-sandbox-account",
+      "snippet": "Sign up for a free monday.com developer account to build and test apps and API integrations in a sandbox separate from your production data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.monday.com/api-reference/docs",
+      "snippet": "The monday.com API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "snippet": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developer.monday.com/api-reference/docs/getting-started",
+      "snippet": "GraphQL APIs use a single endpoint for all operations (unlike REST APIs).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.81,
+  "notes": "No SDKs, webhooks, or rate limits are documented. No app review process is mentioned. | loop A disagreement: api_breadth='small': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: snippet has no access language; evidence for api_type: snippet not on any page; evidence for api_docs_url: snippet not on any page; auth nulled, no surviving evidence; access nulled, no surviving evidence; api_type nulled, no surviving evidence; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='GraphQL' via retrieval; auth='Bearer' via retrieval; api_breadth='small' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

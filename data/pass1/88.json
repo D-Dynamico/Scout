@@ -1,0 +1,76 @@
+{
+  "app_id": 88,
+  "name": "Brex",
+  "website": "https://www.brex.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Brex is a unified spend platform offering corporate cards, expense management, and financial services with an API for custom workflows.",
+  "auth": "Bearer",
+  "auth_notes": "User tokens will expire if they are not used to make an API call for 90 days.",
+  "access": "partner or contact-sales",
+  "access_notes": "If your user token is compromised, make sure to revoke it.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.brex.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://api.brex.com/mcp",
+  "stage": "needs partnership outreach",
+  "blocker": "partner or contact-sales",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.brex.com/guides/authentication",
+      "snippet": "Authorization: \"Bearer {{your user_token here}}\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.brex.com",
+      "snippet": "Brex APIs use the REST architecture, are defined using the OpenAPI specification",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.brex.com",
+      "snippet": "Explore our guides and review our API documentation to see how you can integrate with Brex.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.brex.com/docs/mcp",
+      "snippet": "The Brex MCP server lets AI assistants interact directly with your Brex account",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "snippet": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'admin approval'; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown' | retrieval filled: access='partner or contact-sales' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,82 @@
+{
+  "app_id": 71,
+  "name": "Notion",
+  "website": "https://www.notion.so",
+  "category": "Productivity and Project Management",
+  "one_liner": "Notion API allows reading, creating, and updating pages, databases, users, comments, and more via REST.",
+  "auth": "Bearer",
+  "auth_notes": "Requests use the HTTP `Authorization` header to both authenticate and authorize operations. The Notion API accepts bearer tokens in this header.",
+  "access": "free self-serve",
+  "access_notes": "You can create your own, internal connections, public connections, and personal access tokens — all powered by the same REST API.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.notion.com",
+  "mcp": "community",
+  "mcp_url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript"
+    ],
+    "webhooks": true,
+    "rate_limits": "The Notion API enforces two rate limits: Per connection — an average of three requests per second, with some bursts beyond the average allowed.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.notion.com/reference/authentication",
+      "snippet": "Requests use the HTTP `Authorization` header to both authenticate and authorize operations. The Notion API accepts bearer tokens in this header.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.notion.com",
+      "snippet": "With the REST API, you can read, create, and update nearly everything in a workspace — pages, databases, users, comments, and more.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.notion.com",
+      "snippet": "https://developers.notion.com",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "snippet": "https://mcp.notion.com/mcp",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "snippet": "The fastest way to start building is the Quickstart — create a personal access token, make your first API request, and see a new page appear in your workspace in under two minutes.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.notion.com",
+      "snippet": "Public connections must undergo a Notion security review before being listed on the Marketplace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "snippet": "If you need headless or fully automated access, you can use the [open-source MCP server](https://github.com/makenotion/notion-mcp-server) with a Notion API token, though this package is no longer actively maintained.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; evidence for prod_requires_review: rejected, support check says this snippet does not establish prod_requires_review = False | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval; mcp='community' via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

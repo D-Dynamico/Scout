@@ -1,0 +1,76 @@
+{
+  "app_id": 26,
+  "name": "Discord",
+  "website": "https://discord.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Discord provides a REST API for interacting with Discord data, including bots, slash commands, and gateway events.",
+  "auth": "OAuth2",
+  "auth_notes": "Authentication can be performed with a bot token or an OAuth2 bearer token.",
+  "access": "admin approval",
+  "access_notes": "No cost; credentials are issued directly in the Developer Portal.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/pasympa/discord-mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "discord.js",
+      "discord.py"
+    ],
+    "webhooks": true,
+    "rate_limits": "The HTTP API implements a process for limiting and preventing excessive requests in accordance with RFC 6585.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.discord.com/developers/reference",
+      "snippet": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/pasympa/discord-mcp",
+      "snippet": "Manage your entire Discord server from **Claude Desktop**, **Claude Code**, **Cursor**, **VS Code Copilot**, or any MCP-compatible client.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/discord/discord-api-docs/48d3c2d324796d8236355262ace3b22c1d29acb0/docs/policies_and_agreements/Developer_Terms_of_Service.md",
+      "snippet": "Without limiting the foregoing, we may also require that you submit your Application for our review and approval in various circumstances (e.g., to approve access to certain APIs or API Data, when use of your Application reaches certain thresholds, or to review compliance with the Terms) (“App Review”).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth",
+      "url": "https://docs.discord.com/developers/reference",
+      "snippet": "Using an OAuth2 bearer token gained through the [OAuth2 API](/developers/topics/oauth2).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "The API is free to use and requires no application review, but privileged intents (e.g., Message Content) may require verification for large bots. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet has no access language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; access nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; auth='OAuth2' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: auth: pass1 said 'OAuth2', second model said 'API key'; access: pass1 said 'admin approval', second model said 'free self-serve'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

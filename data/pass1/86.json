@@ -1,0 +1,83 @@
+{
+  "app_id": 86,
+  "name": "QuickBooks",
+  "website": "https://quickbooks.intuit.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Accounting and invoicing software for small businesses",
+  "auth": "OAuth2",
+  "auth_notes": "Access tokens are valid for 3,600 seconds (or one hour).",
+  "access": "paid plan",
+  "access_notes": "Create your app on the Intuit Developer Portal and select the QuickBooks Online Accounting scope.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.intuit.com/app/developer/qbo/docs",
+  "mcp": "community",
+  "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": {
+    "api_breadth": {
+      "value": "large",
+      "reason": "support check says this snippet does not establish api_breadth = 'large'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      ".Net",
+      "Java",
+      "PHP",
+      "Node.js",
+      "Python",
+      "Ruby"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+      "snippet": "Use the OAuth 2.0 protocol to implement authentication and authorization.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+      "snippet": "Start by signing in to your developer account and creating an app on the Intuit Developer Portal.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "snippet": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": "To make additional API calls beyond this allotment, partners can upgrade to the Silver tier by providing a valid payment method in their account on the Intuit Developer Portal within your Workspace.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": "- Compliance: You must complete an Intuit-approved app assessment questionnaire, accept our updated Intuit Developer Terms of Service, and comply with the Intuit App Partner Program.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Webhooks and rate limits are not explicitly documented in the provided pages. The API breadth is inferred from the MCP server’s coverage of 29 entity types and 11 reports, indicating a large API surface. | loop A disagreement: access='paid plan': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: snippet was paraphrased, snapped to the real sentence; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'large'; evidence for mcp: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence | retrieval filled: access='paid plan' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

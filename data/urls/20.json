@@ -1,0 +1,11 @@
+{
+  "app_id": 20,
+  "urls": [
+    "https://developer.gladly.com",
+    "https://developer.gladly.com/rest/index.html",
+    "https://www.stackone.com/connectors/gladly/mcp/",
+    "https://apis.io/security/gladly/gladly-authentication/",
+    "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+    "https://truto.one/blog/connect-gladly-to-claude-sync-customer-profiles-and-inbox-workflows/"
+  ]
+}

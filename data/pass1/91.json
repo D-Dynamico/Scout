@@ -1,0 +1,50 @@
+{
+  "app_id": 91,
+  "name": "NotebookLM",
+  "website": "https://notebooklm.google",
+  "category": "AI, Research and Media-native",
+  "one_liner": "NotebookLM provides no official public API; only unofficial cookie‑based wrappers and a community‑maintained MCP server for Model Context Protocol clients.",
+  "auth": null,
+  "auth_notes": "Authentication is performed by extracting browser cookies (Playwright storage_state or CDP) and using them as a custom cookie header; no API key or OAuth is required.",
+  "access": null,
+  "access_notes": "There is no public consumer API; only unofficial wrappers and the MCP server are available.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/teng-lin/notebooklm-py",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "auth": {
+      "value": "custom",
+      "reason": "support check says this snippet does not establish auth = 'custom'"
+    },
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "notebooklm-py",
+      "notebooklm-ts-api"
+    ],
+    "webhooks": false,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/teng-lin/notebooklm-py/blob/main/docs/mcp-guide.md",
+      "snippet": "The MCP server exposes NotebookLM to any [Model Context Protocol](https://modelcontextprotocol.io)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.36,
+  "notes": "The official product offers no public API; all programmatic access is via unofficial cookie‑based wrappers or the community MCP server. No rate limits or webhook support are documented. | dropped during extraction: evidence for auth: rejected, support check says this snippet does not establish auth = 'custom'; evidence for access: snippet has no access language; evidence for api_type: snippet has no api_type language; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for mcp: snippet was paraphrased, snapped to the real sentence; access nulled, no surviving evidence; api_type nulled, no surviving evidence | confidence: auth was rejected (-0.15); access is null (-0.10); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10); everything from one source (-0.10) | pages read: 6 of 6 tried"
+}

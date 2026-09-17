@@ -1,0 +1,11 @@
+{
+  "app_id": 75,
+  "urls": [
+    "https://developers.asana.com/docs",
+    "https://developers.asana.com/docs/personal-access-token",
+    "https://asana.com/terms/developer-terms",
+    "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "https://developers.asana.com/docs/quick-start",
+    "https://asana.com/terms/api-terms-031422"
+  ]
+}

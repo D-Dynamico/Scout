@@ -1,0 +1,11 @@
+{
+  "app_id": 10,
+  "urls": [
+    "https://api.docs.dealcloud.com",
+    "https://api.docs.dealcloud.com/docs/token",
+    "https://salestools.club/apis/dealcloud",
+    "https://api.docs.dealcloud.com/mcp",
+    "https://api.docs.dealcloud.com/docs/apikeys",
+    "https://api.docs.dealcloud.com/mcp/tools"
+  ]
+}

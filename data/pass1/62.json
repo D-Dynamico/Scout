@@ -1,0 +1,73 @@
+{
+  "app_id": 62,
+  "name": "Vercel",
+  "website": "https://vercel.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Vercel is a platform for frontend teams to deploy and host web applications with global CDN, edge functions, and integrated CI/CD.",
+  "auth": "Bearer",
+  "auth_notes": "Access Tokens are OAuth2 bearer tokens issued via Sign in with Vercel.",
+  "access": "free self-serve",
+  "access_notes": "Tokens are obtained through the standard OAuth2 flow without special approval.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://vercel.com/docs/rest-api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.vercel.com",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://vercel.com/docs/sign-in-with-vercel/tokens",
+      "snippet": "When using the Access Token in your application code to fetch the user's data, it must be included in the `Authorization` header as a Bearer token.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://vercel.com/docs/rest-api",
+      "snippet": "# Vercel REST API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://vercel.com/docs/rest-api",
+      "snippet": "# Vercel REST API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://vercel.com/docs/agent-resources/vercel-mcp.md",
+      "snippet": "Vercel MCP is Vercel's official MCP server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://vercel.com/pricing",
+      "snippet": "You can continue to self serve or [contact us](https://vercel.com/contact/sales) to discuss your requirements and we can customize a plan for your team.\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://vercel.com/docs/agent-resources/vercel-mcp.md",
+      "snippet": "To ensure secure access, Vercel MCP only supports AI clients that have been reviewed and approved by Vercel.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.79,
+  "notes": "Vercel provides a comprehensive REST API with many endpoints, OAuth2-based access tokens, and an official MCP server. Documentation covers authentication, token flow, and API usage. No explicit rate limits or webhook support documented. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet has no access language; evidence for api_breadth: snippet not on any page; access nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,84 @@
+{
+  "app_id": 31,
+  "name": "Google Ads",
+  "website": "https://ads.google.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Programmatic interface for managing Google Ads accounts, campaigns, and reporting.",
+  "auth": "OAuth2",
+  "auth_notes": "Requires an OAuth 2.0 access token and a developer token in the developer-token header.",
+  "access": "admin approval",
+  "access_notes": "Developer token must be approved; access levels include Explorer, Basic, and Standard. Standard access requires RMF compliance and an application review.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.google.com/google-ads/api/docs/start",
+  "mcp": "official",
+  "mcp_url": "https://github.com/googleads/google-ads-mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "https://ads.google.com/aw/apicenter",
+    "process": "Fill out the developer token application form and wait for approval.",
+    "contact": "Google Ads API Center support",
+    "est_time": "days to weeks"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python",
+      "Java",
+      "PHP",
+      ".NET",
+      "Ruby"
+    ],
+    "webhooks": false,
+    "rate_limits": "Basic Access allows up to 15,000 API operations per day once approved; Standard Access has unlimited daily operations.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "snippet": "The Google Ads API uses OAuth 2.0 for authorizing API requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "snippet": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.google.com/google-ads/api/docs/concepts/call-structure",
+      "snippet": "Google Ads API is a gRPC API, with REST bindings.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.google.com/google-ads/api/docs/start",
+      "snippet": "The Google Ads API is a programmatic interface for managing Google Ads accounts and campaigns, suitable for large or complex setups.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "snippet": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "snippet": "- `GOOGLE_ADS_MCP_BASE_URL`: The base URL where your MCP server is accessible: this will be automatically assigned by Google Cloud Run after your first deployment.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "None | dropped during extraction: evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; evidence for mcp: snippet not on any page; api_breadth nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: mcp='official' via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

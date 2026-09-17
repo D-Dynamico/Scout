@@ -1,0 +1,73 @@
+{
+  "app_id": 74,
+  "name": "Jira",
+  "website": "https://www.atlassian.com/software/jira",
+  "category": "Productivity and Project Management",
+  "one_liner": "Jira Cloud provides a REST API for accessing issues, projects, boards, and more, using OAuth2 or API token authentication.",
+  "auth": "OAuth2",
+  "auth_notes": "Authentication for Connect add‑ons uses JWT; for direct REST calls OAuth2 is recommended.",
+  "access": "free self-serve",
+  "access_notes": "No paid plans are required to obtain API credentials.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+  "mcp": "official",
+  "mcp_url": "https://atlassian.github.io/atlassian-mcp-server/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.atlassian.com/cloud/jira/software/rest/intro/",
+      "snippet": "OAuth 2.0 - This token-based method is the recommended method.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+      "snippet": "The Jira Cloud platform REST API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/",
+      "snippet": "The Jira REST API enables you to interact with Jira programmatically.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://atlassian.github.io/atlassian-mcp-server/",
+      "snippet": "Official remote MCP server for Atlassian.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://atlassian.github.io/atlassian-mcp-server/",
+      "snippet": "- Scoped token required: Create a personal API token, or ask your admin for a service account API key, with the scopes required for the tools and data you need to access.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://atlassian.github.io/atlassian-mcp-server/",
+      "snippet": "- Admin controls: Site and organization admins can manage, review, or revoke the MCP app’s access from Manage your organization’s Marketplace and third-party apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "No information on rate limits, webhooks, or SDKs was found in the provided pages. | loop A disagreement: prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve' | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}

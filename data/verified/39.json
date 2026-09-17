@@ -1,0 +1,84 @@
+{
+  "app_id": 39,
+  "name": "Threads (Meta)",
+  "website": "https://www.threads.net",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Meta Threads API for creating, publishing, and managing posts, replies, and insights.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses OAuth 2.0 for user access tokens.",
+  "access": "admin approval",
+  "access_notes": "Credentials are free but require App Review for production use.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.facebook.com/docs/threads",
+  "mcp": "community",
+  "mcp_url": "https://github.com/sergekostenchuk/threads-mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "The Threads API limits how often you can call it using a formula tied to impressions. The call cap is counted per app and app-user pair, based on the impressions that user’s Threads account received in the last 24 hours. The 24-hour API call ceiling is: Calls in 24 hours = 4,800 × Number of impressions.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.facebook.com/docs/threads/get-started/",
+      "snippet": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.blotato.com/blog/threads-api-pricing",
+      "snippet": "Meta opened the public version to all developers on June 18, 2024 with read and publish endpoints.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.facebook.com/docs/threads",
+      "snippet": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.facebook.com/docs/threads/get-started/",
+      "snippet": "each permission must first be approved through the App Review process, and your app must be published.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://www.blotato.com/blog/threads-api-pricing",
+      "snippet": "Create a Meta app, add the Threads use case, request the permissions you need (start with `threads_basic` and `threads_content_publish`), and either invite yourself as a Threads Tester for development or submit each permission to Meta App Review for production users.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/sergekostenchuk/threads-mcp",
+      "snippet": "Complete Model Context Protocol (MCP) server for Meta's Threads platform with OAuth authentication, media uploads, analytics, and enterprise features.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.79,
+  "notes": "The API is free but requires App Review for non-testers. Webhooks are supported. The MCP implementation is community-built. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | retrieval problems: api_breadth: retrieval picked sentence None, out of range | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for mcp: snippet not on any page; mcp nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; mcp='official' via retrieval | mcp downgraded from official to community, its only evidence is a page the app does not own | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 12 tried | loop A: access: pass1 said 'admin approval', second model said 'free self-serve'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06)"
+}

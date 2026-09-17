@@ -1,0 +1,89 @@
+{
+  "app_id": 75,
+  "name": "Asana",
+  "website": "https://asana.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Asana provides a RESTful API for accessing and manipulating work data, plus an official MCP server for AI integrations.",
+  "auth": "OAuth2",
+  "auth_notes": "OAuth is recommended for apps that act on behalf of users.",
+  "access": "free self-serve",
+  "access_notes": "You can generate a personal access token from the Asana developer console.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.asana.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.asana.com/v2/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Node.js",
+      "Python",
+      "Ruby",
+      "Java",
+      "Go",
+      "C#",
+      "PHP",
+      "Swift",
+      "Kotlin",
+      "JavaScript"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "snippet": "If you build an app, and the app needs to perform actions on behalf of users (e.g., getting data from Asana or making changes within Asana), you should use OAuth.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "snippet": "You can generate a personal access token from the Asana developer console.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "snippet": "The Asana API is a RESTful interface",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "snippet": "Get started with the API and make your first request",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "snippet": "Asana offers a Model Context Protocol (MCP) server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.asana.com/docs",
+      "snippet": "Set your distribution to “any workspace”, then follow the instructions on the Developer Console > Submit for Review page.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.79,
+  "notes": "No explicit rate limit documentation found; only recommendation for pagination. No GraphQL API documented. | dropped during extraction: evidence for access: support check did not answer, kept weak; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for prod_requires_review: snippet not on any page; prod_requires_review nulled, no surviving evidence | retrieval filled: prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,62 @@
+{
+  "app_id": 97,
+  "name": "higgsfield",
+  "website": "https://higgsfield.ai",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Higgsfield offers a unified REST API for image, video, audio, and 3D generation with an asynchronous request lifecycle and MCP integration.",
+  "auth": "API key",
+  "auth_notes": "The Higgsfield API authenticates with an API key and secret issued from the Higgsfield Cloud dashboard (cloud.higgsfield.ai). Credentials are sent on the Authorization header using the custom \"Key\" scheme: \"Authorization: Key {api_key}:{api_key_secret}\".",
+  "access": "free self-serve",
+  "access_notes": "Create and manage server-side credentials in Higgsfield Cloud.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.higgsfield.ai/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.higgsfield.ai/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python SDK",
+      "JavaScript/TypeScript SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "Rate limits vary based on your subscription plan and model usage.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://apis.io/security/higgsfield/higgsfield-authentication/",
+      "snippet": "The Higgsfield API authenticates with an API key and secret issued from the Higgsfield Cloud dashboard (cloud.higgsfield.ai). Credentials are sent on the Authorization header using the custom \"Key\" scheme: \"Authorization: Key {api_key}:{api_key_secret}\".",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.higgsfield.ai/docs",
+      "snippet": "Generate images, video, audio, and 3D content through one asynchronous API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.directory/blog/higgsfield-mcp-guide",
+      "snippet": "- Higgsfield MCP is a hosted MCP server at`https://mcp.higgsfield.ai/mcp` that exposes 30-plus image and video models as agent tools.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.higgsfield.ai/docs/help/faq",
+      "snippet": "Generate your API credentials from the dashboard",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "No evidence found for prod_requires_review, so it is set to null. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for mcp: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

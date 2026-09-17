@@ -1,0 +1,73 @@
+{
+  "app_id": 100,
+  "name": "Grain",
+  "website": "https://grain.com",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Grain is a meeting analytics platform with a public API for accessing recordings, transcripts, and real-time events.",
+  "auth": "Bearer",
+  "auth_notes": null,
+  "access": "admin approval",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.grain.com/",
+  "mcp": "official",
+  "mcp_url": "https://api.grain.com/_/mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "300 requests per minute per token",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.grain.com/",
+      "snippet": "Authorization: Bearer TOKEN",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "snippet": "For the full technical reference, see developers.grain.com.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://grain.com/release-note/06-18-2025",
+      "snippet": "Official Grain MCP Server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "snippet": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.grain.com/",
+      "snippet": "https://api.grain.com/_/public-api/v2/recordings/pppp6666-qq77-rr88-ss99-tttt00000000/teams/aaaa1111-bb22-cc33-dd44-eeee55555555",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "No evidence of production review or gate process found; access is free self-serve via Starter plan. | loop A disagreement: access='admin approval': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet was paraphrased, snapped to the real sentence; evidence for api_type: rejected, support check says this snippet does not establish api_type = 'REST' | retrieval filled: access='admin approval' via retrieval; api_type='REST' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 9 tried"
+}

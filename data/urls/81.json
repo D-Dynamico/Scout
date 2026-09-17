@@ -1,0 +1,11 @@
+{
+  "app_id": 81,
+  "urls": [
+    "https://stripe.com/docs/api",
+    "https://docs.stripe.com/api/authentication?api-version=2026-04-22.dahlia",
+    "https://stripe.com/pricing",
+    "https://docs.stripe.com/mcp",
+    "https://docs.stripe.com/connect/authentication.md",
+    "https://docs.stripe.com/rate-limits"
+  ]
+}

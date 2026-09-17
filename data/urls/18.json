@@ -1,0 +1,11 @@
+{
+  "app_id": 18,
+  "urls": [
+    "https://developer.helpscout.com",
+    "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+    "http://docs.helpscout.net/article/1140-help-desk-api",
+    "https://github.com/drewburchfield/help-scout-mcp-server/blob/9c14e2b19b30af09a29a4f53846e6fe91bc2996f/README.md",
+    "https://developer.helpscout.com/llms.txt",
+    "https://developer.helpscout.com/mailbox-api/overview/rate-limiting/"
+  ]
+}

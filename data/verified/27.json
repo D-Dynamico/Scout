@@ -1,0 +1,62 @@
+{
+  "app_id": 27,
+  "name": "Telegram",
+  "website": "https://telegram.org",
+  "category": "Communications and Messaging",
+  "one_liner": "Telegram offers a Bot API, MTProto API, and Gateway API for messaging and authentication.",
+  "auth": "API key",
+  "auth_notes": "Bots use a unique token like 123456:ABC-DEF…",
+  "access": null,
+  "access_notes": "No cost; tokens issued via BotFather or api_id via my.telegram.org.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://mcp-telegram.com/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "TDLib"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://core.telegram.org/bots/api",
+      "snippet": "The Bot API is an HTTP-based interface",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp-telegram.com/",
+      "snippet": "Telegram MCP server — Your Telegram in Claude & ChatGPT",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth",
+      "url": "https://www.unipile.com/is-the-telegram-api-free/",
+      "snippet": "| Setup | Token from BotFather | `api_id` / `api_hash` from my.telegram.org, custom client build | QR login or Hosted Auth, a few endpoints |",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "The MTProto API is also available but not covered in this summary; the Bot API is the primary REST interface for bots. | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet not on any page; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: auth='API key' via retrieval | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 12 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

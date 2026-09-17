@@ -1,0 +1,11 @@
+{
+  "app_id": 61,
+  "urls": [
+    "https://docs.github.com/en/rest",
+    "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+    "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "https://github.com/github/github-mcp-server?locale=en-US",
+    "https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api",
+    "https://docs.github.com/en/rest?apiVersion="
+  ]
+}

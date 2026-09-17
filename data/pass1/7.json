@@ -1,0 +1,71 @@
+{
+  "app_id": 7,
+  "name": "Zoho CRM",
+  "website": "https://www.zoho.com/crm",
+  "category": "CRM and Sales",
+  "one_liner": "Zoho CRM is a cloud-based customer relationship management platform with extensive API support.",
+  "auth": "OAuth2",
+  "auth_notes": "Use OAuth 2.0 access tokens in the Authorization header as Bearer tokens.",
+  "access": "paid plan",
+  "access_notes": "Free plan includes 5000 API calls/day, with credit-based limits.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://www.zoho.com/crm/developer/docs/api/v7/",
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/crm/developer/mcp.html",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Each API call made will result in a reduction of 1 credit.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/access-refresh.html",
+      "snippet": "OAuth2.0 requests are usually authenticated with an access token, which is passed as bearer token.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v7/",
+      "snippet": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v7/",
+      "snippet": "Zoho CRM V7 APIs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/crm/developer/mcp.html",
+      "snippet": "MCP for Zoho CRM: AI Agent Servers for Secure CRM Access",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+      "snippet": "Log in to Zoho CRM, click the Upgrade link on the Home page, and follow the steps on the Subscription page to switch to a new plan.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "No explicit review process indicated; API available to all users with Zoho account. | loop A disagreement: access='paid plan': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet has no access language; access nulled, no surviving evidence | retrieval filled: access='paid plan' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

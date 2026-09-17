@@ -1,0 +1,11 @@
+{
+  "app_id": 54,
+  "urls": [
+    "https://docs.mrscraper.com",
+    "https://docs.mrscraper.com/docs/api/authentication",
+    "https://mrscraper.com/pricing",
+    "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+    "https://docs.mrscraper.com/docs/getting-started/api-token",
+    "https://docs.mrscraper.com/docs/getting-started/billing"
+  ]
+}

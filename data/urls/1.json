@@ -1,0 +1,11 @@
+{
+  "app_id": 1,
+  "urls": [
+    "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+    "https://help.salesforce.com/s/articleView?id=remoteaccess_oauth_tokens_scopes.htm&language=en_US&type=5",
+    "https://developer.salesforce.com/free-trials",
+    "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview",
+    "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm&language=en_US&type=5",
+    "https://developer.salesforce.com/blogs/2024/11/api-limits-and-monitoring-your-api-usage"
+  ]
+}

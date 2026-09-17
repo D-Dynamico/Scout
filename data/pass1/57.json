@@ -1,0 +1,59 @@
+{
+  "app_id": 57,
+  "name": "Bright Data",
+  "website": "https://brightdata.com",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Bright Data provides APIs and MCP for web data access and scraping.",
+  "auth": "Bearer",
+  "auth_notes": "API key is used as a Bearer token in the Authorization header.",
+  "access": null,
+  "access_notes": "New accounts receive 5,000 free credits per month with no credit card required.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.brightdata.com",
+  "mcp": "official",
+  "mcp_url": "https://brightdata.com/ai/mcp-server",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "@brightdata/mcp"
+    ],
+    "webhooks": null,
+    "rate_limits": "1,000 requests per minute",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "snippet": "Authorization: Bearer <token>",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.brightdata.com/api-reference/scrapers/synchronous-requests",
+      "snippet": "https://docs.brightdata.com/api-reference/authentication",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://brightdata.com/ai/mcp-server",
+      "snippet": "Connect LLMs and AI agents to real-time web data with Bright Data MCP Server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "No evidence for prod_requires_review or api_breadth; set to null as pages do not specify. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence | confidence: access was rejected (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

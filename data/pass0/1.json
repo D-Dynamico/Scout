@@ -1,0 +1,59 @@
+{
+  "app_id": 1,
+  "name": "Salesforce",
+  "website": "https://www.salesforce.com",
+  "category": "CRM and Sales",
+  "one_liner": "Salesforce offers a comprehensive REST API that can be accessed via OAuth 2.0 and is available to all orgs.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses OAuth 2.0 for authentication and authorization.",
+  "access": "free self-serve",
+  "access_notes": "Create a connected app in your org to obtain OAuth credentials.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+  "mcp": "official",
+  "mcp_url": "https://developer.salesforce.com",
+  "stage": "ready to build",
+  "blocker": null,
+  "gate": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Daily API Request Limit (e.g., 100,000 calls per 24‑hour period) and a soft limit that can be exceeded with a 403 error; also a /limits endpoint and Limits Info header.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm&language=en_US&type=5",
+      "snippet": "OAuth is an open protocol that authorizes a client application to access data from a protected resource through the exchange of tokens."
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm&language=en_US&type=5",
+      "snippet": "You can use OAuth authorization to approve a client application’s access to your org’s protected resources."
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "snippet": "REST API is one of several web interfaces that you can use to access your Salesforce data without using the Salesforce user interface."
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "snippet": "REST API uses RESTful architecture to provide a straightforward and consistent interface."
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "snippet": "REST API Developer Guide | Salesforce Developers"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "snippet": "REST API Developer Guide | Salesforce Developers"
+    }
+  ],
+  "confidence": 1.0,
+  "notes": "Webhooks not documented; SDK list not provided; no explicit mention of GraphQL or CLI-only access; no mention of rate‑limit enforcement beyond the soft limit. | pages read: 6 of 6 tried"
+}

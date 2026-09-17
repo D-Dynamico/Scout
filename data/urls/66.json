@@ -1,0 +1,11 @@
+{
+  "app_id": 66,
+  "urls": [
+    "https://neo4j.com/docs/query-api/current/",
+    "https://neo4j.com/docs/query-api/current/authentication-authorization/",
+    "https://neo4j.com/pricing/",
+    "https://github.com/neo4j/mcp/",
+    "https://neo4j.com/docs/http-api/current/authentication-authorization/",
+    "https://neo4j.com/free-graph-database/"
+  ]
+}

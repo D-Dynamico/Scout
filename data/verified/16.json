@@ -1,0 +1,76 @@
+{
+  "app_id": 16,
+  "name": "LiveAgent",
+  "website": "https://www.liveagent.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "LiveAgent offers a REST‑style API that uses an API key for authentication and also provides an official MCP (Model Context Protocol) server for AI integrations.",
+  "auth": "API key",
+  "auth_notes": "Your API key has to be set in header of your requests:",
+  "access": "admin approval",
+  "access_notes": "While logged in as an admin navigate to Configuration> System> API which loads the API v3 section where you find existing API keys or add a new one.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://YOURDOMAIN.ladesk.com/docs/api/v3/#/",
+  "mcp": "official",
+  "mcp_url": "https:// /api/mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "https://YOURDOMAIN.ladesk.com/admin",
+    "process": "Generate an API key in the admin panel under Configuration > System > API",
+    "contact": "support.liveagent.com",
+    "est_time": "minutes"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://support.liveagent.com/741982-API-key",
+      "snippet": "API key is an identity of your LiveAgent (like your username and password) which you can use to build your own custom integration solutions.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://support.liveagent.com/741982-API-key",
+      "snippet": "While logged in as an admin navigate to Configuration> System> API which loads the API v3 section where you find existing API keys or add a new one.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://support.liveagent.com/567924-Documentation",
+      "snippet": "You can find whole LiveAgent API documentation within your LiveAgent account: https://YOURDOMAIN.ladesk.com/docs/api/v3/#/",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+      "snippet": "LiveAgent exposes a built-in MCP server (Model Context Protocol) that lets you connect external AI tools — such as Claude Desktop, Cursor, claude.ai, FlowHunt, or any other MCP-compatible client — directly to your LiveAgent account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://support.liveagent.com/741982-API-key",
+      "snippet": "curl --location --request GET 'https://your.ladesk.com/api/v3/tickets' \\ --header 'apikey: 0865evv883j6auflvlt7zrwgqn32qo74' \\ --header 'Content-Type: application/json'",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "The API is accessed via an API key set in the request header; no OAuth is required for the standard REST API. The MCP server is an official feature that uses OAuth 2.1 or bearer tokens for AI tool integration. | dropped during extraction: api_breadth nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

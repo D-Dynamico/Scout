@@ -1,0 +1,87 @@
+{
+  "app_id": 75,
+  "name": "Asana",
+  "website": "https://asana.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Asana provides a RESTful API for accessing and manipulating work graph data, with optional MCP for AI integration.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.asana.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.asana.com/v2/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node",
+      "Python",
+      "Ruby",
+      "Java",
+      ".NET",
+      "Go"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "snippet": "If you build an app, and the app needs to perform actions on behalf of users (e.g., getting data from Asana or making changes within Asana), you should use OAuth.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "snippet": "The Asana API is a RESTful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON, and uses standard HTTP features (verbs, response codes, etc.)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.asana.com/docs",
+      "snippet": "Learn the basics of Asana's developer platform",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "snippet": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "snippet": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "snippet": "> - To quickly authorize your API requests, create a personal access token via the developer console",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.asana.com/docs",
+      "snippet": "Set your distribution to “any workspace”, then follow the instructions on the Developer Console > Submit for Review page.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.94,
+  "notes": "No explicit rate limits or app review process mentioned in the provided pages. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

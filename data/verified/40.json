@@ -1,0 +1,84 @@
+{
+  "app_id": 40,
+  "name": "SendGrid",
+  "website": "https://sendgrid.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "SendGrid v3 Web API for sending transactional emails, managing contacts, and accessing email statistics.",
+  "auth": "API key",
+  "auth_notes": "Use an HTTP Authorization header with a Bearer token containing your API key.",
+  "access": "free trial",
+  "access_notes": "New accounts receive a 60‑day free trial that allows sending up to 100 emails per day.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+  "mcp": "community",
+  "mcp_url": "https://github.com/justinritchie/mcp-sendgrid-server",
+  "stage": "needs sandbox",
+  "blocker": "trial only, no free tier for credentials",
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "C#",
+      "Go",
+      "Java",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Ruby"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+      "snippet": "The SendGrid v3 Web API provides a REST interface to send email at scale and ensure your application can handle high volumes.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+      "snippet": "This API reference provides complete documentation for every endpoint and operation.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/justinritchie/mcp-sendgrid-server",
+      "snippet": "An MCP (Model Context Protocol) server that connects AI coding agents to your [Twilio SendGrid](https://sendgrid.com) account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan",
+      "snippet": "When you sign up for a SendGrid account, you can start a 60-day free trial to explore the Email API and Marketing Campaigns features.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started",
+      "snippet": "Basic Authentication is no longer accepted; you must use an API key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Webhooks and rate limits are not mentioned in the provided pages. The API breadth is considered unknown due to lack of explicit endpoint count. | loop A disagreement: access='free trial': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; evidence for mcp: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence | retrieval filled: access='free trial' via retrieval; auth='API key' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: auth: pass1 said 'API key', second model said 'Bearer'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

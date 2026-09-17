@@ -1,0 +1,85 @@
+{
+  "app_id": 87,
+  "name": "Xero",
+  "website": "https://www.xero.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Xero is a cloud accounting platform that exposes a REST API for accounting data.",
+  "auth": "OAuth2",
+  "auth_notes": "Native desktop and mobile apps use PKCE instead",
+  "access": "free self-serve",
+  "access_notes": "Create an app",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.xero.com/documentation/api/",
+  "mcp": "community",
+  "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Xero-Node",
+      "Xero-PHP",
+      "Xero-Java",
+      "Xero-Python",
+      "Xero-C#"
+    ],
+    "webhooks": true,
+    "rate_limits": "Rate Limits 1000 per day per org",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://codelesssync.com/blog/xero-api-integration-guide",
+      "snippet": "The Xero Accounting API is a REST API that returns XML by default and JSON if you ask for it.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://github.com/XeroAPI/xero-mcp-server/",
+      "snippet": "Xero Public API Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server/",
+      "snippet": "An MCP server that integrates with the MCP protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com",
+      "snippet": "Sign up for a free account to build on the Xero platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://codelesssync.com/blog/xero-api-integration-guide",
+      "snippet": "This guide walks the whole flow: creating an app, running OAuth 2.0, resolving which organisation you're actually talking to, making your first call, paging through results, staying inside the rate limits, and pulling incremental updates.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+      "snippet": "For the Journals and Xero Practice Manager API premium features, what criteria are used to grant \"use case approval,\" and what is the typical review timeline?",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "Xero recently updated its pricing tiers and AI policy (effective 2026). No app review is required before using the API; developers can sign up and create apps freely. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: snippet not on any page; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; auth='OAuth2' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | loop C browser check: Yes, a developer can sign up and get API credentials themselves immediately without paying or human approval by following the 'Getting started guide' to 'Signup for a free Xero account' and then 'Add your OAuth 2.0 application'. The guide explicitly states that developers can use a 'free Xero account' and a 'demo company' to begin building and testing their integration right away."
+}

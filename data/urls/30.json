@@ -1,0 +1,11 @@
+{
+  "app_id": 30,
+  "urls": [
+    "https://developer.vonage.com/en/documentation",
+    "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "https://www.vonage.com/communications-apis/pricing/",
+    "https://developer.vonage.com/en/mcp-server/overview",
+    "https://developer.vonage.com/en/verify/concepts/authentication",
+    "https://www.vonage.com/communications-apis/voice/pricing/"
+  ]
+}

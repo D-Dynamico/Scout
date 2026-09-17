@@ -1,0 +1,116 @@
+{
+  "sample_size": 20,
+  "by_half": {
+    "hard": {
+      "access": {
+        "pass1": 20.0,
+        "verified": 20.0,
+        "n": 10
+      },
+      "auth": {
+        "pass1": 30.0,
+        "verified": 40.0,
+        "n": 10
+      },
+      "api_type": {
+        "pass1": 50.0,
+        "verified": 70.0,
+        "n": 10
+      },
+      "prod_requires_review": {
+        "pass1": 0.0,
+        "verified": 0.0,
+        "n": 3
+      },
+      "mcp": {
+        "pass1": 57.1,
+        "verified": 71.4,
+        "n": 7
+      },
+      "api_breadth": {
+        "pass1": 33.3,
+        "verified": 33.3,
+        "n": 9
+      },
+      "stage": {
+        "pass1": null,
+        "verified": null,
+        "n": 0
+      }
+    },
+    "random": {
+      "access": {
+        "pass1": 44.4,
+        "verified": 44.4,
+        "n": 9
+      },
+      "auth": {
+        "pass1": 50.0,
+        "verified": 50.0,
+        "n": 10
+      },
+      "api_type": {
+        "pass1": 70.0,
+        "verified": 100.0,
+        "n": 10
+      },
+      "prod_requires_review": {
+        "pass1": 50.0,
+        "verified": 50.0,
+        "n": 2
+      },
+      "mcp": {
+        "pass1": 60.0,
+        "verified": 60.0,
+        "n": 10
+      },
+      "api_breadth": {
+        "pass1": 50.0,
+        "verified": 50.0,
+        "n": 10
+      },
+      "stage": {
+        "pass1": null,
+        "verified": null,
+        "n": 0
+      }
+    }
+  },
+  "by_field": {
+    "access": {
+      "pass1": 31.6,
+      "verified": 31.6,
+      "n": 19
+    },
+    "auth": {
+      "pass1": 40.0,
+      "verified": 45.0,
+      "n": 20
+    },
+    "api_type": {
+      "pass1": 60.0,
+      "verified": 85.0,
+      "n": 20
+    },
+    "prod_requires_review": {
+      "pass1": 20.0,
+      "verified": 20.0,
+      "n": 5
+    },
+    "mcp": {
+      "pass1": 58.8,
+      "verified": 64.7,
+      "n": 17
+    },
+    "api_breadth": {
+      "pass1": 42.1,
+      "verified": 42.1,
+      "n": 19
+    },
+    "stage": {
+      "pass1": null,
+      "verified": null,
+      "n": 0
+    }
+  }
+}

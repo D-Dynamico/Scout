@@ -1,0 +1,82 @@
+{
+  "app_id": 49,
+  "name": "Amazon Selling Partner",
+  "website": "https://sell.amazon.com",
+  "category": "Ecommerce",
+  "one_liner": "Amazon Selling Partner API provides programmatic access to Amazon marketplace data for sellers, vendors, and developers.",
+  "auth": "Bearer",
+  "auth_notes": "Uses a bearer token obtained via Login with Amazon (LWA).",
+  "access": "free self-serve",
+  "access_notes": "Register the application in Seller Central or the Solution Provider Portal to obtain LWA credentials.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer-docs.amazon.com/sp-api",
+  "mcp": "community",
+  "mcp_url": "https://github.com/trinknx/amazon-seller-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Java SDK",
+      "C# SDK"
+    ],
+    "webhooks": true,
+    "rate_limits": "Catalog Items API Rate Limits",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "snippet": "\"token_type\":\"bearer\"",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://zonflip.com/amazon-paused-sp-api-fees-what-every-seller-must-know/",
+      "snippet": "REST-based application programming interface",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://agentdeals.dev/vendor/amazon-sp-api",
+      "snippet": "https://developer-docs.amazon.com/sp-api",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/trinknx/amazon-seller-mcp",
+      "snippet": "MCP (Model Context Protocol) server exposing Amazon Selling Partner API tools for sellers.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://zonflip.com/amazon-paused-sp-api-fees-what-every-seller-must-know/",
+      "snippet": "To qualify, sellers must register as a private developer through Amazon’s Solution Provider Portal (or Seller Central’s developer console), generate their own SP-API credentials, and ensure the app is authorized only against their own account (Amazon permits up to 10 self-authorizations for private apps).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer-docs.amazon/sp-api/docs/self-authorization",
+      "snippet": "If your application is public, a selling partner must authorize your application.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "SP-API is free for private sellers; third‑party developers pay a $1,400 annual fee and usage‑based fees (currently paused). | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: snippet not on any page; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried | loop A: auth: pass1 said 'Bearer', second model said 'OAuth2'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | loop C browser check: No, a developer cannot get API credentials immediately for free, as access requires a 'Professional selling account' which costs '$39.99 a month plus selling fees.' Furthermore, the signup is not instant because developer profiles are 'evaluated by Amazon' after submission to ensure they meet security and data usage standards."
+}

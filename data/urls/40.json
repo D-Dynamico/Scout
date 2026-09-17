@@ -1,0 +1,11 @@
+{
+  "app_id": 40,
+  "urls": [
+    "https://www.twilio.com/docs/sendgrid/api-reference",
+    "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Twilio-SendGrid-Trial-Account-Plan",
+    "https://github.com/justinritchie/mcp-sendgrid-server",
+    "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started",
+    "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan"
+  ]
+}

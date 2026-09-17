@@ -1,0 +1,16 @@
+[project]
+name = "scout"
+version = "0.1.0"
+description = "Agent-driven research of 100 apps: auth, access, API surface, MCP, buildability"
+requires-python = ">=3.10"
+dependencies = ["composio>=0.21", "anthropic>=0.40"]
+
+[project.scripts]
+scout = "scout.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["scout"]

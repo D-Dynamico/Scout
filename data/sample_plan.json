@@ -1,0 +1,108 @@
+{
+  "seed": 20260916,
+  "why": "Ten named hard apps, plus one seeded draw per category from the remaining ninety. Accuracy is reported for each half separately.",
+  "hard": [
+    {
+      "app_id": 58,
+      "name": "Sherlock",
+      "category": "Data, SEO and Scraping"
+    },
+    {
+      "app_id": 98,
+      "name": "Mermaid CLI",
+      "category": "AI, Research and Media-native"
+    },
+    {
+      "app_id": 84,
+      "name": "Paygent Connect",
+      "category": "Finance and Fintech"
+    },
+    {
+      "app_id": 85,
+      "name": "iPayX",
+      "category": "Finance and Fintech"
+    },
+    {
+      "app_id": 50,
+      "name": "fanbasis",
+      "category": "Ecommerce"
+    },
+    {
+      "app_id": 59,
+      "name": "Waterfall.io",
+      "category": "Data, SEO and Scraping"
+    },
+    {
+      "app_id": 91,
+      "name": "NotebookLM",
+      "category": "AI, Research and Media-native"
+    },
+    {
+      "app_id": 94,
+      "name": "Consensus",
+      "category": "AI, Research and Media-native"
+    },
+    {
+      "app_id": 90,
+      "name": "PitchBook",
+      "category": "Finance and Fintech"
+    },
+    {
+      "app_id": 10,
+      "name": "DealCloud",
+      "category": "CRM and Sales"
+    }
+  ],
+  "random": [
+    {
+      "app_id": 1,
+      "name": "Salesforce",
+      "category": "CRM and Sales"
+    },
+    {
+      "app_id": 17,
+      "name": "Plain",
+      "category": "Support and Helpdesk"
+    },
+    {
+      "app_id": 23,
+      "name": "Zoho Cliq",
+      "category": "Communications and Messaging"
+    },
+    {
+      "app_id": 32,
+      "name": "Meta Ads",
+      "category": "Marketing, Ads, Email and Social"
+    },
+    {
+      "app_id": 46,
+      "name": "Squarespace",
+      "category": "Ecommerce"
+    },
+    {
+      "app_id": 54,
+      "name": "MrScraper",
+      "category": "Data, SEO and Scraping"
+    },
+    {
+      "app_id": 70,
+      "name": "Sentry",
+      "category": "Developer, Infra and Data platforms"
+    },
+    {
+      "app_id": 78,
+      "name": "Coda",
+      "category": "Productivity and Project Management"
+    },
+    {
+      "app_id": 88,
+      "name": "Brex",
+      "category": "Finance and Fintech"
+    },
+    {
+      "app_id": 97,
+      "name": "higgsfield",
+      "category": "AI, Research and Media-native"
+    }
+  ]
+}

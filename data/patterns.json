@@ -1,0 +1,763 @@
+{
+  "n": 100,
+  "auth": {
+    "OAuth2": 45,
+    "Bearer": 31,
+    "Basic": 6,
+    "API key": 17,
+    "not determined": 1
+  },
+  "auth_by_category": {
+    "CRM and Sales": {
+      "OAuth2": 9,
+      "Bearer": 1
+    },
+    "Support and Helpdesk": {
+      "OAuth2": 3,
+      "Bearer": 4,
+      "Basic": 2,
+      "API key": 1
+    },
+    "Communications and Messaging": {
+      "OAuth2": 5,
+      "Basic": 1,
+      "API key": 2,
+      "Bearer": 2
+    },
+    "Marketing, Ads, Email and Social": {
+      "OAuth2": 7,
+      "Bearer": 1,
+      "API key": 2
+    },
+    "Ecommerce": {
+      "OAuth2": 5,
+      "Basic": 1,
+      "Bearer": 3,
+      "API key": 1
+    },
+    "Data, SEO and Scraping": {
+      "Basic": 1,
+      "API key": 4,
+      "Bearer": 4,
+      "not determined": 1
+    },
+    "Developer, Infra and Data platforms": {
+      "Bearer": 4,
+      "OAuth2": 5,
+      "API key": 1
+    },
+    "Productivity and Project Management": {
+      "Bearer": 4,
+      "OAuth2": 6
+    },
+    "Finance and Fintech": {
+      "Basic": 1,
+      "OAuth2": 4,
+      "API key": 2,
+      "Bearer": 3
+    },
+    "AI, Research and Media-native": {
+      "Bearer": 5,
+      "OAuth2": 1,
+      "API key": 4
+    }
+  },
+  "access": {
+    "free self-serve": 56,
+    "paid plan": 9,
+    "admin approval": 13,
+    "not determined": 16,
+    "partner or contact-sales": 5,
+    "free trial": 1
+  },
+  "access_by_category": {
+    "CRM and Sales": {
+      "free self-serve": 8,
+      "paid plan": 1,
+      "admin approval": 1
+    },
+    "Support and Helpdesk": {
+      "paid plan": 2,
+      "free self-serve": 4,
+      "not determined": 1,
+      "partner or contact-sales": 1,
+      "admin approval": 2
+    },
+    "Communications and Messaging": {
+      "admin approval": 2,
+      "free self-serve": 7,
+      "not determined": 1
+    },
+    "Marketing, Ads, Email and Social": {
+      "admin approval": 5,
+      "free self-serve": 3,
+      "not determined": 1,
+      "free trial": 1
+    },
+    "Ecommerce": {
+      "admin approval": 1,
+      "free self-serve": 7,
+      "paid plan": 2
+    },
+    "Data, SEO and Scraping": {
+      "free self-serve": 6,
+      "paid plan": 1,
+      "not determined": 3
+    },
+    "Developer, Infra and Data platforms": {
+      "free self-serve": 4,
+      "not determined": 6
+    },
+    "Productivity and Project Management": {
+      "free self-serve": 7,
+      "not determined": 1,
+      "admin approval": 1,
+      "paid plan": 1
+    },
+    "Finance and Fintech": {
+      "free self-serve": 6,
+      "paid plan": 1,
+      "partner or contact-sales": 3
+    },
+    "AI, Research and Media-native": {
+      "not determined": 3,
+      "paid plan": 1,
+      "partner or contact-sales": 1,
+      "free self-serve": 4,
+      "admin approval": 1
+    }
+  },
+  "stage": {
+    "ready to build": 55,
+    "needs sandbox": 10,
+    "needs OAuth app review": 12,
+    "not determined": 17,
+    "needs partnership outreach": 4,
+    "no viable API": 2
+  },
+  "stage_by_category": {
+    "CRM and Sales": {
+      "ready to build": 8,
+      "needs sandbox": 1,
+      "needs OAuth app review": 1
+    },
+    "Support and Helpdesk": {
+      "needs sandbox": 2,
+      "ready to build": 4,
+      "not determined": 1,
+      "needs partnership outreach": 1,
+      "needs OAuth app review": 2
+    },
+    "Communications and Messaging": {
+      "needs OAuth app review": 2,
+      "ready to build": 7,
+      "not determined": 1
+    },
+    "Marketing, Ads, Email and Social": {
+      "needs OAuth app review": 4,
+      "not determined": 2,
+      "ready to build": 3,
+      "needs sandbox": 1
+    },
+    "Ecommerce": {
+      "needs OAuth app review": 1,
+      "ready to build": 7,
+      "needs sandbox": 2
+    },
+    "Data, SEO and Scraping": {
+      "ready to build": 5,
+      "needs sandbox": 1,
+      "not determined": 3,
+      "no viable API": 1
+    },
+    "Developer, Infra and Data platforms": {
+      "ready to build": 4,
+      "not determined": 6
+    },
+    "Productivity and Project Management": {
+      "ready to build": 7,
+      "not determined": 1,
+      "needs OAuth app review": 1,
+      "needs sandbox": 1
+    },
+    "Finance and Fintech": {
+      "ready to build": 6,
+      "needs sandbox": 1,
+      "needs partnership outreach": 2,
+      "not determined": 1
+    },
+    "AI, Research and Media-native": {
+      "not determined": 2,
+      "needs sandbox": 1,
+      "needs partnership outreach": 1,
+      "ready to build": 4,
+      "no viable API": 1,
+      "needs OAuth app review": 1
+    }
+  },
+  "api_type": {
+    "REST": 89,
+    "GraphQL": 4,
+    "not determined": 5,
+    "none": 1,
+    "CLI-only": 1
+  },
+  "api_breadth": {
+    "unknown": 93,
+    "large": 5,
+    "small": 2
+  },
+  "mcp": {
+    "official": 66,
+    "community": 30,
+    "none": 1,
+    "not determined": 3
+  },
+  "mcp_by_category": {
+    "CRM and Sales": {
+      "with_mcp": 10,
+      "total": 10
+    },
+    "Support and Helpdesk": {
+      "with_mcp": 9,
+      "total": 10
+    },
+    "Communications and Messaging": {
+      "with_mcp": 10,
+      "total": 10
+    },
+    "Marketing, Ads, Email and Social": {
+      "with_mcp": 10,
+      "total": 10
+    },
+    "Ecommerce": {
+      "with_mcp": 9,
+      "total": 10
+    },
+    "Data, SEO and Scraping": {
+      "with_mcp": 9,
+      "total": 10
+    },
+    "Developer, Infra and Data platforms": {
+      "with_mcp": 9,
+      "total": 10
+    },
+    "Productivity and Project Management": {
+      "with_mcp": 10,
+      "total": 10
+    },
+    "Finance and Fintech": {
+      "with_mcp": 10,
+      "total": 10
+    },
+    "AI, Research and Media-native": {
+      "with_mcp": 10,
+      "total": 10
+    }
+  },
+  "prod_requires_review": {
+    "not determined": 75,
+    "True": 23,
+    "False": 2
+  },
+  "blockers": {
+    "admin approval required": 12,
+    "paid plan required for credentials": 9,
+    "partner or contact-sales": 4,
+    "trial only, no free tier for credentials": 1,
+    "no public API": 1,
+    "CLI only, nothing to call": 1
+  },
+  "quadrant": {
+    "build now": 29,
+    "easy, niche": 26,
+    "worth the paperwork": 32,
+    "park it": 13
+  },
+  "quadrant_members": {
+    "build now": [
+      "Salesforce",
+      "HubSpot",
+      "Pipedrive",
+      "Intercom",
+      "Front",
+      "Twilio",
+      "WhatsApp Business",
+      "Mailchimp",
+      "Klaviyo",
+      "WooCommerce",
+      "BigCommerce",
+      "Salesforce Commerce Cloud",
+      "Magento (Adobe Commerce)",
+      "Amazon Selling Partner",
+      "Apify",
+      "GitHub",
+      "Vercel",
+      "Neo4j",
+      "Datadog",
+      "Notion",
+      "Linear",
+      "Jira",
+      "Asana",
+      "Monday.com",
+      "Stripe",
+      "Plaid",
+      "Binance",
+      "Xero",
+      "Devin"
+    ],
+    "easy, niche": [
+      "Attio",
+      "Twenty",
+      "Podio",
+      "Close",
+      "Copper",
+      "Plain",
+      "Gorgias",
+      "Zoho Cliq",
+      "Lark (Larksuite)",
+      "Pumble",
+      "Aircall",
+      "Vonage",
+      "GoHighLevel",
+      "Gumroad",
+      "fanbasis",
+      "DataForSEO",
+      "SE Ranking",
+      "Waterfall.io",
+      "Clay",
+      "Coda",
+      "Harvest",
+      "Paygent Connect",
+      "iPayX",
+      "Reducto",
+      "higgsfield",
+      "YouTube Transcript"
+    ],
+    "worth the paperwork": [
+      "Zoho CRM",
+      "Zendesk",
+      "Freshdesk",
+      "Help Scout",
+      "Slack",
+      "Discord",
+      "Telegram",
+      "Google Ads",
+      "Meta Ads",
+      "LinkedIn Ads",
+      "Pinterest",
+      "Threads (Meta)",
+      "SendGrid",
+      "Shopify",
+      "Squarespace",
+      "Ahrefs",
+      "Bright Data",
+      "Netlify",
+      "Cloudflare",
+      "Supabase",
+      "Snowflake",
+      "MongoDB Atlas",
+      "Sentry",
+      "Airtable",
+      "ClickUp",
+      "Smartsheet",
+      "QuickBooks",
+      "Brex",
+      "Ramp",
+      "PitchBook",
+      "NotebookLM",
+      "Otter AI"
+    ],
+    "park it": [
+      "DealCloud",
+      "Pylon",
+      "LiveAgent",
+      "Gladly",
+      "systeme.io",
+      "Ecwid",
+      "MrScraper",
+      "Firecrawl",
+      "Sherlock",
+      "Fathom",
+      "Consensus",
+      "Mermaid CLI",
+      "Grain"
+    ]
+  },
+  "outreach_queue": {
+    "paid plan": [
+      {
+        "app_id": 7,
+        "name": "Zoho CRM",
+        "category": "CRM and Sales",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.66
+      },
+      {
+        "app_id": 11,
+        "name": "Zendesk",
+        "category": "Support and Helpdesk",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.79
+      },
+      {
+        "app_id": 18,
+        "name": "Help Scout",
+        "category": "Support and Helpdesk",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "https://developer.helpscout.com/mailbox-api/",
+          "process": "Create OAuth2 app via My Apps",
+          "contact": "Help Scout support",
+          "est_time": "minutes"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 46,
+        "name": "Squarespace",
+        "category": "Ecommerce",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.94
+      },
+      {
+        "app_id": 47,
+        "name": "Ecwid",
+        "category": "Ecommerce",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "https://my.ecwid.com/#develop-apps",
+          "process": "Create a custom app in the Ecwid admin to obtain access tokens.",
+          "contact": "https://support.ecwid.com/hc/en-us",
+          "est_time": "minutes"
+        },
+        "confidence": 0.81
+      },
+      {
+        "app_id": 53,
+        "name": "Ahrefs",
+        "category": "Data, SEO and Scraping",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 79,
+        "name": "Smartsheet",
+        "category": "Productivity and Project Management",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 86,
+        "name": "QuickBooks",
+        "category": "Finance and Fintech",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.64
+      },
+      {
+        "app_id": 92,
+        "name": "Otter AI",
+        "category": "AI, Research and Media-native",
+        "stage": "needs sandbox",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      }
+    ],
+    "admin approval": [
+      {
+        "app_id": 10,
+        "name": "DealCloud",
+        "category": "CRM and Sales",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 16,
+        "name": "LiveAgent",
+        "category": "Support and Helpdesk",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "https://YOURDOMAIN.ladesk.com/admin",
+          "process": "Generate an API key in the admin panel under Configuration > System > API",
+          "contact": "support.liveagent.com",
+          "est_time": "minutes"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 20,
+        "name": "Gladly",
+        "category": "Support and Helpdesk",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.66
+      },
+      {
+        "app_id": 21,
+        "name": "Slack",
+        "category": "Communications and Messaging",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.94
+      },
+      {
+        "app_id": 26,
+        "name": "Discord",
+        "category": "Communications and Messaging",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.66
+      },
+      {
+        "app_id": 31,
+        "name": "Google Ads",
+        "category": "Marketing, Ads, Email and Social",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "https://ads.google.com/aw/apicenter",
+          "process": "Apply for a developer token via API Center and request access level upgrade",
+          "contact": "Google Ads API Center support",
+          "est_time": "days to weeks"
+        },
+        "confidence": 0.91
+      },
+      {
+        "app_id": 32,
+        "name": "Meta Ads",
+        "category": "Marketing, Ads, Email and Social",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.94
+      },
+      {
+        "app_id": 33,
+        "name": "LinkedIn Ads",
+        "category": "Marketing, Ads, Email and Social",
+        "stage": null,
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 38,
+        "name": "Pinterest",
+        "category": "Marketing, Ads, Email and Social",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.94
+      },
+      {
+        "app_id": 39,
+        "name": "Threads (Meta)",
+        "category": "Marketing, Ads, Email and Social",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.79
+      },
+      {
+        "app_id": 41,
+        "name": "Shopify",
+        "category": "Ecommerce",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.75
+      },
+      {
+        "app_id": 77,
+        "name": "ClickUp",
+        "category": "Productivity and Project Management",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.69
+      },
+      {
+        "app_id": 100,
+        "name": "Grain",
+        "category": "AI, Research and Media-native",
+        "stage": "needs OAuth app review",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.69
+      }
+    ],
+    "partner or contact-sales": [
+      {
+        "app_id": 15,
+        "name": "Pylon",
+        "category": "Support and Helpdesk",
+        "stage": "needs partnership outreach",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.81
+      },
+      {
+        "app_id": 88,
+        "name": "Brex",
+        "category": "Finance and Fintech",
+        "stage": "needs partnership outreach",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 89,
+        "name": "Ramp",
+        "category": "Finance and Fintech",
+        "stage": null,
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.69
+      },
+      {
+        "app_id": 90,
+        "name": "PitchBook",
+        "category": "Finance and Fintech",
+        "stage": "needs partnership outreach",
+        "gate": {
+          "application_url": "https://pitchbook.com",
+          "process": "Contact your PitchBook account manager (or your organization's PitchBook administrator) to enable API access and issue an API key for your account.",
+          "contact": "PitchBook account manager",
+          "est_time": "varies"
+        },
+        "confidence": 0.84
+      },
+      {
+        "app_id": 93,
+        "name": "Fathom",
+        "category": "AI, Research and Media-native",
+        "stage": "needs partnership outreach",
+        "gate": {
+          "application_url": "unknown",
+          "process": "unknown",
+          "contact": "unknown",
+          "est_time": "unknown"
+        },
+        "confidence": 0.64
+      }
+    ]
+  },
+  "composio_toolkit": {
+    "already_shipped": 56,
+    "not_shipped": 44
+  },
+  "confidence": {
+    "median": 0.74,
+    "min": 0.43,
+    "max": 0.94
+  },
+  "unresolved": {
+    "stage_not_determined": 17,
+    "rows_with_loop_a_disagreement": 93,
+    "rows_with_a_rejected_claim": 24,
+    "rows_below_confidence_0_7": 48,
+    "weak_evidence_items": 59,
+    "total_evidence_items": 507
+  }
+}

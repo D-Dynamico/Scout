@@ -1,0 +1,11 @@
+{
+  "app_id": 76,
+  "urls": [
+    "https://developer.monday.com/api-reference/docs",
+    "https://developer.monday.com/api-reference/docs/authentication",
+    "https://developer.monday.com/api-reference/docs/developer-sandbox-account",
+    "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+    "https://developer.monday.com/api-reference/docs/getting-started",
+    "https://developer.monday.com/api-reference"
+  ]
+}

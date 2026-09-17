@@ -1,0 +1,11 @@
+{
+  "app_id": 65,
+  "urls": [
+    "https://supabase.com/docs",
+    "https://supabase.com/docs/guides/auth",
+    "https://supabase.com/pricing",
+    "https://supabase.com/docs/guides/ai-tools/mcp",
+    "https://github.com/supabase/auth",
+    "https://axonbuild.com/blog/supabase-pricing/"
+  ]
+}

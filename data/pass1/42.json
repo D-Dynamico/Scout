@@ -1,0 +1,50 @@
+{
+  "app_id": 42,
+  "name": "WooCommerce",
+  "website": "https://woocommerce.com",
+  "category": "Ecommerce",
+  "one_liner": "WooCommerce offers a REST API with Basic Auth and OAuth 1.0a, plus MCP support for AI integration.",
+  "auth": null,
+  "auth_notes": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password.",
+  "access": "free self-serve",
+  "access_notes": "To create or manage keys for a specific WordPress user:",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://developer.woocommerce.com/docs/features/mcp/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "JavaScript",
+      "PHP",
+      "Python",
+      "Ruby"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "snippet": "Select Create an API key or Add Key.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.woocommerce.com/docs/features/mcp/",
+      "snippet": "WooCommerce includes native support for the Model Context Protocol (MCP), enabling AI assistants and tools to interact directly with WooCommerce stores through a standardized protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.46,
+  "notes": "loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: auth nulled, no surviving evidence; access nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; api_docs_url nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

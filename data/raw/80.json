@@ -1,0 +1,71 @@
+{
+  "app_id": 80,
+  "name": "Harvest",
+  "website": "https://www.getharvest.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Harvest is a time tracking and invoicing platform with a REST API.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses Personal Access Tokens and OAuth2 flows.",
+  "access": "free self-serve",
+  "access_notes": "All Harvest accounts can access the API.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://help.getharvest.com/api-v2/",
+  "mcp": "official",
+  "mcp_url": "https://api.harvestapp.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Ruby",
+      "PHP",
+      "Python",
+      "Java"
+    ],
+    "webhooks": null,
+    "rate_limits": "Yes — details on throttling (including limits) can be found in our API overview documentation.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://help.getharvest.com/api-v2/",
+      "snippet": "This is the current API V2 documentation.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "snippet": "The Harvest MCP (Model Context Protocol) connection lets you work with your Harvest data through an AI assistant, using plain language instead of clicking through the app.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.getharvest.com/blog/2017/09/introducing-harvest-api-v2",
+      "snippet": "The first step involves obtaining a Personal Access Token via your Harvest ID account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_type",
+      "url": "https://help.getharvest.com/api-v1/introduction/overview/migration-guide/",
+      "snippet": "To migrate a single API V1 refresh token, send a POST request to`https://id.getharvest.com/api/v2/oauth2/migrate`, with the following parameters:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth",
+      "url": "https://help.getharvest.com/api-v1/introduction/overview/migration-guide/",
+      "snippet": "If you maintain an integration with API V1 that uses the OAuth2 Authorization Code flow, you can use the token migration endpoint to exchange each valid API V1 refresh token you hold on behalf of your users for an API V2 access token / refresh token pair.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Rate limits are mentioned but specific numbers are not provided. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for mcp: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='OAuth2' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 9 tried"
+}

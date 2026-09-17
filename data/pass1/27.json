@@ -1,0 +1,70 @@
+{
+  "app_id": 27,
+  "name": "Telegram",
+  "website": "https://telegram.org",
+  "category": "Communications and Messaging",
+  "one_liner": "Telegram offers a Bot API (HTTP/REST), a full MTProto API for custom clients, and a Gateway API for verification codes.",
+  "auth": null,
+  "auth_notes": "Each bot is given a unique authentication token when it is created.",
+  "access": null,
+  "access_notes": "Telegram Bot API and the Telegram API (MTProto) are both free to use, with no per-message fee and no pricing tier.",
+  "api_type": "REST",
+  "api_breadth": "small",
+  "api_docs_url": "https://core.telegram.org/bots/api",
+  "mcp": "community",
+  "mcp_url": "https://mcp-telegram.com/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "tdlib",
+      "pyrogram",
+      "gramjs",
+      "telethon",
+      "telegram-bot-api"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://core.telegram.org/bots/api",
+      "snippet": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://core.telegram.org/bots/api",
+      "snippet": "Telegram Bot API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp-telegram.com/",
+      "snippet": "The Telegram MCP server for Claude.ai and ChatGPT — read messages, search chats, send replies, react to posts.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.unipile.com/is-the-telegram-api-free/",
+      "snippet": "| Setup | Token from BotFather | `api_id` / `api_hash` from my.telegram.org, custom client build | QR login or Hosted Auth, a few endpoints |",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "api_breadth is set to null because no explicit breadth claim is present in the sources. | loop A disagreement: api_breadth='small': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: api_breadth='small' via retrieval | confidence: auth is null (-0.10); access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

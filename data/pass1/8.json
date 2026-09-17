@@ -1,0 +1,86 @@
+{
+  "app_id": 8,
+  "name": "Close",
+  "website": "https://close.com",
+  "category": "CRM and Sales",
+  "one_liner": "Conversation‑first CRM with built‑in calling, email, SMS, and AI‑powered workflows",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.close.com",
+  "mcp": "official",
+  "mcp_url": "https://help.close.com/docs/mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python",
+      "Node.js",
+      "Ruby",
+      "PHP",
+      "Go"
+    ],
+    "webhooks": true,
+    "rate_limits": "Rate limits apply to all endpoints. Handle 429 responses with exponential backoff.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developer.close.com",
+      "snippet": "API keys for scripts or OAuth 2.0 for user-facing integrations.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.close.com/topics/authentication",
+      "snippet": "API keys can be created and managed in your Close account under Settings → Developer → API Keys.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.close.com",
+      "snippet": "REST API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.close.com",
+      "snippet": "Full endpoint docs with schemas, examples, and an interactive API explorer.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://help.close.com/docs/mcp-server",
+      "snippet": "The MCP server URL is `https://mcp.close.com/mcp`",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://close.com/pricing",
+      "snippet": "Close is designed to be self-serve, so you can sign up, start a trial, and set up your team without talking to sales.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.close.com/docs/mcp-server",
+      "snippet": "If you prefer to interact with the MCP server using a custom setup, create an OAuth application to authenticate using OAuth 2.0 or authenticate using an API key and include the following Headers in your request:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.78,
+  "notes": "No explicit mention of an app review process; API keys and OAuth tokens can be generated directly by users. The API breadth is not quantified, so it is marked unknown. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; mcp='official': retrieval chose this sentence, support check disagreed | dropped during extraction: access='free self‑serve' not in enum; evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official' | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); mcp rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,68 @@
+{
+  "app_id": 38,
+  "name": "Pinterest",
+  "website": "https://www.pinterest.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Pinterest API v5 provides REST endpoints for managing pins, boards, catalogs, ads, and analytics, accessed via OAuth 2.0.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "free trial",
+  "access_notes": null,
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.pinterest.com/docs/api/v5/introduction/",
+  "mcp": "community",
+  "mcp_url": "https://www.outstand.so/mcp/pinterest",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python SDK"
+    ],
+    "webhooks": null,
+    "rate_limits": "Trial: 1000 requests per day; Standard: 100 requests per second per user per app.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+      "snippet": "Build a working authentication flow based on OAuth 2",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.pinterest.com/docs/api/v5/introduction/",
+      "snippet": "API reference",
+      "fetcher": "http",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.outstand.so/mcp/pinterest",
+      "snippet": "Pinterest MCP Server - Create Pins from Claude & AI Agents | Outstand",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+      "snippet": "Application requests are reviewed each business day",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+      "snippet": "- Product limited tokens: Once your app is approved for Trial access you can generate a token to test the API without setting up the Oauth flow.Test tokens expire after 24 hours and allow you to explore certain endpoints faster.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "The API is described as a RESTful service, but no explicit mention of REST in the documentation was found, so api_type is left null. No webhooks are documented. The SDK list includes only the Python SDK as explicitly referenced in the docs. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; api_breadth nulled, no surviving evidence | retrieval filled: access='free trial' via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

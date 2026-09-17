@@ -1,0 +1,90 @@
+{
+  "app_id": 3,
+  "name": "Pipedrive",
+  "website": "https://www.pipedrive.com",
+  "category": "CRM and Sales",
+  "one_liner": "Pipedrive offers a RESTful CRM API with extensive endpoints, OAuth2 and API key authentication, webhooks, SDKs, and official MCP support for AI assistants.",
+  "auth": "OAuth2",
+  "auth_notes": "API token or OAuth 2.0 can be used for authentication.",
+  "access": "free self-serve",
+  "access_notes": "API token is available in every plan's account settings.",
+  "api_type": "REST",
+  "api_breadth": "large",
+  "api_docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "mcp": "official",
+  "mcp_url": "https://www.pipedrive.com/en/features/mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node.js",
+      "PHP"
+    ],
+    "webhooks": true,
+    "rate_limits": "Token-based rate limiting with daily token budget and burst limits.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.pipedrive.com/tutorials/adding-leads-to-pipedrive",
+      "snippet": "For authentication with OAuth 2.0",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "snippet": "RESTful Pipedrive API v1",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://pipedrive.readme.io/docs/hello-world-tutorial",
+      "snippet": "https://developers.pipedrive.com/docs/api/v1",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "snippet": "Pipedrive MCP server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/hello-world-tutorial",
+      "snippet": "- (optional) a Developer Sandbox account (you don't need to have one, but you can create it if you're interested in building an app with Pipedrive or need an environment just for testing)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "snippet": "Use the official Pipedrive MCP server to securely link Claude, Cursor and custom LLMs to CRM data.\",\"offers\":{\"@type\":\"Offer\",\"name\":\"Pipedrive Pricing\",\"priceCurrency\":\"usd\",\"price\":\"0\",\"availability\":\"OnlineOnly\",\"url\":\"https://www.pipedrive.com/en/pricing\"},\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"ratingCount\":\"1585\"}}",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "snippet": "Within our powerful and flexible API is our extensive API Reference with hundreds of endpoints.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; api_breadth='large': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official' | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval; api_breadth='large' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

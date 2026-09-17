@@ -1,0 +1,65 @@
+{
+  "app_id": 25,
+  "name": "Pumble",
+  "website": "https://pumble.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Pumble offers a REST API via API keys for messaging, reactions, channel management, and an official MCP server for AI integration.",
+  "auth": "API key",
+  "auth_notes": "API key passed as bearer token in HTTP header.",
+  "access": "free self-serve",
+  "access_notes": "API key generated in workspace after installing the API addon.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Pumble Node SDK"
+    ],
+    "webhooks": null,
+    "rate_limits": "1000 requests per minute per user",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "snippet": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://pumble.com/learn/pumble/ai-automation-guide/",
+      "snippet": "The Pumble MCP server",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://pumble.com/learn/pumble/ai-automation-guide/",
+      "snippet": "To interact with the API, you must first generate an API key within your Pumble workspace administration panel.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "snippet": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "No contradictory information found. The API uses bearer token style headers but is identified as an API key. MCP is officially supported. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | retrieval problems: api_breadth: retrieval picked sentence None, out of range | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 7 tried | loop A: auth: pass1 said 'API key', second model said 'Bearer'; api_breadth: pass1 said 'unknown', second model said 'small' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

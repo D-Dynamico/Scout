@@ -1,0 +1,59 @@
+{
+  "app_id": 59,
+  "name": "Waterfall.io",
+  "website": "https://waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Waterfall.io is a B2B data enrichment API that aggregates 30+ vendors to provide verified emails, phone numbers, and company data.",
+  "auth": "API key",
+  "auth_notes": "All requests are authenticated using `x-api-key`.",
+  "access": "free self-serve",
+  "access_notes": "Pay only for what you use. No monthly commitments or short-term credit expiration - scale up or down whenever you need.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.waterfall.io/llms.txt",
+  "mcp": null,
+  "mcp_url": null,
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "The Prospector, Search, Enrichment, Job Change and Verify Email APIs allow a maximum of 50 requests per minute (60 seconds).",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "snippet": "All requests are authenticated using `x-api-key`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "snippet": "The Waterfall API is available at `https://api.waterfall.io`.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "snippet": "Fetch the complete documentation index at: https://docs.waterfall.io/llms.txt",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.waterfall.io/llms.txt",
+      "snippet": "- [API Keys - Create](https://docs.waterfall.io/v1/api-keys-create.md): Create a new sub-key for your account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.65,
+  "notes": "The API key header is `x-api-key`; some example snippets mistakenly use `x-waterfall-api-key`. No SDKs or webhooks are explicitly listed in the docs, but webhook support is mentioned. No Model Context Protocol or app‑review gate is described. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: snippet has no access language; evidence for api_breadth: snippet has no api_breadth language; access nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); mcp is null (-0.04); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

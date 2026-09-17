@@ -1,0 +1,66 @@
+{
+  "app_id": 82,
+  "name": "Plaid",
+  "website": "https://plaid.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Plaid provides a REST API for accessing financial data and services such as account linking, transactions, identity verification, and payments.",
+  "auth": null,
+  "auth_notes": "Plaid uses a client_id and secret as API keys.",
+  "access": "free self-serve",
+  "access_notes": "Sandbox is free; production credentials are obtained by signing up on the Plaid Dashboard.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://plaid.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://plaid.com/docs/resources/mcp/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Java",
+      "Python",
+      "Node.js",
+      "Ruby",
+      "Go",
+      "PHP"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/api/",
+      "snippet": "Once you've completed the signup process and acknowledged our terms, we'll provide a live `client_id` and `secret` via the Dashboard.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://plaid.com/docs",
+      "snippet": "Explore server-side API libraries and integrate with API endpoints",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": "Your team must be approved for Production access with at least one Plaid product to use the MCP server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": "Plaid offers two Model Context Protocol (MCP) servers:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.38,
+  "notes": "No explicit rate limit information found; API breadth is not quantified in the docs. | loop A disagreement: prod_requires_review=True: retrieval chose this sentence, support check disagreed; mcp='official': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: support check did not answer, kept weak; evidence for api_type: snippet not on any page; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; auth nulled, no surviving evidence; api_type nulled, no surviving evidence | retrieval filled: prod_requires_review=True via retrieval; mcp='official' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); mcp rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}

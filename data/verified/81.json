@@ -1,0 +1,71 @@
+{
+  "app_id": 81,
+  "name": "Stripe",
+  "website": "https://stripe.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Stripe offers a RESTful API for payments, subscriptions, and more, with extensive SDKs and webhooks.",
+  "auth": "Basic",
+  "auth_notes": "API keys are used as HTTP Basic Auth usernames.",
+  "access": "free self-serve",
+  "access_notes": "API keys can be created in the Stripe Dashboard.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.stripe.com",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Ruby",
+      "Python",
+      "PHP",
+      "Node.js",
+      "Go",
+      "Java",
+      ".NET"
+    ],
+    "webhooks": true,
+    "rate_limits": "Stripe uses rate limiting to maximize API stability and prevent abuse, so treat limits as maximums and avoid unnecessary load.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.stripe.com/api/authentication?api-version=2026-04-22.dahlia",
+      "snippet": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://stripe.com/docs/api",
+      "snippet": "The Stripe API is organized around REST.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.stripe.com/mcp",
+      "snippet": "Let your AI agents interact with the Stripe API by using our MCP server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.stripe.com/api/authentication?api-version=2026-04-22.dahlia",
+      "snippet": "In both test mode and live mode, you can create as many restricted API keys as you need for different use cases or components of your application.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.81,
+  "notes": "dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_docs_url: snippet not on any page; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

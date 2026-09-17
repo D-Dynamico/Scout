@@ -1,0 +1,63 @@
+{
+  "app_id": 50,
+  "name": "fanbasis",
+  "website": "https://fanbasis.com",
+  "category": "Ecommerce",
+  "one_liner": null,
+  "auth": "API key",
+  "auth_notes": null,
+  "access": "free self-serve",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://commasdocs.com/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://commasdocs.com/",
+      "snippet": "You can generate a new API key from Account → API Keys in your Commas dashboard at any time.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_type",
+      "url": "https://registry.npmjs.org/%40fanbasis%2Fcheckout-sdk",
+      "snippet": "This library provides convenient access to the Fanbasis Checkout REST API from server-side TypeScript or JavaScript.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth",
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "snippet": "No OAuth, no client ID/secret pairs — Fanbasis uses a single API key with separate test/live environments.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "mcp",
+      "url": "https://commasdocs.com/",
+      "snippet": "Connect your AI directly to your Commas account using the Model Context Protocol (MCP).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.66,
+  "notes": "extraction returned nothing usable | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | extraction returned nothing, provider groq model openai/gpt-oss-20b | dropped during extraction: everything | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='API key' via retrieval; mcp='official' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

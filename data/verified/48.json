@@ -1,0 +1,94 @@
+{
+  "app_id": 48,
+  "name": "Gumroad",
+  "website": "https://gumroad.com",
+  "category": "Ecommerce",
+  "one_liner": "Gumroad is a platform for creators to sell digital products, offering a REST API for product, sales, and user data.",
+  "auth": "OAuth2",
+  "auth_notes": "The Gumroad API uses OAuth 2.0 for authentication, implemented via the Doorkeeper gem.",
+  "access": "free self-serve",
+  "access_notes": "On the application page, click Generate access token to get the token you will use with the API.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/rmarescu/gumroad-mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "CLI"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://mintlify.wiki/antiwork/gumroad/api/authentication",
+      "snippet": "The Gumroad API uses OAuth 2.0 for authentication, implemented via the Doorkeeper gem.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://mintlify.wiki/antiwork/gumroad/api/authentication",
+      "snippet": "The Gumroad API uses OAuth 2.0 for authentication, implemented via the Doorkeeper gem.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://gumroad.com/api",
+      "snippet": "On the application page, click Generate access token to get the token you will use with the API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://gumroad.com/api",
+      "snippet": "On the application page, click Generate access token to get the token you will use with the API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://gumroad.com/api",
+      "snippet": "The Gumroad OAuth API is based around REST. We return JSON for every request, including errors.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/rmarescu/gumroad-mcp",
+      "snippet": "A Model Context Protocol (MCP) server implementation for Gumroad API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://github.com/rmarescu/gumroad-mcp",
+      "snippet": "A Model Context Protocol (MCP) server implementation for Gumroad API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.81,
+  "notes": "Rate limits are not documented in the available pages. | dropped during extraction: evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet not on any page; evidence for mcp: snippet was paraphrased, snapped to the real sentence; evidence for mcp_url: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet has no prod_requires_review language; api_docs_url nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | confidence: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'medium' | confidence after verification: api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10)"
+}

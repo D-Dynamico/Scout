@@ -1,0 +1,11 @@
+{
+  "app_id": 62,
+  "urls": [
+    "https://vercel.com/docs/rest-api",
+    "https://vercel.com/docs/sign-in-with-vercel/tokens",
+    "https://vercel.com/pricing",
+    "https://vercel.com/docs/agent-resources/vercel-mcp.md",
+    "https://vercel.com/docs/sign-in-with-vercel/authorization-server-api",
+    "https://vercel.com/docs/plans"
+  ]
+}

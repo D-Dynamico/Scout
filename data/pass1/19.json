@@ -1,0 +1,66 @@
+{
+  "app_id": 19,
+  "name": "Gorgias",
+  "website": "https://www.gorgias.com",
+  "category": "Support and Helpdesk",
+  "one_liner": "Gorgias is a helpdesk platform with AI Agent and API integration.",
+  "auth": "OAuth2",
+  "auth_notes": "API key uses HTTP Basic Auth with base64 encoded USERNAME:API_KEY.",
+  "access": "free self-serve",
+  "access_notes": "Public apps require OAuth2 and approval via Developer Portal.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.gorgias.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.gorgias.com/mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.gorgias.com/reference/authentication",
+      "snippet": "Using OAuth2 is mandatory for public apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+      "snippet": "As an admin, you can easily generate and revoke your access token in the settings of your account.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.gorgias.com",
+      "snippet": "Explore our guides and technical documentation to integrate with Gorgias.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "snippet": "The Gorgias Model Context Protocol (MCP) app allows your third-party AI assistant to access your Gorgias data and account, so it can read and analyze your helpdesk tickets, and audit and update your Gorgias settings.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developers.gorgias.com",
+      "snippet": "We'll review it and let you know once it's approved and ready to be published in our App Store.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for api_type: snippet not on any page; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; api_type nulled, no surviving evidence | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

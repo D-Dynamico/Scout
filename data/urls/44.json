@@ -1,0 +1,11 @@
+{
+  "app_id": 44,
+  "urls": [
+    "https://developer.salesforce.com/docs/commerce",
+    "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html",
+    "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/scapi-get-started.html",
+    "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/mcp-dx-intro.html",
+    "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/scapi-get-started.html",
+    "https://www.salesforce.com/commerce/pricing/"
+  ]
+}

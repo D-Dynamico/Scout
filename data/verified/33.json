@@ -1,0 +1,76 @@
+{
+  "app_id": 33,
+  "name": "LinkedIn Ads",
+  "website": "https://business.linkedin.com/marketing-solutions",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "LinkedIn Ads API provides programmatic access to create, manage, and report on LinkedIn advertising campaigns.",
+  "auth": "OAuth2",
+  "auth_notes": "OAuth 2.0 with three‑legged flow requiring member consent.",
+  "access": "admin approval",
+  "access_notes": "Create an app and request Advertising API; no paid plan required.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+  "mcp": "community",
+  "mcp_url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_docs_url",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+      "snippet": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale. The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+      "snippet": "A Model Context Protocol (MCP) server for LinkedIn Ads.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "snippet": "To apply for access to private APIs, first submit an application for the Advertising API with an ads management or reporting use case.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started?view=li-lms-2026-02",
+      "snippet": "Once you have a developer application that has been given access to the LinkedIn Marketing API Program, you're ready to start generating OAuth access tokens to make API calls on behalf of authenticated members.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "snippet": "\\*These APIs are private and require additional approval once you’ve been approved for the Advertising API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "No explicit mention of REST or GraphQL; API type left null. No rate limits or webhooks documented in the provided pages. The GitHub repo implements a community MCP server. No SDKs listed in the source pages. | pre-filter dropped 1 page(s) as not about LinkedIn Ads: https://www.postzen.dev/blog/linkedin-api-pricing | dropped during extraction: evidence for auth: snippet was paraphrased, snapped to the real sentence; evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for prod_requires_review: snippet not on any page; auth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; auth='OAuth2' via retrieval; prod_requires_review=True via retrieval | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 12 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06)"
+}

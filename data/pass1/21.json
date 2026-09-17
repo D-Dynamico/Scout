@@ -1,0 +1,74 @@
+{
+  "app_id": 21,
+  "name": "Slack",
+  "website": "https://slack.com",
+  "category": "Communications and Messaging",
+  "one_liner": "Slack offers a REST API for building apps that interact with workspaces, messages, channels, users, and files.",
+  "auth": "OAuth2",
+  "auth_notes": "Slack uses OAuth 2.0 for authentication and token management.",
+  "access": "free self-serve",
+  "access_notes": "Slack apps can be created and installed via the Slack developer portal.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://api.slack.com",
+  "mcp": "official",
+  "mcp_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Bolt for Java",
+      "Java Slack SDK",
+      "Bolt for JavaScript",
+      "Node Slack SDK",
+      "Bolt for Python",
+      "Python Slack SDK",
+      "Slack CLI"
+    ],
+    "webhooks": true,
+    "rate_limits": "Like all Slack Web API methods, the Slack MCP server is subject to rate limits.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.slack.dev/authentication/",
+      "snippet": "OAuth 2.0: Learn how to use OAuth 2.0 to securely authenticate users and request access tokens.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://api.slack.com",
+      "snippet": "Welcome to the Slack API docs, the place where ideas turn into interactive apps, workflows get automated, and Slack becomes the platform that powers your workday.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+      "snippet": "With the Slack MCP server, your integrated apps can search channels, send messages, and perform other Slack actions through MCP clients.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/tools/developer-sandboxes/",
+      "snippet": "Anyone can sign up for an account, and there are no costs associated with being a member of the Slack Developer Program.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+      "snippet": "- `unapproved_scope`: Occurs if attempting to install a published app for which the requested scopes aren't approved either because they're still in review for that app, or they weren't yet submitted for review by the app developer.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "The provided pages do not explicitly state that Slack’s API is REST, so api_type is set to null. Likewise, no review requirement is mentioned, so prod_requires_review is null. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; api_breadth nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,87 @@
+{
+  "app_id": 99,
+  "name": "YouTube Transcript",
+  "website": "https://transcriptapi.com",
+  "category": "AI, Research and Media-native",
+  "one_liner": "YouTube Transcript API That Just Works",
+  "auth": "API key",
+  "auth_notes": "The API uses Bearer token authentication. Include your API key in the Authorization header of every request: Authorization: Bearer YOUR_API_KEY",
+  "access": "free self-serve",
+  "access_notes": "Get your API key from your API Keys dashboard.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://transcriptapi.com/docs/api/",
+  "mcp": "community",
+  "mcp_url": "https://transcriptapi.com/docs/mcp/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://transcriptapi.com/",
+      "snippet": "YouTube Transcript API That Just Works",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://transcriptapi.com/docs/api/",
+      "snippet": "YouTube Transcript API Reference",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp_url",
+      "url": "https://transcriptapi.com/docs/mcp/",
+      "snippet": "| Server URL | `https://transcriptapi.com/mcp` |",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://transcriptapi.com/",
+      "snippet": "Get a free API key at transcriptapi.com/signup",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://transcriptapi.com/",
+      "snippet": "curl \"https://transcriptapi.com/api/v2/youtube/search?q=climate+change&type=video&limit=5\" \\",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://transcriptapi.com/docs/mcp/",
+      "snippet": "Get your credentials: Sign up and get an API key or prepare for OAuth",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://transcriptapi.com/docs/mcp/",
+      "snippet": "Use TranscriptAPI to fetch transcripts, search YouTube, browse channels, and list playlists — all from within your AI assistant via Model Context Protocol (MCP).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "GitHub repositories jkawamoto/mcp-youtube-transcript and suckerfish/yttranscript_mcp are separate MCP server implementations and not the primary TranscriptAPI product. | pre-filter dropped 4 page(s) as not about YouTube Transcript: https://www.youtubetranscript.dev/api-docs, https://github.com/youtube-transcript-dev/youtube-transcript-api, https://www.youtubetranscript.dev/faq, https://yttranscript.ai/api-docs | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet has no api_type language; evidence for api_breadth: snippet not on any page; evidence for mcp: snippet not on any page; evidence for mcp_url: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence; mcp nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; api_type='REST' via retrieval; auth='API key' via retrieval; mcp='community' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 12 tried | loop A: auth: pass1 said 'API key', second model said 'Bearer'; api_breadth: pass1 said 'unknown', second model said 'medium'; mcp: pass1 said 'community', second model said 'official' | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

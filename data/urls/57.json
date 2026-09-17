@@ -1,0 +1,11 @@
+{
+  "app_id": 57,
+  "urls": [
+    "https://docs.brightdata.com/api-reference/authentication",
+    "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+    "https://brightdata.com/ai/mcp-server",
+    "https://docs.brightdata.com/api-reference/scrapers/synchronous-requests",
+    "https://docs.brightdata.com/general/account/billing-and-pricing/faqs",
+    "https://github.com/brightdata/brightdata-mcp/"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "app_id": 80,
+  "urls": [
+    "https://help.getharvest.com/api-v2/",
+    "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+    "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+    "https://help.getharvest.com/api-v1/introduction/overview/migration-guide/",
+    "https://www.getharvest.com/blog/2017/09/introducing-harvest-api-v2"
+  ]
+}

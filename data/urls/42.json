@@ -1,0 +1,11 @@
+{
+  "app_id": 42,
+  "urls": [
+    "https://woocommerce.com/document/woocommerce-rest-api/",
+    "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+    "https://woocommerce.com/pricing/",
+    "https://developer.woocommerce.com/docs/features/mcp/",
+    "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "https://apis.io/plans/woocommerce/woocommerce-plans-pricing/"
+  ]
+}

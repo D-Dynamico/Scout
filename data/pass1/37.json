@@ -1,0 +1,68 @@
+{
+  "app_id": 37,
+  "name": "systeme.io",
+  "website": "https://systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Systeme.io offers a REST API with API key authentication, free self‑serve access, and an official MCP server for AI integration.",
+  "auth": "API key",
+  "auth_notes": "API key passed in the X-API-Key header for every request.",
+  "access": null,
+  "access_notes": "API keys are generated directly in the dashboard without approval.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developer.systeme.io/reference/api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.systeme.io/mcp?mcpKey=YOUR_KEY",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    },
+    "api_breadth": {
+      "value": "medium",
+      "reason": "support check says this snippet does not establish api_breadth = 'medium'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "Rate limiting headers: X-RateLimit-Refill, X-RateLimit-Limit, X-RateLimit-Remaining, Retry-After.",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://dlthub.com/context/source/systeme-io",
+      "snippet": "Authentication is performed by including the API key in the 'X-API-Key' HTTP header for every request.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://dlthub.com/context/source/systeme-io",
+      "snippet": "Systeme.io is an all-in-one marketing platform providing a REST API to manage resources like contacts and tags programmatically.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developer.systeme.io/reference/api",
+      "snippet": "Welcome to this comprehensive guide for the Systeme.io Public API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+      "snippet": "The new MCP server feature gives users, partners, and developers a powerful new way to interact with systeme.io using AI tools.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "The API exposes a moderate number of endpoints (contacts, tags, funnels, etc.) and supports webhooks. No app‑review process is mentioned for using the API. | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'medium'; evidence for mcp: snippet was paraphrased, snapped to the real sentence | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,79 @@
+{
+  "app_id": 78,
+  "name": "Coda",
+  "website": "https://coda.io",
+  "category": "Productivity and Project Management",
+  "one_liner": "A RESTful API to programmatically read and modify Coda/Superhuman Docs documents, folders, tables, rows, pages, formulas, and controls.",
+  "auth": "Bearer",
+  "auth_notes": null,
+  "access": null,
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://coda.io/developers/apis/v1",
+  "mcp": "community",
+  "mcp_url": "https://github.com/vish288/mcp-coda",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": {
+    "access": {
+      "value": "free self-serve",
+      "reason": "support check says this snippet does not establish access = 'free self-serve'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "Google Apps Script",
+      "PHP",
+      "Node-RED",
+      "NodeJS",
+      "Ruby",
+      "Python",
+      "Go"
+    ],
+    "webhooks": true,
+    "rate_limits": "Reading data: 100 req/6s; Writing (POST/PUT/PATCH): 10 req/6s; Writing doc content: 5 req/10s; Listing docs: 4 req/6s; Reading analytics: 100 req/6s; errors return HTTP 429",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://apis.io/security/coda/coda-authentication/",
+      "snippet": "Bearer http scheme: bearer",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://coda.io/developers/apis/v1",
+      "snippet": "A RESTful API",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://coda.io/developers/apis/v1",
+      "snippet": "Superhuman Docs API (v1) Reference Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://coda.io/apis/v1/openapi.yaml",
+      "snippet": "The latest released Pack version that has been verified (approved)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/vish288/mcp-coda",
+      "snippet": "**mcp-coda** is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for the [Coda API](https://coda.io/developers/apis/v1) — **54 tools**, **12 resources**, and **5 prompts** covering docs, pages, tables, rows, formulas, controls, permissions, folders, publishing, automations, and analytics.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.64,
+  "notes": "loop A disagreement: prod_requires_review=True: retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for mcp: snippet not on any page; mcp nulled, no surviving evidence | retrieval filled: prod_requires_review=True via retrieval; mcp='community' via retrieval | confidence: access was rejected (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}

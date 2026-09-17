@@ -1,0 +1,67 @@
+{
+  "app_id": 40,
+  "name": "SendGrid",
+  "website": "https://sendgrid.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "SendGrid is a cloud-based email delivery service that offers a REST API for transactional and marketing emails.",
+  "auth": null,
+  "auth_notes": "To authenticate, add an HTTP `Authorization` header to your API request that contains an API Key. To use an API key, include an `Authorization` header with the value `Bearer <YOUR_API_KEY_HERE>`.",
+  "access": "free trial",
+  "access_notes": "After the 60 day trial period, email send via any web API or SMTP integration for the account will stop unless an appropriate \"Email API\" plan is chosen.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+  "mcp": "community",
+  "mcp_url": "https://github.com/justinritchie/mcp-sendgrid-server",
+  "stage": "needs sandbox",
+  "blocker": "trial only, no free tier for credentials",
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "C#",
+      "Go",
+      "Java",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Ruby"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+      "snippet": "The SendGrid v3 Web API provides a REST interface to send email at scale and ensure your application can handle high volumes.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+      "snippet": "This API reference provides complete documentation for every endpoint and operation.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/justinritchie/mcp-sendgrid-server",
+      "snippet": "Production-grade Model Context Protocol server exposing SendGrid's transactional email APIs to AI agents (Cursor, Claude Code, Copilot, Windsurf, Zed).",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan",
+      "snippet": "When you sign up for a SendGrid account, you can start a 60-day free trial to explore the Email API and Marketing Campaigns features.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.59,
+  "notes": "None | loop A disagreement: access='free trial': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_docs_url: snippet was paraphrased, snapped to the real sentence; auth nulled, no surviving evidence; api_breadth nulled, no surviving evidence | retrieval filled: access='free trial' via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,85 @@
+{
+  "app_id": 47,
+  "name": "Ecwid",
+  "website": "https://www.ecwid.com",
+  "category": "Ecommerce",
+  "one_liner": "Ecwid is an e-commerce platform that offers a REST API for store data, webhooks, and storefront customization.",
+  "auth": "OAuth2",
+  "auth_notes": "Secret token (`secret_token`) is only limited by the app permissions, so it must not be used in the publically available code.",
+  "access": "paid plan",
+  "access_notes": "When created, custom applications automatically get default access scopes and both access tokens unlocking some REST API requests.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.ecwid.com",
+  "mcp": "community",
+  "mcp_url": "https://ecwid.usefulapi.io/mcp",
+  "stage": "needs sandbox",
+  "blocker": "paid plan required for credentials",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "https://my.ecwid.com/#develop-apps",
+    "process": "Create a custom app in the Ecwid admin to obtain access tokens",
+    "contact": "None (self-service)",
+    "est_time": "minutes"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "snippet": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://docs.ecwid.com/develop-apps/app-settings",
+      "snippet": "Secret token (`secret_token`) is only limited by the app permissions, so it must not be used in the publically available code.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+      "snippet": "Only stores on paid plans can access API.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://docs.ecwid.com/develop-apps/app-settings",
+      "snippet": "When created, custom applications automatically get default access scopes and both access tokens unlocking some REST API requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "snippet": "All requests to Ecwid REST API require an access token.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://api-docs.ecwid.com",
+      "snippet": "https://docs.ecwid.com/build-with-ecwid-apps.md",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://claudeskills.info/mcp/usefulapi/ecwid/",
+      "snippet": "Ecwid MCP Server by usefulapi",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "Ecwid provides a REST API that requires a paid plan and uses OAuth 2.0 for public apps. Custom apps can use secret tokens. The API supports webhooks and storefront JS customization. | dropped during extraction: api_breadth nulled, no surviving evidence | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

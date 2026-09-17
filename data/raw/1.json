@@ -1,0 +1,64 @@
+{
+  "app_id": 1,
+  "name": "Salesforce",
+  "website": "https://www.salesforce.com",
+  "category": "CRM and Sales",
+  "one_liner": "Salesforce provides a comprehensive REST API for accessing and manipulating data, with OAuth 2.0 authentication and extensive limits monitoring.",
+  "auth": "OAuth2",
+  "auth_notes": "When a client successfully completes an authorization flow, whether it’s a standard OAuth 2.0 flow or a headless identity flow, Salesforce issues an access token that can be used to access protected Salesforce data.",
+  "access": "free self-serve",
+  "access_notes": "Build on Salesforce for free and get hands-on with development environments for a range of platforms within the Salesforce ecosystem.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "official",
+  "mcp_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": "Daily API Request Limit is the total number of API calls to the REST API, the SOAP API, the Bulk APIs, and the Connect API that your org is entitled to within a rolling 24-hour period.",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm&language=en_US&type=5",
+      "snippet": "When a client successfully completes an authorization flow, whether it’s a standard OAuth 2.0 flow or a headless identity flow, Salesforce issues an access token that can be used to access protected Salesforce data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "snippet": "REST API is one of several web interfaces that you can use to access your Salesforce data without using the Salesforce user interface.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/free-trials",
+      "snippet": "https://developer.salesforce.com/signup Sign UpView Details",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview",
+      "snippet": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide Get Started https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references References",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.6,
+  "notes": "No information on app review or webhooks found. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed; mcp='official': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: rejected, support check says this snippet does not establish access = 'free trial'; evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown'; evidence for api_docs_url: snippet not on any page; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; api_docs_url nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; mcp='official' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); mcp rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

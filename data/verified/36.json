@@ -1,0 +1,73 @@
+{
+  "app_id": 36,
+  "name": "Klaviyo",
+  "website": "https://www.klaviyo.com",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Klaviyo offers a RESTful JSON:API with private key, OAuth, and public key authentication, supporting a wide range of marketing and data operations.",
+  "auth": "OAuth2",
+  "auth_notes": "OAuth is recommended for tech partners; private API keys are used for server‑side calls.",
+  "access": "free self-serve",
+  "access_notes": "API keys can be created in account settings; OAuth requires tech partner status.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.klaviyo.com/en/reference/api_overview",
+  "mcp": "official",
+  "mcp_url": "https://mcp.klaviyo.com/mcp",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Klaviyo SDKs"
+    ],
+    "webhooks": null,
+    "rate_limits": "All new API endpoints are rate limited on a per-account basis, and use a fixed-window rate limiting algorithm with two distinct windows: burst (short) and steady (long).",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "snippet": "If you are a tech partner integrating with Klaviyo, we recommend using OAuth to authenticate your app.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "snippet": "Navigate to your account’s Settings page and select API keys.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.klaviyo.com/en/docs/klaviyo_stripe_projects_context",
+      "snippet": "Call the Klaviyo REST API directly over HTTP.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "snippet": "View the latest OpenAPI spec here.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "snippet": "Configure Klaviyo's MCP server to get AI assistance with your Klaviyo data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "Klaviyo provides a free plan with limits; API keys are available to account owners, admins, or managers. | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: auth: pass1 said 'OAuth2', second model said 'API key'; api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

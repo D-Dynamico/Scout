@@ -1,0 +1,11 @@
+{
+  "app_id": 74,
+  "urls": [
+    "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+    "https://developer.atlassian.com/cloud/jira/software/rest/intro/",
+    "https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/",
+    "https://atlassian.github.io/atlassian-mcp-server/",
+    "https://community.developer.atlassian.com/t/jira-all-apis-are-free-or-paid-if-paid-what-are-the-paiment-plans/87575",
+    "https://github.com/Hopcos/jira-mcp-server"
+  ]
+}

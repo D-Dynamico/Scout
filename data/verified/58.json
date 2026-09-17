@@ -1,0 +1,47 @@
+{
+  "app_id": 58,
+  "name": "Sherlock",
+  "website": "https://github.com/sherlock-project/sherlock",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Hunt down social media accounts by username across social networks",
+  "auth": null,
+  "auth_notes": null,
+  "access": null,
+  "access_notes": null,
+  "api_type": "none",
+  "api_breadth": "unknown",
+  "api_docs_url": null,
+  "mcp": "community",
+  "mcp_url": "https://github.com/adeze/sherlock",
+  "stage": "no viable API",
+  "blocker": "no public API",
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/adeze/sherlock",
+      "snippet": "Sherlock: Find Usernames Across Social Networks (with MCP Server)",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/adeze/sherlock",
+      "snippet": "This version has been enhanced with a **Model Context Protocol (MCP) Server**, allowing the Sherlock tool to be used programmatically by AI agents and other MCP-compatible clients.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    }
+  ],
+  "confidence": 0.51,
+  "notes": "The official Sherlock repository provides only a CLI interface; no REST or GraphQL API is documented. A community fork (adeze/sherlock) adds an MCP server, but it is not part of the main project and offers no authentication or rate limiting. No production review process is mentioned. | pre-filter dropped 7 page(s) as not about Sherlock: https://docs.cloudferro.com/en/latest/sherlock/Sherlock-authentication-API-keys-on-CloudFerro-Cloud.html, https://www.sherlocks.ai/pricing, https://github.com/H4RR1SON/sherlock-mcp, https://docs.cloudferro.com/en/latest/sherlock/Package-installation-and-examples-of-Sherlock-AI-code-on-CloudFerro-Cloud.html, https://www.usesherlock.ai/pricing, https://sherlockeye.io/pricing, https://sherlock.cloudferro.com/en/ | dropped during extraction: evidence for api_type: snippet has no api_type language; api_type nulled, no surviving evidence | retrieval filled: api_type='none' via retrieval | confidence: auth is null (-0.10); access is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10); everything from one source (-0.10) | pages read: 5 of 12 tried | loop A: api_type: pass1 said 'none', second model said 'REST'; api_breadth: pass1 said 'unknown', second model said 'small' | confidence after verification: auth is null (-0.10); access is null (-0.10); api_breadth rests on weak evidence (-0.06); api_docs_url is null (-0.03); prod_requires_review is null (-0.10); everything from one source (-0.10)"
+}

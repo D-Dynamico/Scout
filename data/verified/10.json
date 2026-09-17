@@ -1,0 +1,87 @@
+{
+  "app_id": 10,
+  "name": "DealCloud",
+  "website": "https://www.dealcloud.com",
+  "category": "CRM and Sales",
+  "one_liner": "DealCloud provides Deal Management, Pipeline Analytics, Relationship Intelligence through its REST.",
+  "auth": "OAuth2",
+  "auth_notes": null,
+  "access": "admin approval",
+  "access_notes": null,
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://api.docs.dealcloud.com",
+  "mcp": "official",
+  "mcp_url": "https://api.docs.dealcloud.com/mcp",
+  "stage": "needs OAuth app review",
+  "blocker": "admin approval required",
+  "prod_requires_review": null,
+  "gate": {
+    "application_url": "unknown",
+    "process": "unknown",
+    "contact": "unknown",
+    "est_time": "unknown"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Python",
+      "C#"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://salestools.club/apis/dealcloud",
+      "snippet": "DealCloud provides Deal Management, Pipeline Analytics, Relationship Intelligence through its REST.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_type",
+      "url": "https://salestools.club/apis/dealcloud",
+      "snippet": "API Type REST",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://api.docs.dealcloud.com",
+      "snippet": "Dealcloud Developer Documentation",
+      "fetcher": "http",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.docs.dealcloud.com/mcp",
+      "snippet": "DealCloud MCP Server - DealCloud API Docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "access",
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "snippet": "- If you cannot enable or copy your API key, verify your user group permissions and contact your admin or DealCloud support.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "snippet": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token, which is then used in the HTTP Authentication header for API requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "dropped during extraction: evidence for auth: snippet not on any page; evidence for access: snippet has no access language; evidence for mcp_url: snippet not on any page; auth nulled, no surviving evidence; access nulled, no surviving evidence | retrieval filled: access='admin approval' via retrieval; auth='OAuth2' via retrieval | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'large' | confidence after verification: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

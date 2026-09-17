@@ -1,0 +1,55 @@
+{
+  "app_id": 4,
+  "name": "Attio",
+  "website": "https://attio.com",
+  "category": "CRM and Sales",
+  "one_liner": "Attio is a data‑native CRM that offers a REST API, an App SDK, MCP, and SQL access.",
+  "auth": "OAuth2",
+  "auth_notes": "OAuth 2.0 flow or API key; use Bearer token in Authorization header.",
+  "access": "free self-serve",
+  "access_notes": "API key can be generated in developer settings; all plans have API access.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://docs.attio.com/rest-api",
+  "mcp": null,
+  "mcp_url": null,
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "App SDK",
+      "REST API"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": "Attio implements the standard OAuth 2.0 specification.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.attio.com",
+      "snippet": "Fetch the complete documentation index at: https://docs.attio.com/llms.txt",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": "If you only need a token for a single workspace, you can generate an API key in the developer settings page of your apps.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.55,
+  "notes": "No explicit rate limits or app‑review process are mentioned on the provided pages. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for api_type: snippet not on any page; evidence for mcp: snippet not on any page; api_type nulled, no surviving evidence; mcp nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval | confidence: access rests on weak evidence (-0.15); api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); mcp is null (-0.04); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

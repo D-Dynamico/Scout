@@ -1,0 +1,79 @@
+{
+  "app_id": 6,
+  "name": "Podio",
+  "website": "https://www.podio.com",
+  "category": "CRM and Sales",
+  "one_liner": "Podio offers a RESTful API with OAuth2 authentication, free self‑serve API keys, optional MCP integration, and rate limits that can be increased via add‑ons.",
+  "auth": "OAuth2",
+  "auth_notes": "Access token included in Authorization header: Authorization: OAuth2 ACCESS_TOKEN.",
+  "access": "free self-serve",
+  "access_notes": "API keys are generated per app in account settings.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://developers.podio.com",
+  "mcp": "official",
+  "mcp_url": "https://mcp.podio.com",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": {
+    "api_breadth": {
+      "value": "unknown",
+      "reason": "support check says this snippet does not establish api_breadth = 'unknown'"
+    }
+  },
+  "extras": {
+    "sdks": [
+      "PHP",
+      ".NET",
+      "Ruby",
+      "Java",
+      "Python",
+      "Android",
+      "Objective-C"
+    ],
+    "webhooks": true,
+    "rate_limits": "250 calls per hour for Limit A and 1,000 calls per hour for Limit B",
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://developers.podio.com/authentication",
+      "snippet": "The Podio API uses the OAuth2 protocol for authentication.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com",
+      "snippet": "You'll need a Podio account, first of all. Then you should review our Terms of API use and then grab an API key for each app you want to build from your account settings page.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.podio.com/index/api",
+      "snippet": "The API is available at https://api.podio.com. It is RESTful and uses json as the exchange format.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://developers.podio.com",
+      "snippet": "Developers - Podio API Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+      "snippet": "The Podio MCP (Model Context Protocol) Server connects AI assistants — ChatGPT, Microsoft Copilot Studio, Claude Desktop, and any other MCP-compatible platform — directly to your Podio data.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.84,
+  "notes": "The API is free to obtain via a Podio account and does not require an app review. Rate limits are 250 calls/hr (Limit A) and 1,000 calls/hr (Limit B) per API key, with optional add‑ons for higher capacity. Webhooks are supported, and the MCP server provides a no‑code integration path for AI assistants. | dropped during extraction: evidence for api_breadth: rejected, support check says this snippet does not establish api_breadth = 'unknown' | confidence: api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried"
+}

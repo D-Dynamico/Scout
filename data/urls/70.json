@@ -1,0 +1,11 @@
+{
+  "app_id": 70,
+  "urls": [
+    "https://docs.sentry.io/api/",
+    "https://docs.sentry.dev/api/auth/",
+    "https://sentry.io/pricing/",
+    "https://mcp.sentry.dev/",
+    "https://sentrydocs.dev/api/authentication",
+    "https://markaicode.com/pricing/sentry-pricing/"
+  ]
+}

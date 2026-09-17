@@ -1,0 +1,82 @@
+{
+  "app_id": 87,
+  "name": "Xero",
+  "website": "https://www.xero.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Xero is a cloud accounting platform that exposes a REST API for accounting data.",
+  "auth": null,
+  "auth_notes": "Native desktop and mobile apps use PKCE instead",
+  "access": "free self-serve",
+  "access_notes": "Sign up for a free account to build on the Xero platform.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://github.com/XeroAPI/xero-mcp-server",
+  "mcp": "community",
+  "mcp_url": "https://github.com/XeroAPI/xero-mcp-server",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "https://xeroapi.github.io/xero-node/accounting"
+    ],
+    "webhooks": true,
+    "rate_limits": "Rate Limits 1000 per day per org",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth_notes",
+      "url": "https://codelesssync.com/blog/xero-api-integration-guide",
+      "snippet": "Native desktop and mobile apps use PKCE instead",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access_notes",
+      "url": "https://developer.xero.com",
+      "snippet": "Sign up for a free account to build on the Xero platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://codelesssync.com/blog/xero-api-integration-guide",
+      "snippet": "The Xero Accounting API is a REST API that returns XML by default and JSON if you ask for it.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://github.com/XeroAPI/xero-mcp-server/",
+      "snippet": "Xero Public API Documentation",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server/",
+      "snippet": "An MCP server that integrates with the MCP protocol.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com",
+      "snippet": "Sign up for a free account to build on the Xero platform.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+      "snippet": "For the Journals and Xero Practice Manager API premium features, what criteria are used to grant \"use case approval,\" and what is the typical review timeline?",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "Xero offers a REST API with OAuth2, free developer account, and optional MCP server. Pricing tiers are based on connections and egress volume. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: rejected, support check says this snippet does not establish access = 'free self-serve'; evidence for prod_requires_review: snippet has no prod_requires_review language; auth nulled, no surviving evidence; prod_requires_review nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; prod_requires_review=True via retrieval | confidence: auth is null (-0.10); access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06) | pages read: 6 of 6 tried"
+}

@@ -1,0 +1,11 @@
+{
+  "app_id": 22,
+  "urls": [
+    "https://www.twilio.com/docs/usage/api",
+    "https://www.twilio.com/docs/usage/requests-to-twilio",
+    "https://www.twilio.com/docs/usage/trials",
+    "https://www.twilio.com/docs/ai/mcp",
+    "https://static1.twilio.com/docs/api/errors/20003",
+    "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account.md"
+  ]
+}

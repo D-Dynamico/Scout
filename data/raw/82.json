@@ -1,0 +1,79 @@
+{
+  "app_id": 82,
+  "name": "Plaid",
+  "website": "https://plaid.com",
+  "category": "Finance and Fintech",
+  "one_liner": "Plaid provides a RESTful API for accessing financial data, payments, and identity verification across many banking institutions.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses client_id and secret as API keys.",
+  "access": "free self-serve",
+  "access_notes": "Create a dashboard account to receive client_id and secret.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://plaid.com/docs",
+  "mcp": "official",
+  "mcp_url": "https://plaid.com/docs/resources/mcp/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Node.js",
+      "Python",
+      "Java",
+      "Ruby",
+      "Go"
+    ],
+    "webhooks": true,
+    "rate_limits": null,
+    "composio_toolkit": false
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/api/",
+      "snippet": "Once you've completed the signup process and acknowledged our terms, we'll provide a live `client_id` and `secret` via the Dashboard.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://plaid.com/docs",
+      "snippet": "Welcome to the Docs",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_type",
+      "url": "https://plaid.com/docs/api/",
+      "snippet": "OpenAPI is a standard format for describing RESTful APIs that allows those APIs to be integrated with tools for a wide variety of applications, including testing, client library generation, IDE integration, and more.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "auth",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": "To connect to the Dashboard MCP server, first create an OAuth token with the `mcp:dashboard` scope and the `client_credentials` grant type by calling /oauth/token .",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": "Your team must be approved for Production access with at least one Plaid product to use the MCP server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    },
+    {
+      "field": "mcp",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": "Plaid offers two Model Context Protocol (MCP) servers:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.43,
+  "notes": "Rate limit information was not found in the provided pages. | loop A disagreement: api_type='REST': retrieval chose this sentence, support check disagreed; prod_requires_review=True: retrieval chose this sentence, support check disagreed; mcp='official': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet not on any page; evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for access: support check did not answer, kept weak; evidence for api_type: snippet not on any page; evidence for mcp: rejected, support check says this snippet does not establish mcp = 'official'; auth nulled, no surviving evidence; api_type nulled, no surviving evidence | retrieval filled: api_type='REST' via retrieval; auth='OAuth2' via retrieval; prod_requires_review=True via retrieval; mcp='official' via retrieval | confidence: access rests on weak evidence (-0.15); api_type rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); mcp rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}

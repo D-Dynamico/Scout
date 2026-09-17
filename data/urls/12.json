@@ -1,0 +1,11 @@
+{
+  "app_id": 12,
+  "urls": [
+    "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+    "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "https://www.intercom.com/help/en/articles/8344190-pricing-faqs",
+    "https://developers.intercom.com/docs/guides/mcp",
+    "https://developers.intercom.com/docs/build-an-integration/getting-started",
+    "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs"
+  ]
+}

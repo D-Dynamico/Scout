@@ -1,0 +1,80 @@
+{
+  "app_id": 66,
+  "name": "Neo4j",
+  "website": "https://neo4j.com",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Neo4j is a graph database that exposes a RESTful Query API and official MCP support for AI assistants.",
+  "auth": "Bearer",
+  "auth_notes": "Supports Basic and Bearer authentication via the Authorization header.",
+  "access": "free self-serve",
+  "access_notes": "The Query API is enabled by default on self‑managed instances and Aura, with no approval required.",
+  "api_type": "REST",
+  "api_breadth": "unknown",
+  "api_docs_url": "https://neo4j.com/docs/query-api/current/",
+  "mcp": "official",
+  "mcp_url": "https://neo4j.com/docs/mcp/current/",
+  "stage": "ready to build",
+  "blocker": null,
+  "prod_requires_review": null,
+  "gate": null,
+  "rejected": null,
+  "extras": {
+    "sdks": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "Go",
+      "C#",
+      "Ruby",
+      "PHP",
+      "Kotlin"
+    ],
+    "webhooks": null,
+    "rate_limits": null,
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://neo4j.com/docs/query-api/current/",
+      "snippet": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://neo4j.com/docs/http-api/current/authentication-authorization/",
+      "snippet": "https://neo4j.com/docs/query-api/current/",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/neo4j/mcp/",
+      "snippet": "Neo4j MCP gives AI assistants and LLM-powered tools direct, structured access to your Neo4j graph database.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "third-party-confirmed"
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/pricing/",
+      "snippet": "Contact sales@neo4j.com or sign up directly.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak",
+      "subject": "own-domain"
+    },
+    {
+      "field": "auth",
+      "url": "https://neo4j.com/docs/query-api/current/authentication-authorization/",
+      "snippet": "The header format to authenticate with a bearer token is:",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong",
+      "subject": "own-domain"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "No explicit rate limits or webhook support are documented; HTTP API is deprecated in favor of the Query API. | loop A disagreement: access='free self-serve': retrieval chose this sentence, support check disagreed | dropped during extraction: evidence for auth: snippet has no auth language; evidence for access: snippet has no access language; auth nulled, no surviving evidence; access nulled, no surviving evidence | retrieval filled: access='free self-serve' via retrieval; auth='Bearer' via retrieval | confidence: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10) | pages read: 6 of 6 tried | loop A: api_breadth: pass1 said 'unknown', second model said 'small' | confidence after verification: access rests on weak evidence (-0.15); api_breadth rests on weak evidence (-0.06); prod_requires_review is null (-0.10)"
+}

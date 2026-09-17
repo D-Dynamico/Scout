@@ -1,0 +1,71 @@
+{
+  "app_id": 33,
+  "name": "LinkedIn Ads",
+  "website": "https://business.linkedin.com/marketing-solutions",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "LinkedIn Ads API for campaign management, reporting, and audience targeting.",
+  "auth": "OAuth2",
+  "auth_notes": "Uses OAuth 2.0/2.1 for member authentication and token issuance.",
+  "access": "admin approval",
+  "access_notes": "Requires creating a LinkedIn developer app, adding the Advertising API product, and submitting the app for LinkedIn review.",
+  "api_type": null,
+  "api_breadth": "unknown",
+  "api_docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+  "mcp": "community",
+  "mcp_url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+  "stage": null,
+  "blocker": null,
+  "prod_requires_review": true,
+  "gate": {
+    "application_url": "https://www.linkedin.com/developers/apps",
+    "process": "Create an app, add Advertising API product, and submit for review",
+    "contact": "LinkedIn Developer Support",
+    "est_time": "weeks"
+  },
+  "rejected": null,
+  "extras": {
+    "sdks": [],
+    "webhooks": true,
+    "rate_limits": "500 calls per app per 24 hours",
+    "composio_toolkit": true
+  },
+  "evidence": [
+    {
+      "field": "auth",
+      "url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+      "snippet": "OAuth 2.1 authorization server.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "snippet": "LinkedIn will review your application",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "api_docs_url",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+      "snippet": "LinkedIn Marketing API Program",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+      "snippet": "A Model Context Protocol (MCP) server for LinkedIn Ads.",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "strong"
+    },
+    {
+      "field": "prod_requires_review",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "snippet": "LinkedIn will review your application",
+      "fetcher": "COMPOSIO_SEARCH_FETCH_URL_CONTENT",
+      "support": "weak"
+    }
+  ],
+  "confidence": 0.69,
+  "notes": "LinkedIn Ads API requires OAuth 2.0, app approval, and is a REST API. The API is gated by product approval and has a Development tier limit of 500 calls per app per day. The MCP implementation is community-built. | dropped during extraction: evidence for access: snippet was paraphrased, snapped to the real sentence; evidence for api_type: snippet not on any page; evidence for prod_requires_review: snippet was paraphrased, snapped to the real sentence; evidence for prod_requires_review: support check did not answer, kept weak; api_type nulled, no surviving evidence; api_breadth nulled, no surviving evidence | confidence: api_type is null (-0.10); api_breadth rests on weak evidence (-0.06); prod_requires_review rests on weak evidence (-0.15) | pages read: 6 of 6 tried"
+}
